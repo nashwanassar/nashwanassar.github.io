@@ -45,25 +45,9 @@ a:focus-visible,button:focus-visible{outline:2px solid #8a6630;outline-offset:3p
 .pill{display:inline-flex;align-items:center;height:30px;padding:0 14px;border-radius:999px;background:rgba(98,98,104,0.62);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);font-size:14px;letter-spacing:.01em;color:#ffffff;white-space:nowrap}
 .menu-btn:hover{background:rgba(255,255,255,0.85) !important}
 @media (prefers-reduced-motion: reduce){.card img,.card .hover-title,.tags{transition:none}}
-@media (max-width: 900px){
-.grid{grid-template-columns:1fr !important}
-}
-@media (max-width: 760px){
-.hdr{padding-left:16px !important;padding-right:16px !important}
-.menu-panel{right:16px !important;left:16px !important;width:auto !important}
-.hdr-nav,.hdr-cta{display:none !important}
-.menu-btn{display:flex !important}
-.quote{padding:150px 16px 72px !important}
-.q-br{display:none}
-.work{padding:64px 16px 96px !important}
-.foot{padding:20px 16px !important}
-.tags{right:10px;bottom:10px;left:10px;gap:6px}
-.tag-row{gap:6px}
-.pill{height:26px;padding:0 10px;font-size:12px}
-}
-@media (max-width: 420px){
-.brand-text{display:none}
-}
+
+
+
 
 .hdr.compact{padding-top:6px !important;padding-bottom:6px !important;box-shadow:0 6px 24px rgba(20,19,26,0.08) !important}
 .hdr.compact .hdr-nav,.hdr.compact .hdr-cta{display:none !important}
@@ -72,6 +56,44 @@ a:focus-visible,button:focus-visible{outline:2px solid #8a6630;outline-offset:3p
 .menu-open .menu-btn .ic-close{display:block}
 #site-menu[hidden]{display:none !important}
 a:focus-visible,button:focus-visible{outline:2px solid #8a6630;outline-offset:3px}
+
+.card-info{display:none}
+.info-btn:hover{background:rgba(138,102,48,0.08)}
+/* ---------- tablet + mobile: up to 1024 ---------- */
+@media (max-width: 1024px){
+.hdr{padding-left:32px !important;padding-right:32px !important}
+.menu-panel{right:32px !important}
+.quote{padding:150px 32px 72px !important;min-height:0 !important}
+.quote blockquote p{font-size:30px !important}
+.q-br,.q-indent{display:none}
+.work{padding:72px 32px 120px !important}
+.grid{grid-template-columns:repeat(2, minmax(0, 1fr)) !important;gap:48px 24px !important}
+.card{cursor:pointer;-webkit-tap-highlight-color:transparent}
+.card .hover-title{display:none !important}
+.card:hover .hover-img,.card:focus-visible .hover-img{opacity:0}
+.card:hover .tags,.card:focus-visible .tags{opacity:1}
+.card.flipped .hover-img{opacity:1 !important}
+.card.flipped .tags{opacity:0 !important}
+.card-info{display:flex;flex-direction:column;align-items:flex-start;gap:16px;margin-top:16px}
+.foot{padding:24px 32px !important}
+}
+/* ---------- mobile: up to 640 ---------- */
+@media (max-width: 640px){
+.hdr{height:64px !important;padding:0 16px !important}
+.hdr-nav,.hdr-cta{display:none !important}
+.menu-btn{display:flex !important;width:44px !important;height:44px !important}
+.menu-panel{left:16px !important;right:16px !important;width:auto !important}
+.quote{padding:120px 16px 64px !important}
+.quote blockquote p{font-size:20px !important;line-height:2 !important}
+.quote figcaption{font-size:20px !important}
+.work{padding:56px 16px 80px !important}
+#work-h{font-size:34px !important;margin-bottom:32px !important}
+.grid{grid-template-columns:1fr !important;gap:48px !important}
+.tags{right:10px;bottom:10px;left:10px;gap:6px}
+.tag-row{gap:6px}
+.pill{height:26px;padding:0 10px;font-size:12px}
+.foot{padding:20px 16px !important;font-size:14px !important;gap:8px 16px !important}
+}
 </style>
 </head>
 <body>
@@ -112,7 +134,7 @@ a:focus-visible,button:focus-visible{outline:2px solid #8a6630;outline-offset:3p
 </nav>
 </header><section class="quote" aria-label="Quote" style="display: flex; align-items: center; justify-content: center; box-sizing: border-box; min-height: 586px; padding: 185px 72px 96px; background: #f7f7f7">
 <figure style="margin: 0; max-width: 680px">
-<blockquote style="margin: 0; font-family: Khand, 'Arial Narrow', sans-serif; font-weight: 700; font-size: clamp(24px, 2.45vw, 36px); line-height: 1.9; letter-spacing: 0.004em; text-transform: uppercase; text-align: center; color: #14131a"><p style="margin: 0; font-weight: 500; font-size: 35px; line-height: 2"><span aria-hidden="true" style="display: inline-block; margin-right: 10px; font-size: 2.1em; line-height: 0; vertical-align: -0.12em; color: rgb(58, 58, 58)">“</span>Some people want it to happen, some wish it<br class="q-br">&nbsp; &nbsp; &nbsp; &nbsp;would happen, <span style="color: rgb(171, 129, 71)">others make it happen</span><span aria-hidden="true" style="display: inline-block; margin-left: 10px; font-size: 2.1em; line-height: 0; vertical-align: 0.02em; color: rgb(58, 58, 58); font-weight: 500">”</span></p></blockquote>
+<blockquote style="margin: 0; font-family: Khand, 'Arial Narrow', sans-serif; font-weight: 700; font-size: clamp(24px, 2.45vw, 36px); line-height: 1.9; letter-spacing: 0.004em; text-transform: uppercase; text-align: center; color: #14131a"><p style="margin: 0; font-weight: 500; font-size: 35px; line-height: 2"><span aria-hidden="true" style="display: inline-block; margin-right: 10px; font-size: 2.1em; line-height: 0; vertical-align: -0.12em; color: rgb(58, 58, 58)">“</span>Some people want it to happen, some wish it <br class="q-br"><span class="q-indent">&nbsp; &nbsp; &nbsp; &nbsp;</span>would happen, <span style="color: rgb(171, 129, 71)">others make it happen</span><span aria-hidden="true" style="display: inline-block; margin-left: 10px; font-size: 2.1em; line-height: 0; vertical-align: 0.02em; color: rgb(58, 58, 58); font-weight: 500">”</span></p></blockquote>
 <figcaption style="margin: 6px 0 0; text-align: right; font-family: 'Mrs Saint Delafield', cursive; font-size: clamp(32px, 3vw, 44px); line-height: 1.1; color: #14131a">Michael Jordan</figcaption>
 </figure>
 </section>
@@ -121,25 +143,34 @@ a:focus-visible,button:focus-visible{outline:2px solid #8a6630;outline-offset:3p
 <h1 id="work-h" style="margin: 0 0 76px; font-family: Khand, 'Arial Narrow', sans-serif; font-weight: 700; font-size: clamp(34px, 3.1vw, 46px); line-height: 1.1; letter-spacing: 0.04em; color: #14131a">Selected Projects</h1>
 <div class="grid" style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px">
 
+<div class="proj">
 <a class="card" href="goat.html" aria-label="GOAT: translating SRMG's editorial credibility into digital audience engagement and monetisation. SportsTech and digital media, digital product experience leadership.">
 <img class="base" src="assets/projects/goat.webp" alt="">
 <img class="hover-img" loading="lazy" src="assets/projects/goat-hover.webp" alt="">
 <p class="hover-title" aria-hidden="true">Translating SRMG’s editorial credibility into digital audience engagement and monetisation</p>
 <div class="tags"><p class="tag-row"><span class="pill">SportsTech &amp; Digital Media</span></p><p class="tag-row"><span class="pill">Digital Product Experience Leadership</span></p></div>
 </a>
+<div class="card-info"><h2 style="margin: 0; font-family: Khand, 'Arial Narrow', sans-serif; font-weight: 500; font-size: 24px; line-height: 1.2; color: #14131a"><a href="goat.html" style="color: #14131a">Translating SRMG’s editorial credibility into digital audience engagement and monetisation</a></h2><a class="info-btn" href="goat.html" style="display: flex; align-items: center; gap: 8px; width: fit-content; min-height: 44px; box-sizing: border-box; padding: 0 20px; border: 1px solid #8a6630; border-radius: 6px; font-size: 16px; font-weight: 500; color: #8a6630">View case study<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"></path><path d="M13 6l6 6-6 6"></path></svg></a></div>
+</div>
 
+<div class="proj">
 <div class="card">
 <img class="base" src="assets/projects/digital-twin.webp" alt="">
 <img class="hover-img" loading="lazy" src="assets/projects/digital-twin-hover.webp" alt="">
 <p class="hover-title"><span>Transforming telecom tower workflows with IBM Digital Twin Platform</span><a class="req-btn" href="mailto:nashwaanassar@gmail.com?subject=Access%20request%3A%20IBM%20Digital%20Twin%20Platform%20case%20study&amp;body=Hi%20Nashwa%2C%0A%0AI%27d%20like%20to%20request%20access%20to%20your%20IBM%20Digital%20Twin%20Platform%20case%20study.%0A%0AName%3A%0ACompany%3A%0ARole%3A%0A">Request access</a></p>
 <div class="tags"><p class="tag-row"><span class="pill">Telecom</span><span class="pill">Digital Twin Technology</span><span class="pill">AI</span></p><p class="tag-row"><span class="pill">Design Thinking</span><span class="pill">Experience Design</span><span class="pill">Journey Mapping</span></p></div>
 </div>
+<div class="card-info"><h2 style="margin: 0; font-family: Khand, 'Arial Narrow', sans-serif; font-weight: 500; font-size: 24px; line-height: 1.2; color: #14131a">Transforming telecom tower workflows with IBM Digital Twin Platform</h2><a class="info-btn" href="mailto:nashwaanassar@gmail.com?subject=Access%20request%3A%20IBM%20Digital%20Twin%20Platform%20case%20study&amp;body=Hi%20Nashwa%2C%0A%0AI%27d%20like%20to%20request%20access%20to%20your%20IBM%20Digital%20Twin%20Platform%20case%20study.%0A%0AName%3A%0ACompany%3A%0ARole%3A%0A" style="display: flex; align-items: center; gap: 8px; width: fit-content; min-height: 44px; box-sizing: border-box; padding: 0 20px; border: 1px solid #8a6630; border-radius: 6px; font-size: 16px; font-weight: 500; color: #8a6630">Request access</a></div>
+</div>
 
+<div class="proj">
 <div class="card">
 <img class="base" src="assets/projects/srmg-data.webp" alt="">
 <img class="hover-img" loading="lazy" src="assets/projects/srmg-data-hover.webp" alt="">
 <p class="hover-title"><span>SRMG Data Strategy<br>ML Recommendation Engine &amp; Executive Business Case</span><a class="req-btn" href="mailto:nashwaanassar@gmail.com?subject=Access%20request%3A%20SRMG%20Data%20Strategy%20case%20study&amp;body=Hi%20Nashwa%2C%0A%0AI%27d%20like%20to%20request%20access%20to%20your%20SRMG%20Data%20Strategy%20case%20study.%0A%0AName%3A%0ACompany%3A%0ARole%3A%0A">Request access</a></p>
 <div class="tags"><p class="tag-row"><span class="pill">Digital Media &amp; Newsroom</span></p><p class="tag-row"><span class="pill">Data Strategy</span></p></div>
+</div>
+<div class="card-info"><h2 style="margin: 0; font-family: Khand, 'Arial Narrow', sans-serif; font-weight: 500; font-size: 24px; line-height: 1.2; color: #14131a">SRMG Data Strategy<br>ML Recommendation Engine &amp; Executive Business Case</h2><a class="info-btn" href="mailto:nashwaanassar@gmail.com?subject=Access%20request%3A%20SRMG%20Data%20Strategy%20case%20study&amp;body=Hi%20Nashwa%2C%0A%0AI%27d%20like%20to%20request%20access%20to%20your%20SRMG%20Data%20Strategy%20case%20study.%0A%0AName%3A%0ACompany%3A%0ARole%3A%0A" style="display: flex; align-items: center; gap: 8px; width: fit-content; min-height: 44px; box-sizing: border-box; padding: 0 20px; border: 1px solid #8a6630; border-radius: 6px; font-size: 16px; font-weight: 500; color: #8a6630">Request access</a></div>
 </div>
 
 </div>
@@ -157,8 +188,14 @@ a:focus-visible,button:focus-visible{outline:2px solid #8a6630;outline-offset:3p
   function setMenu(open){menu.hidden=!open;hdr.classList.toggle('menu-open',open);btn.setAttribute('aria-expanded',open?'true':'false');btn.setAttribute('aria-label',open?'Close menu':'Open menu');}
   btn.addEventListener('click',function(){setMenu(menu.hidden);});
   menu.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){setMenu(false);});});
-  function hdrUpdate(){var compact=window.scrollY>40;hdr.classList.toggle('compact',compact);if(!compact&&!menu.hidden&&window.innerWidth>760)setMenu(false);}
+  function hdrUpdate(){var compact=window.scrollY>40;hdr.classList.toggle('compact',compact);if(!compact&&!menu.hidden&&window.innerWidth>640)setMenu(false);}
 
+
+  var mqT=window.matchMedia('(max-width: 1024px)');
+  document.querySelectorAll('.card').forEach(function(c){
+    c.addEventListener('click',function(e){if(!mqT.matches||e.target.closest('.req-btn'))return;e.preventDefault();c.classList.toggle('flipped');});
+  });
+  mqT.addEventListener('change',function(e){if(!e.matches)document.querySelectorAll('.card.flipped').forEach(function(c){c.classList.remove('flipped');});});
   window.addEventListener('scroll',hdrUpdate,{passive:true}); window.addEventListener('resize',hdrUpdate); hdrUpdate();
 })();</script>
 </body>

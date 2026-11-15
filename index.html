@@ -37,20 +37,42 @@ a:focus-visible{outline:2px solid #bb935c;outline-offset:3px;border-radius:4px}
 .dd:hover .dd-chev,.dd:focus-within .dd-chev{transform:rotate(180deg)}
 .dd-menu a:hover,.dd-menu a:focus-visible{background:rgba(255,255,255,0.07);color:#ffffff}
 @media (prefers-reduced-motion: reduce){.portrait img{transition:none}.dd-chev{transition:none}}
+.menu-btn,.hero-scrim,.site-foot{display:none}
+.menu-btn .ic-close,.menu-open .menu-btn .ic-open{display:none}
+.menu-open .menu-btn .ic-close{display:block}
+#site-menu[hidden]{display:none !important}
+#site-menu a:hover{background:rgba(255,255,255,0.07);color:#ffffff}
+.menu-btn:hover{background:rgba(255,255,255,0.12) !important}
+/* ---------- tablet: 641-1180 ---------- */
 @media (max-width: 1180px){
 .hero-head{padding:24px 32px 0 !important}
-.hero-body{padding:8px 32px 40px !important;min-height:0 !important}
+.portrait{position:absolute !important;top:80px !important;right:0 !important;height:560px !important;width:auto !important;margin:0 !important}
+.hero-scrim{display:block;position:absolute;z-index:1;top:80px;left:0;width:72%;height:560px;background:linear-gradient(90deg,rgba(24,23,27,0.85) 0%,rgba(24,23,27,0.5) 45%,rgba(24,23,27,0) 80%);pointer-events:none}
+.hero-body{flex:none !important;justify-content:flex-start !important;min-height:0 !important;max-width:none !important;padding:0 32px 40px !important;gap:32px !important}
+.hero-copy{height:480px;box-sizing:border-box;padding:32px 0;justify-content:center;margin-bottom:48px}
+.eyebrow{font-size:14px !important}
+.hero-h1{font-size:64px !important;max-width:520px !important}
 .hero-foot{padding:0 32px 40px !important}
-.portrait{position:relative !important;height:440px !important;width:auto !important;max-width:100%;align-self:flex-end;margin-top:-8px;top:auto !important;right:auto !important}
+.proof{max-width:none !important}
+.site-foot{display:flex;padding:24px 32px}
 }
+/* ---------- mobile: up to 640 ---------- */
 @media (max-width: 640px){
-.hero-head{padding:16px 16px 0 !important;gap:12px !important}
-.hero-nav{margin-left:0 !important;gap:4px 24px !important;width:100%;order:3}
-.head-cta{margin-left:auto !important}
-.hero-body{padding:8px 16px 32px !important}
-.hero-foot{padding:0 16px 32px !important}
-.proof{grid-template-columns:repeat(2, minmax(0, 1fr)) !important;column-gap:16px !important;row-gap:20px !important}
-.portrait{height:340px !important}
+.hero-head{height:60px;box-sizing:border-box;flex-wrap:nowrap !important;gap:12px !important;padding:4px 16px !important}
+.hero-head .brand svg{width:40px;height:45px}
+.brand-name,.hero-nav,.head-cta{display:none !important}
+.menu-btn{display:flex}
+.portrait{top:60px !important;height:340px !important;width:270px !important}
+.hero-scrim{top:60px;width:290px;height:340px;background:linear-gradient(90deg,rgba(24,23,27,0.8) 0%,rgba(24,23,27,0.45) 45%,rgba(24,23,27,0) 75%)}
+.hero-body{padding:0 16px 32px !important;gap:28px !important}
+.hero-copy{height:290px;padding:24px 0;gap:16px !important;margin-bottom:30px}
+.eyebrow{font-size:10px !important;letter-spacing:-0.01em !important;line-height:1.5 !important}
+.hero-h1{font-size:36px !important;line-height:1.4 !important;letter-spacing:-0.005em !important;max-width:274px !important}
+.hero-lede{font-size:19px !important}
+.hero-foot{padding:0 16px 40px !important}
+.proof{grid-template-columns:repeat(2, minmax(0, 1fr)) !important;column-gap:16px !important;row-gap:24px !important}
+.proof dt{font-size:42px !important}
+.site-foot{padding:20px 16px;font-size:14px}
 }
 </style>
 </head>
@@ -58,9 +80,9 @@ a:focus-visible{outline:2px solid #bb935c;outline-offset:3px;border-radius:4px}
 <main id="top" style="position: relative; min-height: 100vh; overflow: hidden; display: flex; flex-direction: column; box-sizing: border-box; background-color: #18171b; background-image: radial-gradient(1000px 1100px at calc(100% - 180px) 25%, #3d3e46 0%, #383941 16%, #27272d 55%, #1e1e22 74%, #18171b 92%); font-family: 'IBM Plex Sans Condensed', 'Arial Narrow', sans-serif; color: #c8c9d2">
 
 <header class="hero-head" style="position: relative; z-index: 5; display: flex; flex-wrap: wrap; align-items: center; gap: 24px; padding: 20px 200px 0 72px">
-<a href="index.html" style="display: flex; align-items: center; gap: 14px; min-height: 44px; color: #e2e3ea">
+<a class="brand" href="index.html" aria-label="Nashwa Nassar, home" style="display: flex; align-items: center; gap: 14px; min-height: 44px; color: #e2e3ea">
 <svg width="48" height="54" viewBox="0 0 47 53" aria-hidden="true" style="display: block; flex: none"><rect width="47" height="53" rx="5" fill="#222127"></rect><path fill="#bb935c" d="M39.06 10.38 L36.94 9.69 L35.56 9.69 L33.62 10.00 L30.56 11.12 L27.88 12.38 L25.06 14.00 L20.56 17.12 L17.00 20.00 L12.75 23.81 L11.69 24.44 L11.44 24.19 L12.94 20.44 L15.25 16.81 L16.62 15.25 L18.38 12.81 L18.75 11.88 L18.56 10.75 L17.81 10.19 L17.00 10.19 L15.50 11.00 L14.00 12.50 L12.19 15.12 L10.06 19.00 L8.19 23.62 L7.00 28.25 L7.12 30.19 L7.81 31.12 L8.50 31.50 L9.19 31.44 L10.06 30.75 L12.50 26.94 L16.94 22.50 L22.50 18.25 L27.25 15.25 L31.75 13.00 L34.88 11.88 L35.81 11.94 L36.12 12.31 L35.81 13.19 L30.88 18.50 L22.06 27.44 L17.31 33.19 L15.06 36.56 L14.12 38.62 L13.50 40.69 L13.38 42.19 L14.12 44.50 L14.69 45.25 L16.38 46.75 L18.06 47.25 L19.88 47.25 L21.50 46.69 L22.56 45.81 L23.31 44.00 L23.31 43.12 L22.94 42.12 L21.75 40.88 L20.00 40.25 L19.38 39.69 L19.44 38.88 L21.19 35.19 L23.25 32.19 L27.25 27.62 L32.06 23.44 L38.75 18.69 L40.88 16.62 L41.88 15.38 L42.19 14.44 L42.19 13.75 L41.94 13.06 L40.50 11.50 Z"></path></svg>
-<span style="font-size: 22px; font-weight: 500; letter-spacing: 0.01em">Nashwa Nassar</span>
+<span class="brand-name" style="font-size: 22px; font-weight: 500; letter-spacing: 0.01em">Nashwa Nassar</span>
 </a>
 <nav class="hero-nav" aria-label="Main" style="display: flex; flex-wrap: wrap; align-items: center; gap: 8px 24px; margin-left: auto; font-size: 16px">
 <a href="index.html" aria-current="page" style="display: flex; align-items: center; min-height: 44px; font-weight: 600; color: #bb935c">About</a>
@@ -76,19 +98,26 @@ a:focus-visible{outline:2px solid #bb935c;outline-offset:3px;border-radius:4px}
 </div>
 </nav>
 <a class="hero-cta head-cta" href="https://calendly.com/nashwaanassar/30min" target="_blank" rel="noopener" style="display: flex; align-items: center; min-height: 44px; box-sizing: border-box; padding: 0 18px; margin-left: 20px; border: 1px solid #bb935c; border-radius: 6px; font-size: 18px; font-weight: 600; color: #bb935c">Let’s talk</a>
+<button type="button" class="menu-btn" aria-label="Open menu" aria-expanded="false" aria-controls="site-menu" style="align-items: center; justify-content: center; width: 44px; height: 44px; flex: none; margin-left: auto; padding: 0; border: 1px solid rgba(212, 214, 224, 0.2); border-radius: 10px; background: rgba(255, 255, 255, 0.04); color: #e2e3ea; cursor: pointer; transition: background 0.2s ease"><svg class="ic-open" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16"></path><path d="M4 12h16"></path><path d="M4 17h16"></path></svg><svg class="ic-close" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12"></path><path d="M18 6L6 18"></path></svg></button>
+<nav id="site-menu" hidden aria-label="Main" style="position: absolute; top: calc(100% + 8px); left: 16px; right: 16px; box-sizing: border-box; display: flex; flex-direction: column; padding: 12px; border-radius: 14px; background: rgba(24, 23, 27, 0.96); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); border: 1px solid rgba(212, 214, 224, 0.12); box-shadow: 0 24px 48px rgba(0, 0, 0, 0.4)">
+<a href="index.html" aria-current="page" style="display: flex; align-items: center; min-height: 48px; padding: 0 12px; border-radius: 8px; font-size: 18px; font-weight: 600; color: #bb935c">About</a>
+<a href="projects.html" style="display: flex; align-items: center; min-height: 48px; padding: 0 12px; border-radius: 8px; font-size: 18px; color: #c8c9d2">Projects</a>
+<a href="https://calendly.com/nashwaanassar/30min" target="_blank" rel="noopener" style="display: flex; align-items: center; justify-content: center; min-height: 48px; margin-top: 8px; border: 1px solid #bb935c; border-radius: 8px; font-size: 17px; font-weight: 600; color: #bb935c">Let’s talk</a>
+</nav>
 </header>
 
 <div class="portrait" style="position: absolute; top: -5px; right: -17px; height: 903px; z-index: 1; width: 815px">
 <img src="portrait.webp" alt="Low-poly portrait of Nashwa Nassar" width="1178" height="1335" style="display: block; height: 100%; width: auto">
 <img class="p-color" src="portrait-color.webp" alt="" aria-hidden="true" width="1178" height="1335" style="display: block; height: 100%; width: auto">
 </div>
+<div class="hero-scrim" aria-hidden="true"></div>
 
 <section class="hero-body" style="position: relative; z-index: 2; flex: 1; display: flex; flex-direction: column; justify-content: center; gap: 36px; box-sizing: border-box; max-width: 1108px; min-height: 589px; padding: 32px 72px 40px">
-<div style="display: flex; flex-direction: column; gap: 22px">
-<p style="margin: 0; font-size: 16px; font-weight: 300; letter-spacing: 0.06em; line-height: 1.4; color: #bb935c">Senior Manager, Experience Design at SRMG <span aria-hidden="true" style="color: #6f7079">·</span> <span style="color: #c8c9d2">Formerly IBM iX</span></p>
-<h1 style="margin: 0; max-width: 958px; font-family: Khand, 'Arial Narrow', sans-serif; font-weight: 600; font-size: clamp(40px, 6.4vw, 104px); line-height: 1.04; letter-spacing: 0.005em; text-transform: uppercase; color: #d4d6e0">Simplify complexity<br>Turn ideas into <span style="color: #bb935c">impact</span></h1>
+<div class="hero-copy" style="display: flex; flex-direction: column; gap: 22px">
+<p class="eyebrow" style="margin: 0; font-size: 16px; font-weight: 300; letter-spacing: 0.06em; line-height: 1.4; color: #bb935c">Senior Manager, Experience Design at SRMG <span aria-hidden="true" style="color: #6f7079">·</span> <span style="color: #c8c9d2">Formerly IBM iX</span></p>
+<h1 class="hero-h1" style="margin: 0; max-width: 958px; font-family: Khand, 'Arial Narrow', sans-serif; font-weight: 600; font-size: clamp(40px, 6.4vw, 104px); line-height: 1.04; letter-spacing: 0.005em; text-transform: uppercase; color: #d4d6e0">Simplify complexity<br>Turn ideas into <span style="color: #bb935c">impact</span></h1>
 </div>
-<p style="margin: 0; max-width: 720px; font-size: clamp(19px, 1.7vw, 26px); font-weight: 300; line-height: 1.5; color: #c8c9d2">I connect business goals, customer and users needs, and technology to solve the right problems.</p>
+<p class="hero-lede" style="margin: 0; max-width: 720px; font-size: clamp(19px, 1.7vw, 26px); font-weight: 300; line-height: 1.5; color: #c8c9d2">I connect business goals, customer and users needs, and technology to solve the right problems.</p>
 <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 16px 32px">
 <a class="hero-cta" href="projects.html" style="display: flex; align-items: center; min-height: 44px; box-sizing: border-box; padding: 0 22px; border: 1px solid #bb935c; border-radius: 6px; font-size: 18px; color: #bb935c">Projects</a>
 <a href="https://calendly.com/nashwaanassar/30min" target="_blank" rel="noopener" style="display: flex; align-items: center; gap: 10px; min-height: 44px; font-size: 18px; color: #d4d6e0"><span>Let’s talk</span><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M17 19H4V9H17V19Z"/><path d="M17 9H19C20.6569 9 22 10.3431 22 12C22 13.6569 20.6569 15 19 15H17"/><path d="M1 22H22"/><path d="M8.5 6C7.39543 6 6.5 5.10457 6.5 4C6.5 2.89543 7.39543 2 8.5 2"/><path d="M14.5 6C13.3954 6 12.5 5.10457 12.5 4C12.5 2.89543 13.3954 2 14.5 2"/></svg></a>
@@ -116,6 +145,21 @@ a:focus-visible{outline:2px solid #bb935c;outline-offset:3px;border-radius:4px}
 </dl>
 <p class="site-notice" style="margin: 28px 0 0; max-width: 800px; font-size: 13px; line-height: 1.5; color: #8a8b94">This site uses Microsoft Clarity to see how visitors use it. <a href="privacy.html" style="color: #a3a4ad; text-decoration: underline; text-underline-offset: 2px">Privacy</a></p>
 </footer>
+<footer class="site-foot" style="flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 8px 16px; font-size: 15px; color: #8d8e97; background: #18171b; border-top: 1px solid rgba(212, 214, 224, 0.08)">
+<a href="index.html" style="display: flex; align-items: center; min-height: 44px; color: #c8c9d2">Home</a>
+<span>© 2026 Nashwa Nassar · <a href="privacy.html" style="color: #a3a4ad; text-decoration: underline; text-underline-offset: 2px">Privacy</a></span>
+<a href="https://www.linkedin.com/in/nashwanassar/" target="_blank" rel="noopener noreferrer" style="display: flex; align-items: center; min-height: 44px; color: #c8c9d2">LinkedIn</a>
+</footer>
 </main>
+<script>
+(function(){
+  var head=document.querySelector('.hero-head'), btn=head.querySelector('.menu-btn'), menu=document.getElementById('site-menu');
+  function setMenu(open){menu.hidden=!open;head.classList.toggle('menu-open',open);btn.setAttribute('aria-expanded',open?'true':'false');btn.setAttribute('aria-label',open?'Close menu':'Open menu');}
+  btn.addEventListener('click',function(){setMenu(menu.hidden);});
+  menu.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){setMenu(false);});});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape'&&!menu.hidden){setMenu(false);btn.focus();}});
+  window.matchMedia('(max-width: 640px)').addEventListener('change',function(e){if(!e.matches)setMenu(false);});
+})();
+</script>
 </body>
 </html>

@@ -36,34 +36,8 @@ a:hover{color:#000000}
 .next-title{transition:letter-spacing .5s ease}
 .next-title:hover{letter-spacing:0.03em}
 @media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}.next-title{transition:none}}
-@media (max-width: 900px){
-.cs-carousel{margin-left:-32px !important}
-.cs-text{grid-column:1 / -1 !important}
-.cs-side{display:none !important}
-.cs-wrap{padding:0 32px !important}
-.cs-stats{grid-template-columns:repeat(1, minmax(0, 1fr)) !important;row-gap:28px !important}
-}
-@media (max-width: 760px){
-.ds-grid{grid-template-columns:repeat(3, minmax(0, 1fr)) !important}
-.ad-grid{grid-template-columns:repeat(3, minmax(0, 1fr)) !important;gap:24px 12px !important}
-.lb-scroll{padding:0 16px 96px !important}
-.lb-prev,.lb-next{top:auto !important;bottom:20px !important;transform:none !important}
-.lb-prev{left:16px !important}
-.lb-next{right:16px !important}
-.cs-carousel{margin-left:-16px !important}
-.cs-cap,.cs-bar{left:16px !important;right:16px !important}
-.cs-eyebrow{left:16px !important;top:20px !important}
-.cs-contain{padding:24px 16px 132px !important}
-.cs-prev{left:8px !important}
-.cs-next{right:8px !important}
-.hdr{padding-left:16px !important;padding-right:16px !important}
-.menu-panel{right:16px !important;left:16px !important;width:auto !important}
-.hdr-nav,.hdr-cta{display:none !important}
-.menu-btn{display:flex !important}
-.cs-wrap{padding:0 16px !important}
-.hero{padding:104px 16px 24px !important}
-.hero-meta-r{display:none !important}
-}
+
+
 
 .hdr.compact{padding-top:6px !important;padding-bottom:6px !important;box-shadow:0 6px 24px rgba(20,19,26,0.08) !important}
 .hdr.compact .hdr-nav,.hdr.compact .hdr-cta{display:none !important}
@@ -76,7 +50,74 @@ a:focus-visible,button:focus-visible{outline:2px solid #8a6630;outline-offset:3p
 #lb[hidden]{display:none !important}
 [data-chapter].ch-hidden{opacity:0 !important;transform:translateY(40px) !important}
 .toc-link.active{color:#14131a !important}
-@media (max-width: 760px){.hero-mark{left:16px !important;width:160px !important}}
+
+
+.sl-split,.only-mob{display:none}
+/* ---------- tablet + mobile: up to 1024 ---------- */
+@media (max-width: 1024px){
+.hdr{padding-left:32px !important;padding-right:32px !important}
+.menu-panel{right:32px !important}
+.hero{padding:104px 32px 32px !important}
+.hero-mark{left:32px !important}
+.cs-wrap{padding:0 32px !important}
+.cs-grid{display:block !important}
+.cs-text{max-width:720px;margin:0 auto}
+.cs-side{display:none !important}
+.cs-stats{column-gap:20px !important}
+.cs-carousel{width:100vw !important;margin:16px 0 8px calc(50% - 50vw) !important;height:min(72vh, 640px) !important;min-height:480px !important}
+.sl-desk{display:none !important}
+.sl-split{display:block}
+.cs-contain{padding:40px 32px 140px !important}
+.cs-cap{left:32px !important;right:32px !important}
+.cs-bar{left:32px !important;right:32px !important}
+.cs-prev{left:16px !important}
+.cs-next{right:16px !important}
+.roadmap{width:100% !important;height:auto !important;aspect-ratio:635 / 358}
+.next-sec{margin-top:120px !important;padding:96px 32px 80px !important}
+.site-foot{padding:24px 32px !important}
+}
+/* ---------- mobile: up to 640 ---------- */
+@media (max-width: 640px){
+.hdr{height:64px !important;padding:0 16px !important}
+.hdr-nav,.hdr-cta{display:none !important}
+.menu-btn{display:flex !important;width:44px !important;height:44px !important}
+.menu-panel{left:16px !important;right:16px !important;width:auto !important}
+.hero{height:75vh;height:75svh;min-height:0 !important;padding:104px 16px 24px !important}
+.hero-bg{object-position:77.43% 50% !important}
+.hero-grad{display:none}
+.hero-mark{left:16px !important;top:auto !important;bottom:84px;width:108px !important}
+.hero-meta-r{display:none !important}
+.cs-wrap{padding:0 16px !important}
+#intro{padding-top:56px !important;gap:24px !important}
+.intro-lede{font-size:21px !important;line-height:1.5 !important}
+.cs-stats{grid-template-columns:1fr !important;row-gap:24px !important;margin-top:8px !important}
+[data-chapter]{padding-top:64px !important;gap:20px !important}
+.cs-text p[aria-hidden="true"]{font-size:64px !important}
+.cs-text h2{font-size:30px !important}
+.cs-text h3{font-size:22px !important}
+.cs-text p[style*="font-size: 19px"]{font-size:17px !important;line-height:1.6 !important}
+.cs-text ul[style*="font-size: 18px"]{font-size:17px !important}
+.ad-grid,.ds-grid{display:flex !important;gap:12px !important;overflow-x:auto;scroll-snap-type:x mandatory;margin:0 -16px;padding:0 16px 4px;scroll-padding:0 16px;scrollbar-width:none}
+.ad-grid::-webkit-scrollbar,.ds-grid::-webkit-scrollbar{display:none}
+.ad-tile{flex:0 0 148px;scroll-snap-align:start}
+.ds-tile{flex:0 0 112px;scroll-snap-align:start}
+.only-desk{display:none}
+.only-mob{display:inline}
+.cs-carousel{height:480px !important;min-height:0 !important}
+.cs-contain{padding:24px 16px 132px !important}
+.cs-cap{left:16px !important;right:16px !important;bottom:84px !important;font-size:18px !important}
+.cs-bar{left:16px !important;right:16px !important;bottom:24px !important}
+.cs-prev{left:8px !important}
+.cs-next{right:8px !important}
+.cs-nav{width:44px !important;height:44px !important}
+.next-sec{margin-top:96px !important;padding:72px 16px 64px !important}
+.next-title{font-size:64px !important}
+.site-foot{padding:20px 16px !important;font-size:14px !important;gap:8px 16px !important}
+.lb-scroll{padding:0 16px 96px !important}
+.lb-prev,.lb-next{top:auto !important;bottom:20px !important;transform:none !important}
+.lb-prev{left:16px !important}
+.lb-next{right:16px !important}
+}
 </style>
 </head>
 <body>
@@ -116,9 +157,9 @@ a:focus-visible,button:focus-visible{outline:2px solid #8a6630;outline-offset:3p
 </header>
 
 <section id="top" class="hero" aria-label="GOAT" style="position: relative; overflow: hidden; display: flex; flex-direction: column; align-items: center; box-sizing: border-box; min-height: min(100vh, 900px); padding: 120px 72px 36px; background: #14131a">
-<img src="assets/goat/hero.webp" alt="" aria-hidden="true" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center 40%">
-<div aria-hidden="true" style="position: absolute; inset: 0; background: linear-gradient(180deg, rgba(20, 19, 26, 0.45) 0%, rgba(20, 19, 26, 0.12) 38%, rgba(20, 19, 26, 0.18) 62%, rgba(20, 19, 26, 0.7) 100%)"></div>
-<div aria-hidden="true" style="position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; font-family: Khand, 'Arial Narrow', sans-serif; font-weight: 700; font-size: clamp(96px, 17vw, 260px); line-height: 0.86; text-transform: uppercase; text-align: center; color: rgba(20, 19, 26, 0.05); pointer-events: none"><span><br></span><img src="assets/goat/goat-wordmark.png" alt="" width="1388" height="594" class="hero-mark" style="position: absolute; left: 82px; top: 47.5%; width: 251px; height: auto"></div>
+<img class="hero-bg" src="assets/goat/hero.webp" alt="" aria-hidden="true" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center 40%">
+<div class="hero-grad" aria-hidden="true" style="position: absolute; inset: 0; background: linear-gradient(180deg, rgba(20, 19, 26, 0.45) 0%, rgba(20, 19, 26, 0.12) 38%, rgba(20, 19, 26, 0.18) 62%, rgba(20, 19, 26, 0.7) 100%)"></div>
+<div aria-hidden="true" style="position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; font-family: Khand, 'Arial Narrow', sans-serif; font-weight: 700; font-size: clamp(96px, 17vw, 260px); line-height: 0.86; text-transform: uppercase; text-align: center; color: rgba(20, 19, 26, 0.05); pointer-events: none"><span><br></span><img src="assets/goat/goat-wordmark.png" alt="" width="1388" height="594" class="hero-mark" style="position: absolute; left: 82px; top: 47.5%; width: 251px; height: auto"></div><div aria-hidden="true" style="position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; font-family: Khand, 'Arial Narrow', sans-serif; font-weight: 700; font-size: clamp(96px, 17vw, 260px); line-height: 0.86; text-transform: uppercase; text-align: center; color: rgba(20, 19, 26, 0.05); pointer-events: none"><span><br></span></div>
 
 
 <div class="hero-meta" style="position: relative; z-index: 2; width: 100%; margin-top: auto; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px; margin-bottom: 0px">
@@ -128,11 +169,11 @@ a:focus-visible,button:focus-visible{outline:2px solid #8a6630;outline-offset:3p
 </section>
 
 <div class="cs-wrap" style="padding: 0 72px; opacity: 1; background-color: #F7F7F7">
-<div style="display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); column-gap: 24px">
+<div class="cs-grid" style="display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); column-gap: 24px">
 
 <div class="cs-text" style="grid-column: 3 / span 6">
 <section id="intro" aria-label="Summary" style="display: flex; flex-direction: column; gap: 28px; padding-top: 120px">
-<p style="margin: 0; font-size: clamp(21px, 1.8vw, 25px); font-weight: 400; line-height: 1.55; color: #22212a"><span></span><span></span><span style="white-space: pre-wrap">Translating SRMG's editorial credibility into digital audience engagement and monetisation</span></p>
+<p class="intro-lede" style="margin: 0; font-size: clamp(21px, 1.8vw, 25px); font-weight: 400; line-height: 1.55; color: #22212a"><span></span><span></span><span style="white-space: pre-wrap">Translating SRMG's editorial credibility into digital audience engagement and monetisation</span></p>
 <a href="https://campaignme.com/srmg-launches-g-o-a-t-data-driven-sports-app-built-for-the-ai-age/" target="_blank" rel="noopener noreferrer" style="display: flex; align-items: center; gap: 10px; min-height: 44px; width: fit-content; font-size: 18px; font-weight: 500; color: #14131a"><span>About GOAT</span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7"></path><path d="M8 7h9v9"></path></svg></a>
 <dl class="cs-stats" style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); column-gap: 28px; margin: 24px 0 0; padding-top: 28px; border-top: 1px solid rgba(20, 19, 26, 0.12)">
 <div style="display: flex; flex-direction: column-reverse; justify-content: flex-end; gap: 6px">
@@ -155,7 +196,7 @@ a:focus-visible,button:focus-visible{outline:2px solid #8a6630;outline-offset:3p
 <h2 id="ch-idea-h" style="margin: 0; font-size: clamp(32px, 3vw, 44px); font-weight: 500; line-height: 1.15; color: #14131a">From hackathon concept to product</h2>
 <p style="margin: 0; font-size: 19px; font-weight: 300; line-height: 1.65; color: #4a4b57">curates content from SRMG’s most trusted brands, including Arriyadiah, Asharq Al Awsat, Asharq Sports, and Sport 24, giving fans access to reporting, analysis, and match coverage from the region’s most established newsrooms through one unified product experience.</p>
 <h3 style="margin: 12px 0 0; font-size: 24px; font-weight: 500; line-height: 1.3; color: #22212a">The opportunity</h3>
-<p style="margin: 0; font-size: 19px; font-weight: 300; line-height: 1.65; color: #4a4b57">New monetisation opportunities aligned with fan behavior and premium engagement. These include intelligent sponsorship integrations, data-driven brand partnerships, and premium experiences built around key moments and competitions.</p><div style="display: flex; flex-direction: column; gap: 16px; box-sizing: border-box"><img src="assets/goat/hackathon-boards.webp" alt="Hackathon boards: opportunity, benchmarking, personas, product roadmap, ideation, user research, prioritisation and agile delivery" width="2560" height="996" style="max-width: 100%; height: auto; display: block; object-fit: cover; width: 100%; aspect-ratio: 2560 / 996"><img src="assets/goat/widget-ideation.webp" alt="Widget ideation: live score, AI audio article, shorts, AI summary, community reactions and Apple Watch sync" width="2560" height="1440" style="max-width: 100%; height: auto; display: block; object-fit: cover; width: 100%; aspect-ratio: 2560 / 1440"></div><img src="assets/goat/experience-plan-2026.webp" alt="GOAT Product Experience Plan 2026: release timeline from February to July plus a future north star, with features tagged by community, gamification and monetisation" style="display: block; height: 358px; box-sizing: border-box; padding: 48px 72px 132px; object-fit: cover; object-position: 0% 0%; width: 635px; max-width: 100%; padding-top: 0px; padding-bottom: 0px; padding-right: 0px; padding-left: 0px">
+<p style="margin: 0; font-size: 19px; font-weight: 300; line-height: 1.65; color: #4a4b57">New monetisation opportunities aligned with fan behavior and premium engagement. These include intelligent sponsorship integrations, data-driven brand partnerships, and premium experiences built around key moments and competitions.</p><div style="display: flex; flex-direction: column; gap: 16px; box-sizing: border-box"><img src="assets/goat/hackathon-boards.webp" alt="Hackathon boards: opportunity, benchmarking, personas, product roadmap, ideation, user research, prioritisation and agile delivery" width="2560" height="996" style="max-width: 100%; height: auto; display: block; object-fit: cover; width: 100%; aspect-ratio: 2560 / 996"><img src="assets/goat/widget-ideation.webp" alt="Widget ideation: live score, AI audio article, shorts, AI summary, community reactions and Apple Watch sync" width="2560" height="1440" style="max-width: 100%; height: auto; display: block; object-fit: cover; width: 100%; aspect-ratio: 2560 / 1440"></div><img class="roadmap" src="assets/goat/experience-plan-2026.webp" alt="GOAT Product Experience Plan 2026: release timeline from February to July plus a future north star, with features tagged by community, gamification and monetisation" style="display: block; height: 358px; box-sizing: border-box; padding: 48px 72px 132px; object-fit: cover; object-position: 0% 0%; width: 635px; max-width: 100%; padding-top: 0px; padding-bottom: 0px; padding-right: 0px; padding-left: 0px">
 </section>
 <section id="ch-role" data-chapter="" aria-labelledby="ch-role-h" style="display: flex; flex-direction: column; gap: 22px; padding-top: 120px; opacity: 1; transform: translateY(0px); transition: opacity 0.7s ease, transform 0.7s ease">
 <p aria-hidden="true" style="margin: 0; font-family: Khand, 'Arial Narrow', sans-serif; font-weight: 600; font-size: 88px; line-height: 0.9; color: #14131a">02</p>
@@ -183,7 +224,7 @@ a:focus-visible,button:focus-visible{outline:2px solid #8a6630;outline-offset:3p
 <button type="button" class="ad-tile" data-lb="ads" data-lb-i="3" aria-label="Enlarge the sponsored match centre screen" style="display: flex; flex-direction: column; gap: 10px; padding: 0; border: 0; background: transparent; text-align: left; cursor: zoom-in; font: inherit"><span style="display: block; width: 100%; aspect-ratio: 300 / 650; overflow: hidden; border-radius: 12px; background: #14131a; border: 1px solid rgba(20, 19, 26, 0.1)"><img src="assets/goat/ad-match-tile.webp" alt="" style="display: block; width: 100%; height: 100%; object-fit: cover; object-position: top; transition: transform 0.4s ease"></span><span style="display: flex; flex-direction: column; gap: 2px"><span style="font-size: 15px; font-weight: 500; color: #22212a">Sponsored match centre</span><span style="font-size: 14px; line-height: 1.4; color: #6b6c78">Sponsor credit on live match events</span></span></button>
 <button type="button" class="ad-tile" data-lb="ads" data-lb-i="4" aria-label="Enlarge the bottom banner screen" style="display: flex; flex-direction: column; gap: 10px; padding: 0; border: 0; background: transparent; text-align: left; cursor: zoom-in; font: inherit"><span style="display: block; width: 100%; aspect-ratio: 300 / 650; overflow: hidden; border-radius: 12px; background: #14131a; border: 1px solid rgba(20, 19, 26, 0.1)"><img src="assets/goat/ad-banner-tile.webp" alt="" style="display: block; width: 100%; height: 100%; object-fit: cover; object-position: top; transition: transform 0.4s ease"></span><span style="display: flex; flex-direction: column; gap: 2px"><span style="font-size: 15px; font-weight: 500; color: #22212a">Bottom banner</span><span style="font-size: 14px; line-height: 1.4; color: #6b6c78">One persistent slot above the tab bar</span></span></button>
 </div>
-<figcaption style="font-size: 14px; line-height: 1.5; color: #6b6c78">Contextual ad formats in the GOAT app. Select a screen to enlarge it.</figcaption>
+<figcaption style="font-size: 14px; line-height: 1.5; color: #6b6c78">Contextual ad formats in the GOAT app. <span class="only-desk">Select a screen to enlarge it.</span><span class="only-mob">Swipe for more and tap a screen to enlarge it.</span></figcaption>
 </figure>
 <p style="margin: 0; font-size: 17px; font-weight: 300; line-height: 1.6; color: #6b6c78">Still open: how long the same ad can repeat across screens, which we’re agreeing with the SMS and tech teams.</p>
 </section>
@@ -196,25 +237,57 @@ a:focus-visible,button:focus-visible{outline:2px solid #8a6630;outline-offset:3p
 <div id="cs-track" style="display: flex; height: 100%; transform: translateX(0%); transition: transform 0.7s cubic-bezier(0.2, 0.7, 0.2, 1)">
 
 
-<div data-slide="" role="group" aria-roledescription="slide" aria-label="1 of 6" style="position: relative; flex: 0 0 100%; height: 100%">
+<div data-slide="" class="sl-desk" role="group" aria-roledescription="slide" aria-label="1 of 6" style="position: relative; flex: 0 0 100%; height: 100%">
 <img class="cs-contain" src="assets/goat/slide-main-features.webp" alt="Six GOAT app screens in Arabic: home with today's top matches, GOAT games and news; competitions and the news feed; a club page with the knockout bracket; the club's Moments video grid; club news with most-followed players; and a match poll with a fan vote" style="display: block; width: 100%; height: 100%; box-sizing: border-box; padding: 64px 72px 140px; object-fit: contain">
 <p class="cs-cap" style="position: absolute; left: 72px; bottom: 92px; margin: 0; font-size: 22px; font-weight: 500; color: #ffffff">Main features</p>
+</div>
+<div data-slide="" class="sl-split" role="group" aria-roledescription="slide" aria-label="1 of 6" style="position: relative; flex: 0 0 100%; height: 100%">
+<img class="cs-contain" src="assets/goat/slide-main-features-1.webp" alt="Three GOAT app screens in Arabic: home with today's top matches, GOAT games and news; competitions and the news feed; and a club page with the knockout bracket" loading="lazy" style="display: block; width: 100%; height: 100%; box-sizing: border-box; padding: 64px 72px 140px; object-fit: contain">
+<p class="cs-cap" style="position: absolute; left: 72px; bottom: 92px; margin: 0; font-size: 22px; font-weight: 500; color: #ffffff">Main features: home &amp; competitions</p>
+</div>
+<div data-slide="" class="sl-split" role="group" aria-roledescription="slide" aria-label="1 of 6" style="position: relative; flex: 0 0 100%; height: 100%">
+<img class="cs-contain" src="assets/goat/slide-main-features-2.webp" alt="Three GOAT app screens in Arabic: the club's Moments video grid; club news with most-followed players; and a match poll with a fan vote" loading="lazy" style="display: block; width: 100%; height: 100%; box-sizing: border-box; padding: 64px 72px 140px; object-fit: contain">
+<p class="cs-cap" style="position: absolute; left: 72px; bottom: 92px; margin: 0; font-size: 22px; font-weight: 500; color: #ffffff">Main features: clubs &amp; fan polls</p>
 </div>
 <div data-slide="" role="group" aria-roledescription="slide" aria-label="2 of 6" style="position: relative; flex: 0 0 100%; height: 100%">
 <img class="cs-contain" src="assets/goat/slide-daily-quizzes.webp" alt="Three GOAT daily quiz start screens in Arabic: World Cup history, Saudi Arabia at the World Cup, and Golden Boot winners" style="display: block; width: 100%; height: 100%; box-sizing: border-box; padding: 64px 72px 140px; object-fit: contain">
 <p class="cs-cap" style="position: absolute; left: 72px; bottom: 92px; margin: 0; font-size: 22px; font-weight: 500; color: #ffffff">Daily quizzes</p>
 </div>
-<div data-slide="" role="group" aria-roledescription="slide" aria-label="3 of 6" style="position: relative; flex: 0 0 100%; height: 100%">
+<div data-slide="" class="sl-desk" role="group" aria-roledescription="slide" aria-label="3 of 6" style="position: relative; flex: 0 0 100%; height: 100%">
 <img class="cs-contain" src="assets/goat/slide-quiz-play.webp" alt="Five GOAT daily quiz screens in Arabic: the World Cup history quiz intro, then timed multiple-choice questions sponsored by stc, with points, a progress tracker, correct and wrong answer states, and 50/50 and second-chance help options" style="display: block; width: 100%; height: 100%; box-sizing: border-box; padding: 64px 72px 140px; object-fit: contain">
 <p class="cs-cap" style="position: absolute; left: 72px; bottom: 92px; margin: 0; font-size: 22px; font-weight: 500; color: #ffffff">Daily quizzes: playing a quiz</p>
 </div>
-<div data-slide="" role="group" aria-roledescription="slide" aria-label="4 of 6" style="position: relative; flex: 0 0 100%; height: 100%">
+<div data-slide="" class="sl-split" role="group" aria-roledescription="slide" aria-label="3 of 6" style="position: relative; flex: 0 0 100%; height: 100%">
+<img class="cs-contain" src="assets/goat/slide-quiz-play-1.webp" alt="Three GOAT daily quiz screens in Arabic: the World Cup history quiz intro, a timed multiple-choice question sponsored by stc with points and a progress tracker, and the correct answer state" loading="lazy" style="display: block; width: 100%; height: 100%; box-sizing: border-box; padding: 64px 72px 140px; object-fit: contain">
+<p class="cs-cap" style="position: absolute; left: 72px; bottom: 92px; margin: 0; font-size: 22px; font-weight: 500; color: #ffffff">Daily quizzes: starting and a correct answer</p>
+</div>
+<div data-slide="" class="sl-split" role="group" aria-roledescription="slide" aria-label="3 of 6" style="position: relative; flex: 0 0 100%; height: 100%">
+<img class="cs-contain" src="assets/goat/slide-quiz-play-2.webp" alt="Two GOAT daily quiz screens in Arabic: the next timed question, and the wrong answer state, with 50/50 and second-chance help options" loading="lazy" style="display: block; width: 100%; height: 100%; box-sizing: border-box; padding: 64px 72px 140px; object-fit: contain">
+<p class="cs-cap" style="position: absolute; left: 72px; bottom: 92px; margin: 0; font-size: 22px; font-weight: 500; color: #ffffff">Daily quizzes: a wrong answer and help options</p>
+</div>
+<div data-slide="" class="sl-desk" role="group" aria-roledescription="slide" aria-label="4 of 6" style="position: relative; flex: 0 0 100%; height: 100%">
 <img class="cs-contain" src="assets/goat/slide-score-prediction.webp" alt="Four GOAT score prediction screens in Arabic: the World Cup predictions hub with a countdown and weekly leaderboard, the decisive matches card, a final score prediction for a match, and the leaderboard podium with ranked players" style="display: block; width: 100%; height: 100%; box-sizing: border-box; padding: 64px 72px 140px; object-fit: contain">
 <p class="cs-cap" style="position: absolute; left: 72px; bottom: 92px; margin: 0; font-size: 22px; font-weight: 500; color: #ffffff">Score prediction &amp; leaderboard</p>
 </div>
-<div data-slide="" role="group" aria-roledescription="slide" aria-label="5 of 6" style="position: relative; flex: 0 0 100%; height: 100%">
+<div data-slide="" class="sl-split" role="group" aria-roledescription="slide" aria-label="4 of 6" style="position: relative; flex: 0 0 100%; height: 100%">
+<img class="cs-contain" src="assets/goat/slide-score-prediction-1.webp" alt="Two GOAT score prediction screens in Arabic: the World Cup predictions hub with a countdown and weekly leaderboard, and the decisive matches card" loading="lazy" style="display: block; width: 100%; height: 100%; box-sizing: border-box; padding: 64px 72px 140px; object-fit: contain">
+<p class="cs-cap" style="position: absolute; left: 72px; bottom: 92px; margin: 0; font-size: 22px; font-weight: 500; color: #ffffff">Score prediction: the predictions hub</p>
+</div>
+<div data-slide="" class="sl-split" role="group" aria-roledescription="slide" aria-label="4 of 6" style="position: relative; flex: 0 0 100%; height: 100%">
+<img class="cs-contain" src="assets/goat/slide-score-prediction-2.webp" alt="Two GOAT score prediction screens in Arabic: a final score prediction for a match, and the leaderboard podium with ranked players" loading="lazy" style="display: block; width: 100%; height: 100%; box-sizing: border-box; padding: 64px 72px 140px; object-fit: contain">
+<p class="cs-cap" style="position: absolute; left: 72px; bottom: 92px; margin: 0; font-size: 22px; font-weight: 500; color: #ffffff">Score prediction: a match and the leaderboard</p>
+</div>
+<div data-slide="" class="sl-desk" role="group" aria-roledescription="slide" aria-label="5 of 6" style="position: relative; flex: 0 0 100%; height: 100%">
 <img class="cs-contain" src="assets/goat/slide-group-predictions.webp" alt="Four GOAT World Cup group prediction screens in Arabic: ranking the four Group H teams, the completed prediction ready to send, the confirmation that the prediction was sent, and the group result compared with the user's prediction" style="display: block; width: 100%; height: 100%; box-sizing: border-box; padding: 64px 72px 140px; object-fit: contain">
 <p class="cs-cap" style="position: absolute; left: 72px; bottom: 92px; margin: 0; font-size: 22px; font-weight: 500; color: #ffffff">World Cup group predictions</p>
+</div>
+<div data-slide="" class="sl-split" role="group" aria-roledescription="slide" aria-label="5 of 6" style="position: relative; flex: 0 0 100%; height: 100%">
+<img class="cs-contain" src="assets/goat/slide-group-predictions-1.webp" alt="Two GOAT World Cup group prediction screens in Arabic: ranking the four Group H teams, and the completed prediction ready to send" loading="lazy" style="display: block; width: 100%; height: 100%; box-sizing: border-box; padding: 64px 72px 140px; object-fit: contain">
+<p class="cs-cap" style="position: absolute; left: 72px; bottom: 92px; margin: 0; font-size: 22px; font-weight: 500; color: #ffffff">World Cup group predictions: ranking the group</p>
+</div>
+<div data-slide="" class="sl-split" role="group" aria-roledescription="slide" aria-label="5 of 6" style="position: relative; flex: 0 0 100%; height: 100%">
+<img class="cs-contain" src="assets/goat/slide-group-predictions-2.webp" alt="Two GOAT World Cup group prediction screens in Arabic: the confirmation that the prediction was sent, and the group result compared with the user's prediction" loading="lazy" style="display: block; width: 100%; height: 100%; box-sizing: border-box; padding: 64px 72px 140px; object-fit: contain">
+<p class="cs-cap" style="position: absolute; left: 72px; bottom: 92px; margin: 0; font-size: 22px; font-weight: 500; color: #ffffff">World Cup group predictions: sent and results</p>
 </div>
 <div data-slide="" role="group" aria-roledescription="slide" aria-label="6 of 6" style="position: relative; flex: 0 0 100%; height: 100%">
 <img class="cs-contain" src="assets/goat/slide-team-of-the-week.webp" alt="Two GOAT team of the week screens in Arabic: building an 11-player squad on a pitch by position, and the team of the week hub with the user's points, the weekly deadline and last week's results with points per player" style="display: block; width: 100%; height: 100%; box-sizing: border-box; padding: 64px 72px 140px; object-fit: contain">
@@ -227,9 +300,7 @@ a:focus-visible,button:focus-visible{outline:2px solid #8a6630;outline-offset:3p
 <button type="button" class="cs-nav cs-next" aria-label="Next slide" style="position: absolute; right: 32px; top: 50%; transform: translateY(-50%); display: flex; align-items: center; justify-content: center; width: 56px; height: 56px; padding: 0; border: 1px solid rgba(255, 255, 255, 0.3); border-radius: 50%; background: rgba(20, 19, 26, 0.45); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); color: #ffffff; cursor: pointer; transition: background 0.2s ease"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"></path></svg></button>
 <div class="cs-bar" style="position: absolute; left: 72px; right: 72px; bottom: 32px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px">
 <p aria-live="polite" style="margin: 0; font-family: Khand, 'Arial Narrow', sans-serif; font-size: 24px; font-weight: 600; letter-spacing: 0.04em; color: #ffffff" id="cs-counter">01 / 06</p>
-<div style="display: flex; gap: 8px">
-<button type="button" aria-label="Go to slide 1" aria-current="true" data-dot="0" style="display: flex; align-items: center; width: 40px; height: 44px; padding: 0; border: 0; background: transparent; cursor: pointer; transition: width 0.3s ease"><span style="display: block; width: 100%; height: 4px; border-radius: 2px; background: #ffffff; transition: background 0.3s ease"></span></button><button type="button" aria-label="Go to slide 2" aria-current="false" data-dot="1" style="display: flex; align-items: center; width: 24px; height: 44px; padding: 0; border: 0; background: transparent; cursor: pointer; transition: width 0.3s ease"><span style="display: block; width: 100%; height: 4px; border-radius: 2px; background: rgba(255, 255, 255, 0.35); transition: background 0.3s ease"></span></button><button type="button" aria-label="Go to slide 3" aria-current="false" data-dot="2" style="display: flex; align-items: center; width: 24px; height: 44px; padding: 0; border: 0; background: transparent; cursor: pointer; transition: width 0.3s ease"><span style="display: block; width: 100%; height: 4px; border-radius: 2px; background: rgba(255, 255, 255, 0.35); transition: background 0.3s ease"></span></button><button type="button" aria-label="Go to slide 4" aria-current="false" data-dot="3" style="display: flex; align-items: center; width: 24px; height: 44px; padding: 0; border: 0; background: transparent; cursor: pointer; transition: width 0.3s ease"><span style="display: block; width: 100%; height: 4px; border-radius: 2px; background: rgba(255, 255, 255, 0.35); transition: background 0.3s ease"></span></button><button type="button" aria-label="Go to slide 5" aria-current="false" data-dot="4" style="display: flex; align-items: center; width: 24px; height: 44px; padding: 0; border: 0; background: transparent; cursor: pointer; transition: width 0.3s ease"><span style="display: block; width: 100%; height: 4px; border-radius: 2px; background: rgba(255, 255, 255, 0.35); transition: background 0.3s ease"></span></button><button type="button" aria-label="Go to slide 6" aria-current="false" data-dot="5" style="display: flex; align-items: center; width: 24px; height: 44px; padding: 0; border: 0; background: transparent; cursor: pointer; transition: width 0.3s ease"><span style="display: block; width: 100%; height: 4px; border-radius: 2px; background: rgba(255, 255, 255, 0.35); transition: background 0.3s ease"></span></button>
-</div>
+<div id="cs-dots" style="display: flex; gap: 8px"></div>
 </div>
 </section>
 <h3 style="margin: 12px 0 0; font-size: 24px; font-weight: 500; line-height: 1.3; color: #22212a">The design system</h3>
@@ -274,13 +345,13 @@ a:focus-visible,button:focus-visible{outline:2px solid #8a6630;outline-offset:3p
 </div>
 </div>
 
-<section aria-label="Next project" style="margin-top: 160px; padding: 120px 72px 100px; text-align: center; background-color: #12161f; background-image: radial-gradient(900px 600px at 50% 0%, rgba(78, 102, 148, 0.32) 0%, transparent 70%)">
+<section class="next-sec" aria-label="Next project" style="margin-top: 160px; padding: 120px 72px 100px; text-align: center; background-color: #12161f; background-image: radial-gradient(900px 600px at 50% 0%, rgba(78, 102, 148, 0.32) 0%, transparent 70%)">
 <p style="margin: 0 0 16px; font-size: 15px; font-weight: 500; letter-spacing: 0.14em; text-transform: uppercase; color: #8d8e97">Next project</p>
 <a href="projects.html" class="next-title" style="display: inline-block; font-family: Khand, 'Arial Narrow', sans-serif; font-weight: 600; font-size: clamp(64px, 11vw, 168px); line-height: 1; text-transform: uppercase; color: #f0f0f4">Data to SSO</a>
 <p style="margin: 28px 0 0"><a href="projects.html" style="display: inline-flex; align-items: center; min-height: 44px; padding: 0 22px; border: 1px solid #bb935c; border-radius: 6px; font-size: 17px; color: #bb935c">View all projects</a></p>
 </section>
 
-<footer style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px; padding: 28px 72px; font-size: 15px; color: #8d8e97; background: #18171b; border-top: 1px solid rgba(212, 214, 224, 0.08)">
+<footer class="site-foot" style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px; padding: 28px 72px; font-size: 15px; color: #8d8e97; background: #18171b; border-top: 1px solid rgba(212, 214, 224, 0.08)">
 <a href="#top" style="display: flex; align-items: center; min-height: 44px; color: #c8c9d2">Back to top</a>
 <span>© 2026 Nashwa Nassar · <a href="privacy.html" style="color: #a3a4ad; text-decoration: underline; text-underline-offset: 2px">Privacy</a></span>
 <a href="https://www.linkedin.com/in/nashwanassar/" target="_blank" rel="noopener noreferrer" style="display: flex; align-items: center; min-height: 44px; color: #c8c9d2">LinkedIn</a>
@@ -303,7 +374,7 @@ a:focus-visible,button:focus-visible{outline:2px solid #8a6630;outline-offset:3p
   function setMenu(open){menu.hidden=!open;hdr.classList.toggle('menu-open',open);btn.setAttribute('aria-expanded',open?'true':'false');btn.setAttribute('aria-label',open?'Close menu':'Open menu');}
   btn.addEventListener('click',function(){setMenu(menu.hidden);});
   menu.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){setMenu(false);});});
-  function hdrUpdate(){var compact=window.scrollY>40;hdr.classList.toggle('compact',compact);if(!compact&&!menu.hidden&&window.innerWidth>760)setMenu(false);}
+  function hdrUpdate(){var compact=window.scrollY>40;hdr.classList.toggle('compact',compact);if(!compact&&!menu.hidden&&window.innerWidth>640)setMenu(false);}
 
   var reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   var chapters=[].slice.call(document.querySelectorAll('[data-chapter]')), toc=[].slice.call(document.querySelectorAll('.toc-link'));
@@ -318,15 +389,27 @@ a:focus-visible,button:focus-visible{outline:2px solid #8a6630;outline-offset:3p
   window.addEventListener('scroll',function(){if(!ticking){ticking=true;requestAnimationFrame(update);}},{passive:true});
   window.addEventListener('resize',update); update();
   function pad(n){return String(n).padStart(2,'0');}
-  var track=document.getElementById('cs-track'), slides=[].slice.call(track.querySelectorAll('[data-slide]')), n=slides.length, cur=0;
-  var counter=document.getElementById('cs-counter'), dots=[].slice.call(document.querySelectorAll('[data-dot]'));
+  var track=document.getElementById('cs-track'), all=[].slice.call(track.querySelectorAll('[data-slide]')), slides=[], n=0, cur=0;
+  var counter=document.getElementById('cs-counter'), dotsBox=document.getElementById('cs-dots'), dots=[];
+  var mqS=window.matchMedia('(max-width: 640px)'), mqT=window.matchMedia('(max-width: 1024px)');
   function go(i){cur=(i+n)%n;track.style.transform='translateX('+(-cur*100)+'%)';counter.textContent=pad(cur+1)+' / '+pad(n);
-    dots.forEach(function(d,k){var on=k===cur;d.style.width=(on?40:24)+'px';d.setAttribute('aria-current',on?'true':'false');d.firstElementChild.style.background=on?'#ffffff':'rgba(255, 255, 255, 0.35)';});
-    slides.forEach(function(s,k){s.setAttribute('aria-hidden',k===cur?'false':'true');});}
+    var small=mqS.matches;
+    dots.forEach(function(d,k){var on=k===cur;d.style.width=(on?(small?28:40):(small?16:24))+'px';d.setAttribute('aria-current',on?'true':'false');d.firstChild.style.background=on?'#ffffff':'rgba(255, 255, 255, 0.35)';});
+    all.forEach(function(s){s.setAttribute('aria-hidden',s===slides[cur]?'false':'true');});}
+  function build(){var keep=slides[cur];slides=all.filter(function(s){return getComputedStyle(s).display!=='none';});n=slides.length;
+    var k=slides.indexOf(keep);cur=k<0?0:k;dotsBox.innerHTML='';dotsBox.style.gap=mqS.matches?'6px':'8px';
+    dots=slides.map(function(s,i){s.setAttribute('aria-label',(i+1)+' of '+n);var b=document.createElement('button');b.type='button';b.setAttribute('aria-label','Go to slide '+(i+1));
+      b.style.cssText='display:flex;align-items:center;height:44px;padding:0;border:0;background:transparent;cursor:pointer;transition:width .3s ease';
+      var sp=document.createElement('span');sp.style.cssText='display:block;width:100%;height:4px;border-radius:2px;transition:background .3s ease';b.appendChild(sp);
+      b.addEventListener('click',function(){go(i);});dotsBox.appendChild(b);return b;});
+    go(cur);}
   document.querySelector('.cs-prev').addEventListener('click',function(){go(cur-1);});
   document.querySelector('.cs-next').addEventListener('click',function(){go(cur+1);});
-  dots.forEach(function(d){d.addEventListener('click',function(){go(+d.getAttribute('data-dot'));});});
-  go(0);
+  var sx=null,sy=null;
+  track.addEventListener('touchstart',function(e){sx=e.touches[0].clientX;sy=e.touches[0].clientY;},{passive:true});
+  track.addEventListener('touchend',function(e){if(sx===null)return;var dx=e.changedTouches[0].clientX-sx,dy=e.changedTouches[0].clientY-sy;if(Math.abs(dx)>40&&Math.abs(dx)>Math.abs(dy))go(cur+(dx<0?1:-1));sx=null;},{passive:true});
+  mqT.addEventListener('change',build);mqS.addEventListener('change',build);
+  build();
   var SETS={ds:[{"n": "Colors", "u": "assets/goat/ds-01-colors.webp"}, {"n": "Typography", "u": "assets/goat/ds-02-typography.webp"}, {"n": "Iconography", "u": "assets/goat/ds-03-iconography.webp"}, {"n": "Buttons & Labels", "u": "assets/goat/ds-04-buttons-labels.webp"}, {"n": "Cards", "u": "assets/goat/ds-05-cards.webp"}, {"n": "Navigation", "u": "assets/goat/ds-06-navigation.webp"}, {"n": "Inputs", "u": "assets/goat/ds-07-inputs.webp"}, {"n": "Logo", "u": "assets/goat/ds-08-logo.webp"}, {"n": "Grids & Layout", "u": "assets/goat/ds-09-grids-layout.webp"}, {"n": "Photos & Media", "u": "assets/goat/ds-10-photos-media.webp"}, {"n": "Effects & Shapes", "u": "assets/goat/ds-11-effects-shapes.webp"}, {"n": "Motion", "u": "assets/goat/ds-12-motion.webp"}, {"n": "Crests & Competitions", "u": "assets/goat/ds-13-crests-competitions.webp"}, {"n": "Match Centre", "u": "assets/goat/ds-14-match-centre.webp"}, {"n": "Players & Stats", "u": "assets/goat/ds-15-players-stats.webp"}, {"n": "Community", "u": "assets/goat/ds-16-community.webp"}, {"n": "Video & Audio", "u": "assets/goat/ds-17-video-audio.webp"}, {"n": "Gamification", "u": "assets/goat/ds-18-gamification.webp"}, {"n": "World Cup", "u": "assets/goat/ds-19-world-cup.webp"}],ads:[{"n": "In-feed ad", "u": "assets/goat/ad-infeed.webp"}, {"n": "Between shorts", "u": "assets/goat/ad-shorts.webp"}, {"n": "Sponsored vote", "u": "assets/goat/ad-vote.webp"}, {"n": "Sponsored match centre", "u": "assets/goat/ad-match.webp"}, {"n": "Bottom banner", "u": "assets/goat/ad-banner.webp"}]};
   var lb=document.getElementById('lb'), img=document.getElementById('lb-img'), nm=document.getElementById('lb-name'), cnt=document.getElementById('lb-count'), scroller=lb.querySelector('.lb-scroll');
   var set='ds', idx=0, opener=null;
