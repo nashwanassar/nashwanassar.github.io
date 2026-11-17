@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Projects — Nashwa Nassar</title>
 <meta name="description" content="Selected projects by Nashwa Nassar: GOAT sports app at SRMG, the IBM Digital Twin Platform for telecom towers, and SRMG's data strategy and ML recommendation engine.">
-<meta name="theme-color" content="#ffffff">
+<meta name="theme-color" content="#18171b">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Projects — Nashwa Nassar">
 <meta property="og:description" content="Selected projects by Nashwa Nassar: GOAT sports app at SRMG, the IBM Digital Twin Platform for telecom towers, and SRMG's data strategy and ML recommendation engine.">
@@ -38,182 +38,468 @@ gtag('config', 'G-5EDCTR4SLC');
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Condensed:wght@300;400;500;600&amp;family=Khand:wght@500;600;700&amp;family=Mrs+Saint+Delafield&amp;display=swap" rel="stylesheet">
 <style>
-body{margin:0;background:#ffffff}
-a{color:#3a3b47;text-decoration:none}
-a:hover{color:#000000}
-a:focus-visible,button:focus-visible{outline:2px solid #8a6630;outline-offset:3px}
-.cta:hover{background:#14131a;color:#ffffff !important}
-.menu-panel a:hover{background:rgba(20,19,26,0.06)}
-.card{position:relative;display:block;overflow:hidden;aspect-ratio:16 / 9;background:#14131a;color:#ffffff}
-.card img{position:absolute;inset:0;display:block;width:100%;height:100%;object-fit:cover;transition:opacity .5s ease,filter .5s ease,transform .7s ease}
-.card .hover-img{opacity:0}
-.card:hover .hover-img,.card:focus-visible .hover-img{opacity:1}
-.card.plain:hover .base{filter:grayscale(1) brightness(.34);transform:scale(1.03)}
-.card .hover-title{position:absolute;left:5%;top:50%;transform:translateY(calc(-50% + 12px));width:40%;max-width:40%;margin:0;font-family:Khand,'Arial Narrow',sans-serif;font-weight:500;font-size:clamp(20px,2.2vw,32px);line-height:1.2;letter-spacing:0;color:#ffffff;opacity:0;transition:opacity .5s ease,transform .5s ease}
-.req-btn{display:flex;align-items:center;width:fit-content;min-height:44px;box-sizing:border-box;margin-top:20px;padding:0 20px;border:1px solid #bb935c;border-radius:6px;font-family:'IBM Plex Sans Condensed','Arial Narrow',sans-serif;font-size:16px;font-weight:500;line-height:1;color:#bb935c !important;transition:background .2s ease}
-.card:hover .hover-title,.card:focus-visible .hover-title{opacity:1;transform:translateY(-50%)}
-.card .hover-text{opacity:0;transition:opacity .5s ease}
-.card:focus-within .hover-title{opacity:1;transform:translateY(-50%)}
-.req-btn:hover{background:rgba(187,147,92,0.16);color:#d2a86a !important}
-.card:hover .hover-text,.card:focus-visible .hover-text{opacity:1}
-.tags{position:absolute;right:16px;bottom:16px;left:16px;display:flex;flex-direction:column;align-items:flex-end;gap:10px;transition:opacity .4s ease}
-.card:hover .tags,.card:focus-visible .tags{opacity:0}
-.tag-row{display:flex;flex-wrap:wrap;justify-content:flex-end;gap:10px;margin:0}
-.pill{display:inline-flex;align-items:center;height:30px;padding:0 14px;border-radius:999px;background:rgba(98,98,104,0.62);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);font-size:14px;letter-spacing:.01em;color:#ffffff;white-space:nowrap}
-.menu-btn:hover{background:rgba(255,255,255,0.85) !important}
-@media (prefers-reduced-motion: reduce){.card img,.card .hover-title,.tags{transition:none}}
+:root{--bg:#18171b;--ink:#e2e3ea;--text:#c8c9d2;--muted:#a3a4ad;--dim:#8d8e97;--line:rgba(212,214,224,0.12);--gold:#bb935c;--pad:72px;--khand:Khand,'Arial Narrow',sans-serif}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--text);font-family:'IBM Plex Sans Condensed','Arial Narrow',sans-serif}
+a{color:var(--text);text-decoration:none}
+a:hover{color:#fff}
+a:focus-visible,button:focus-visible{outline:2px solid var(--gold);outline-offset:3px;border-radius:4px}
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+main{position:relative;overflow:hidden;background-color:var(--bg);background-image:radial-gradient(1000px 1100px at calc(100% - 180px) 250px,#3d3e46 0%,#383941 16%,#27272d 55%,#1e1e22 74%,#18171b 92%)}
+.wrap{max-width:1440px;margin:0 auto;padding:0 var(--pad)}
+.kicker{margin:0 0 16px;font-size:13px;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:var(--dim)}
+.eyebrow-sec{margin:0;font-size:14px;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:var(--gold)}
+.sec-h2{margin:0;font-family:var(--khand);font-weight:600;font-size:52px;line-height:1.05;color:var(--ink)}
+.sec-h2 span{color:var(--gold)}
+.sec-sub{margin:0;font-size:19px;font-weight:300;line-height:1.5;color:var(--muted)}
+.sec-head{display:flex;flex-direction:column;gap:12px}
 
-
-
-
-.hdr.compact{padding-top:6px !important;padding-bottom:6px !important;box-shadow:0 6px 24px rgba(20,19,26,0.08) !important}
-.hdr.compact .hdr-nav,.hdr.compact .hdr-cta{display:none !important}
-.hdr.compact .menu-btn{display:flex !important}
+/* header */
+.site-head{position:fixed;top:0;left:0;right:0;z-index:50;display:flex;align-items:center;gap:24px;height:88px;padding:0 var(--pad);background:rgba(24,23,27,0);border-bottom:1px solid rgba(212,214,224,0);transition:height .3s ease,background .3s ease,box-shadow .3s ease,border-color .3s ease}
+.site-head.compact{height:64px;background:rgba(24,23,27,.6);-webkit-backdrop-filter:blur(20px) saturate(140%);backdrop-filter:blur(20px) saturate(140%);border-bottom-color:rgba(212,214,224,.08);box-shadow:0 6px 24px rgba(0,0,0,.25)}
+.brand{display:flex;align-items:center;gap:14px;min-height:44px;color:var(--ink)}
+.brand-mark{display:block;flex:none;width:48px;height:54px;transition:width .3s ease,height .3s ease}
+.compact .brand-mark{width:36px;height:40px}
+.brand-name{font-size:22px;font-weight:500;letter-spacing:.01em;white-space:nowrap;overflow:hidden;max-width:220px;transition:opacity .25s ease,max-width .3s ease}
+.compact .brand-name{opacity:0;max-width:0}
+.main-nav{display:flex;align-items:center;gap:8px 24px;margin-left:auto;font-size:16px}
+.main-nav>a,.dd>a{display:flex;align-items:center;gap:6px;min-height:44px}
+.main-nav [aria-current="page"]{font-weight:600;color:var(--gold)}
+.dd{position:relative}
+.dd-menu{position:absolute;top:100%;left:-16px;padding-top:10px;display:none;z-index:10}
+.dd:hover .dd-menu,.dd:focus-within .dd-menu{display:block}
+.dd-menu ul{list-style:none;margin:0;padding:8px;width:320px;border-radius:12px;background:rgba(24,23,27,.92);-webkit-backdrop-filter:blur(16px);backdrop-filter:blur(16px);border:1px solid var(--line);box-shadow:0 24px 48px rgba(0,0,0,.4)}
+.dd-menu a{display:flex;align-items:center;min-height:44px;padding:0 12px;border-radius:8px}
+.dd-menu a:hover,.dd-menu a:focus-visible{background:rgba(255,255,255,.07);color:#fff}
+.dd-chev{transition:transform .25s ease}
+.dd:hover .dd-chev,.dd:focus-within .dd-chev{transform:rotate(180deg)}
+.head-cta{display:flex;align-items:center;min-height:44px;padding:0 18px;margin-left:20px;border:1px solid var(--gold);border-radius:6px;background:rgba(24,23,27,.55);font-size:18px;font-weight:600;color:var(--gold)}
+.head-cta:hover{background:rgba(187,147,92,.12);color:#d2a86a}
+.menu-btn{display:none;align-items:center;justify-content:center;width:44px;height:44px;flex:none;margin-left:auto;padding:0;border:1px solid rgba(212,214,224,.2);border-radius:10px;background:rgba(255,255,255,.04);color:var(--ink);cursor:pointer}
 .menu-btn .ic-close,.menu-open .menu-btn .ic-open{display:none}
 .menu-open .menu-btn .ic-close{display:block}
-#site-menu[hidden]{display:none !important}
-a:focus-visible,button:focus-visible{outline:2px solid #8a6630;outline-offset:3px}
+#site-menu{position:absolute;top:calc(100% + 8px);left:16px;right:16px;display:flex;flex-direction:column;padding:12px;border-radius:14px;background:rgba(24,23,27,.96);-webkit-backdrop-filter:blur(16px);backdrop-filter:blur(16px);border:1px solid var(--line);box-shadow:0 24px 48px rgba(0,0,0,.4)}
+#site-menu[hidden]{display:none}
+#site-menu a{display:flex;align-items:center;min-height:48px;padding:0 12px;border-radius:8px;font-size:18px}
+#site-menu a:hover{background:rgba(255,255,255,.07);color:#fff}
+#site-menu .menu-cta{justify-content:center;margin-top:8px;border:1px solid var(--gold);font-size:17px;font-weight:600;color:var(--gold)}
 
-.card-info{display:none}
-.info-btn:hover{background:rgba(138,102,48,0.08)}
-/* ---------- tablet + mobile: up to 1024 ---------- */
-@media (max-width: 1024px){
-.hdr{padding-left:32px !important;padding-right:32px !important}
-.menu-panel{right:32px !important}
-.quote{padding:150px 32px 72px !important;min-height:0 !important}
-.quote blockquote p{font-size:30px !important}
-.q-br,.q-indent{display:none}
-.work{padding:72px 32px 120px !important}
-.grid{grid-template-columns:repeat(2, minmax(0, 1fr)) !important;gap:48px 24px !important}
-.card{cursor:pointer;-webkit-tap-highlight-color:transparent}
-.card .hover-title{display:none !important}
-.card:hover .hover-img,.card:focus-visible .hover-img{opacity:0}
-.card:hover .tags,.card:focus-visible .tags{opacity:1}
-.card.flipped .hover-img{opacity:1 !important}
-.card.flipped .tags{opacity:0 !important}
-.card-info{display:flex;flex-direction:column;align-items:flex-start;gap:16px;margin-top:16px}
-.foot{padding:24px 32px !important}
+/* hero */
+.hero{position:relative;overflow:hidden;min-height:max(600px,calc(100svh - 170px));max-height:960px;display:flex}
+.portrait{position:absolute;top:0;right:-17px;z-index:0;height:calc(100% + 170px);-webkit-mask-image:linear-gradient(180deg,#000 0%,#000 72%,transparent 100%);mask-image:linear-gradient(180deg,#000 0%,#000 72%,transparent 100%)}
+.portrait img{display:block;height:100%;width:auto;filter:saturate(.35) brightness(1.02);transition:filter .6s ease}
+.portrait:hover img{filter:none}
+.hero-scrim{display:none}
+.hero-inner{position:relative;z-index:2;display:flex;flex-direction:column;justify-content:flex-end;width:100%;padding:120px var(--pad) 64px}
+.hero-copy{display:flex;flex-direction:column;gap:22px}
+.eyebrow{margin:0;font-size:16px;font-weight:300;letter-spacing:.06em;line-height:1.4;color:var(--gold)}
+.hero h1{margin:0;max-width:958px;font-family:var(--khand);font-weight:600;font-size:clamp(40px,6.4vw,104px);line-height:1.04;letter-spacing:.005em;text-transform:uppercase;color:#d4d6e0}
+.hero h1 span{color:var(--gold)}
+.btn-outline{display:flex;align-items:center;width:fit-content;height:44px;margin-top:32px;padding:0 24px;border:1px solid var(--gold);border-radius:6px;font-size:18px;color:var(--gold)}
+.btn-outline:hover{background:rgba(187,147,92,.12);color:#d2a86a}
+.proof{--kick:#5c5d66;background:#f7f7f7;padding:44px 0 40px}
+.proof-line{height:0;margin:32px var(--pad);border:0;border-top:1px solid #e5e5e8}
+.proof .kicker{color:var(--kick)}
+.worked{padding:0 var(--pad)}
+.logo-row{display:flex;flex-wrap:wrap;align-items:center;gap:20px 44px}
+.logo-row img{display:block;width:auto;filter:brightness(0) invert(.24)}
+.logo-srmg{height:26px}.logo-ibm{height:21px}.logo-kn{height:42px}
+
+/* clients */
+.clients .kicker{margin:0 var(--pad) 18px}
+.marquee{overflow:hidden;-webkit-mask-image:linear-gradient(90deg,transparent 0%,#000 8%,#000 92%,transparent 100%);mask-image:linear-gradient(90deg,transparent 0%,#000 8%,#000 92%,transparent 100%)}
+.marquee-track{display:flex;gap:56px;width:max-content;padding-right:56px;animation:marquee 34s linear infinite}
+.marquee:hover .marquee-track{animation-play-state:paused}
+.marquee-set{display:flex;gap:56px}
+.marquee-set span{flex:none;font-family:var(--khand);font-weight:600;font-size:24px;letter-spacing:.03em;color:#3f4047;white-space:nowrap}
+@keyframes marquee{to{transform:translateX(-50%)}}
+
+/* expertise */
+.expertise{padding:100px 0 80px}
+.expertise .sec-head{max-width:760px;margin-bottom:40px}
+.xp-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:20px}
+.xp-card{display:flex;flex-direction:column;gap:16px;min-height:380px;padding:30px 26px;border:1px solid var(--line);border-radius:18px;background:rgba(255,255,255,.03)}
+.xp-icon{width:34px;height:34px}
+.xp-card h3{margin:0;font-family:var(--khand);font-weight:600;font-size:28px;line-height:1.1;color:var(--ink)}
+.xp-body{margin:0;font-size:16px;font-weight:300;line-height:1.55;color:var(--muted)}
+.xp-proof{margin-top:auto;padding-top:16px;border-top:1px solid var(--line)}
+.xp-num{margin:0;font-family:var(--khand);font-weight:600;font-size:46px;line-height:1;color:var(--gold)}
+.xp-label{margin:6px 0 0;font-size:14px;line-height:1.45;color:var(--muted);min-height:4.35em}
+.xp-hint{display:none}
+
+/* journey */
+.journey,.experience{padding:100px 0;border-top:1px solid rgba(212,214,224,.08)}
+.jr-grid{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:24px;align-items:center}
+.jr-map{grid-column:1 / span 7;grid-row:1 / span 3}
+.jr-side-head{grid-column:9 / span 4;margin-bottom:28px;align-self:end}
+.jr-card-wrap{grid-column:9 / span 4}
+.jr-chips{grid-column:9 / span 4;align-self:start}
+.legend{display:flex;align-items:center;gap:18px;margin-bottom:10px;font-size:13px;color:var(--muted)}
+.legend span{display:flex;align-items:center;gap:8px}
+.lg-home{display:block;width:10px;height:10px;border-radius:50%;background:var(--gold)}
+.lg-trip{display:block;width:8px;height:8px;border-radius:50%;border:1.5px solid var(--gold);background:var(--bg)}
+.legend .lg-count{margin-left:auto;color:#6f7079}
+.jmap{position:relative;width:100%;aspect-ratio:1220 / 960}
+.jmap>img,.jmap>svg{position:absolute;inset:0;display:block;width:100%;height:100%}
+.jmap svg{overflow:visible}
+.jarc{fill:none;stroke:var(--gold);stroke-opacity:.6;stroke-width:3.5;stroke-dasharray:1;stroke-dashoffset:1}
+.jarc-home{stroke-opacity:1;stroke-width:7;stroke-linecap:round}
+.in-view .jarc{animation:jdraw 1.1s ease-out forwards}
+@keyframes jdraw{to{stroke-dashoffset:0}}
+.pin{position:absolute;transform:translate(-50%,-50%);display:flex;align-items:center;justify-content:center;width:44px;height:44px;padding:0;border:0;background:transparent;cursor:pointer}
+.pin-dot{position:relative;display:block;width:10px;height:10px;border-radius:50%;border:2px solid var(--gold);background:var(--bg)}
+.pin-home .pin-dot{width:14px;height:14px;border:0;background:var(--gold)}
+.pin[aria-pressed="true"] .pin-dot{box-shadow:0 0 0 4px rgba(187,147,92,.35)}
+.pin-pulse{position:absolute;width:14px;height:14px;border-radius:50%;background:var(--gold);animation:jpulse 2.2s ease-out infinite}
+@keyframes jpulse{0%{transform:scale(1);opacity:.55}100%{transform:scale(2.6);opacity:0}}
+.pin-label{position:absolute;font-size:14px;font-weight:500;color:var(--ink);white-space:nowrap;pointer-events:none}
+.lab-left{transform:translate(calc(-100% - 10px),-150%)}
+.lab-right{transform:translate(10px,-50%)}
+.lab-below{transform:translate(-50%,10px)}
+.place-card{min-height:150px;padding:18px 20px;border:1px solid var(--line);border-radius:16px;background:rgba(255,255,255,.03)}
+.place-card[hidden]{display:none}
+.pc-eyebrow{margin:0 0 6px;font-size:12px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:var(--gold)}
+.place-card h3{margin:0 0 8px;font-family:var(--khand);font-weight:600;font-size:24px;line-height:1.1;color:var(--ink)}
+.pc-body{margin:0;font-size:15px;font-weight:300;line-height:1.5;color:var(--muted)}
+.jr-chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
+.chip{min-height:40px;padding:0 14px;border:1px solid rgba(212,214,224,.25);border-radius:999px;background:transparent;font:inherit;font-size:14px;color:var(--text);cursor:pointer}
+.chip[aria-pressed="true"]{border-color:var(--gold);background:var(--gold);color:var(--bg)}
+
+/* experience */
+.ex-grid{display:grid;grid-template-columns:4fr 1fr 7fr;grid-template-areas:"head . list" "creds . list" "link . list";grid-template-rows:auto auto 1fr}
+.ex-head{grid-area:head}
+.ex-list{grid-area:list}
+.ex-creds{grid-area:creds}
+.ex-link{grid-area:link;align-self:start}
+.more-btn{display:flex;align-items:center;gap:8px;min-height:44px;margin:20px 0 0;padding:0 18px;border:1px solid rgba(212,214,224,.25);border-radius:999px;background:transparent;font:inherit;font-size:15px;color:var(--text);cursor:pointer}
+.more-btn svg{transition:transform .25s ease}
+.more-btn[aria-expanded="true"] svg{transform:rotate(180deg)}
+.timeline [hidden]{display:none}
+
+/* footer + floating button */
+.site-foot{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:12px 16px;padding:28px var(--pad);font-size:15px;color:var(--dim);background:var(--bg);border-top:1px solid rgba(212,214,224,.08)}
+.site-foot a{display:flex;align-items:center;min-height:44px;color:var(--text)}
+.site-foot .privacy{display:inline;min-height:0;color:var(--muted);text-decoration:underline;text-underline-offset:2px}
+.site-notice{flex-basis:100%;margin:0;font-size:13px;color:#8a8b94}
+.fab-talk{display:none;position:fixed;right:20px;bottom:24px;z-index:40;align-items:center;justify-content:center;width:56px;height:56px;border-radius:50%;background:var(--gold);color:var(--bg);box-shadow:0 10px 24px rgba(0,0,0,.45);transition:transform .2s ease}
+.fab-talk:hover{color:var(--bg);transform:translateY(-2px)}
+
+/* ---------- tablet ---------- */
+@media (max-width:1180px){
+:root{--pad:32px}
+.site-head{height:76px}
+.hero{min-height:max(560px,calc(100svh - 160px))}
+.portrait{right:0;height:calc(100% + 160px);max-height:820px}
+.hero-scrim{display:block;position:absolute;inset:0;z-index:1;background:linear-gradient(90deg,rgba(24,23,27,.85) 0%,rgba(24,23,27,.5) 45%,rgba(24,23,27,0) 80%);pointer-events:none}
+.hero-inner{padding:100px var(--pad) 40px}
+.hero h1{font-size:64px;max-width:560px}
+.eyebrow{font-size:14px}
+.xp-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+.xp-card{min-height:320px}
+.jr-grid,.ex-grid{display:block;max-width:720px}
+.jr-side-head{margin-bottom:24px}
+.jr-map{margin-bottom:16px}
+.ex-head{margin-bottom:28px}
+.ex-creds,.ex-link{margin-top:24px}
+.sec-h2{font-size:44px}
 }
-/* ---------- mobile: up to 640 ---------- */
-@media (max-width: 640px){
-.hdr{height:64px !important;padding:0 16px !important}
-.hdr-nav,.hdr-cta{display:none !important}
-.menu-btn{display:flex !important;width:44px !important;height:44px !important}
-.menu-panel{left:16px !important;right:16px !important;width:auto !important}
-.quote{padding:120px 16px 64px !important}
-.quote blockquote p{font-size:20px !important;line-height:2 !important}
-.quote figcaption{font-size:20px !important}
-.work{padding:56px 16px 80px !important}
-#work-h{font-size:34px !important;margin-bottom:32px !important}
-.grid{grid-template-columns:1fr !important;gap:48px !important}
-.tags{right:10px;bottom:10px;left:10px;gap:6px}
-.tag-row{gap:6px}
-.pill{height:26px;padding:0 10px;font-size:12px}
-.foot{padding:20px 16px !important;font-size:14px !important;gap:8px 16px !important}
+/* ---------- mobile ---------- */
+@media (max-width:640px){
+:root{--pad:16px}
+html{scroll-snap-type:y mandatory;scroll-padding-top:52px}
+.snap{scroll-snap-align:start;scroll-margin-top:16px}
+.snap-end{scroll-snap-align:end}
+.site-head{height:60px;gap:12px}
+.site-head.compact{height:52px}
+.brand{gap:10px}
+.brand-mark{width:40px;height:45px}
+.compact .brand-mark{width:30px;height:34px}
+.brand-name{font-size:19px;max-width:180px}
+.main-nav,.head-cta{display:none}
+.menu-btn{display:flex}
+main{background-image:radial-gradient(600px 720px at 82% 185px,#3d3e46 0%,#383941 16%,#27272d 55%,#1e1e22 74%,#18171b 92%)}
+.hero{min-height:max(520px,calc(100svh - 118px));max-height:none}
+.portrait{top:60px;right:0;height:calc(100% - 150px);max-height:440px;-webkit-mask-image:linear-gradient(180deg,#000 0%,#000 70%,transparent 100%);mask-image:linear-gradient(180deg,#000 0%,#000 70%,transparent 100%)}
+.hero-scrim{background:linear-gradient(90deg,rgba(24,23,27,.8) 0%,rgba(24,23,27,.45) 45%,rgba(24,23,27,0) 75%)}
+.hero-inner{padding:84px 16px 24px}
+.hero-copy{gap:8px}
+.eyebrow{font-size:14px;font-weight:300;letter-spacing:-.01em;line-height:1.5;max-width:271px}
+.hero h1{font-size:34px;line-height:1.4;letter-spacing:-.01em;max-width:254px}
+.btn-outline{height:40px;margin-top:8px;padding:0 22px}
+.proof{padding:24px 0 28px}
+.proof-line{margin:24px 16px}
+.btn-outline{width:124px;justify-content:center}
+.worked .kicker{font-size:12px;margin-bottom:14px}
+.logo-row{gap:18px 30px}
+.logo-srmg{height:20px}.logo-ibm{height:16px}.logo-kn{height:32px}
+.clients .kicker{font-size:12px;margin-bottom:14px}
+.marquee{-webkit-mask-image:linear-gradient(90deg,transparent 0%,#000 12%,#000 88%,transparent 100%);mask-image:linear-gradient(90deg,transparent 0%,#000 12%,#000 88%,transparent 100%)}
+.marquee-track,.marquee-set{gap:36px}
+.marquee-track{padding-right:36px;animation-duration:26s}
+.marquee-set span{font-size:21px}
+.expertise{padding:40px 0}
+.expertise .sec-head{margin-bottom:24px;padding:0}
+.eyebrow-sec{font-size:13px}
+.sec-h2{font-size:36px;line-height:1.08}
+.sec-sub{font-size:16px}
+.sec-head{gap:10px}
+.xp-grid{display:flex;gap:12px;overflow-x:auto;scroll-snap-type:x mandatory;margin:0 -16px;padding:0 16px 4px;scroll-padding:0 16px;scrollbar-width:none}
+.xp-grid::-webkit-scrollbar{display:none}
+.xp-card{flex:0 0 280px;scroll-snap-align:start;min-height:330px;padding:24px 22px;gap:14px;border-radius:16px}
+.xp-icon{width:30px;height:30px}
+.xp-card h3{font-size:25px}
+.xp-body{font-size:15px;line-height:1.5}
+.xp-proof{padding-top:14px}
+.xp-num{font-size:40px}
+.xp-label{font-size:13px;margin-top:4px}
+.xp-hint{display:block;margin:14px 0 0;font-size:13px;color:#6f7079}
+.journey,.experience{padding:40px 0}
+.experience{padding-bottom:72px}
+.jr-side-head{margin-bottom:20px}
+.pin-label{font-size:12px}
+.ex-head{margin-bottom:28px}
+.ex-creds{margin-top:32px}
+.ex-link{margin-top:20px}
+.site-foot{padding:20px 16px;font-size:14px;gap:8px 16px}
+.fab-talk{display:flex}
 }
+@media (prefers-reduced-motion:reduce){
+html{scroll-behavior:auto}
+.portrait img,.brand-mark,.brand-name,.site-head{transition:none}
+.marquee-track,.pin-pulse{animation:none}
+.jarc{stroke-dashoffset:0}
+.in-view .jarc{animation:none}
+}
+
+main{background:#18171b;background-image:none;color:var(--text)}
+.feature{position:relative;height:min(760px,calc(100svh - 40px));min-height:560px;overflow:hidden;background:#18171b}
+.feature>img{position:absolute;inset:0;display:block;width:100%;height:100%;object-fit:cover;object-position:60% 40%;transition:transform 1.2s ease}
+.feature:hover>img{transform:scale(1.02)}
+.feature-scrim{position:absolute;inset:0;background:linear-gradient(180deg,rgba(24,23,27,.75) 0%,rgba(24,23,27,0) 20%),linear-gradient(90deg,rgba(24,23,27,.94) 0%,rgba(24,23,27,.78) 34%,rgba(24,23,27,.15) 66%,rgba(24,23,27,0) 100%)}
+.feature-inner{position:relative;z-index:2;display:flex;flex-direction:column;justify-content:flex-end;height:100%;box-sizing:border-box;padding:0 var(--pad) 72px}
+.f-label{margin:0 0 16px;font-size:15px;font-weight:500;color:var(--gold)}
+.feature h2{margin:0;max-width:720px;font-family:var(--khand);font-weight:600;font-size:56px;line-height:1.04;color:var(--ink)}
+.f-proof{margin:22px 0 0;max-width:560px;font-size:19px;font-weight:300;line-height:1.5;color:var(--text)}
+.f-proof strong{font-weight:600;color:var(--ink)}
+.feature .btn-outline{margin-top:32px}
+.work{padding:96px var(--pad) 140px;background:#18171b}
+.work-head{display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:8px 24px;margin-bottom:40px;padding-bottom:20px;border-bottom:1px solid rgba(212,214,224,.12)}
+.work-head h2{margin:0;font-family:var(--khand);font-weight:600;font-size:40px;line-height:1.1;color:var(--ink)}
+.work-head p{margin:0;font-size:16px;color:var(--dim)}
+.rows{display:flex;flex-direction:column;gap:72px}
+.prow{display:grid;gap:30px}
+.wide-left{grid-template-columns:2fr 1fr}
+.wide-right{grid-template-columns:1fr 2fr}
+.one{grid-template-columns:1fr}
+.pcard{display:flex;flex-direction:column;min-width:0}
+.pimg{position:relative;height:540px;overflow:hidden;background:#222127}
+.pimg img{position:absolute;inset:0;display:block;width:100%;height:100%;object-fit:cover;transition:opacity .5s ease,transform .8s ease}
+.pimg .hover-img{opacity:0}
+.pimg:hover .hover-img,.pimg.flipped .hover-img{opacity:1}
+.pimg:hover img{transform:scale(1.02)}
+.pimg.ph{display:flex;align-items:flex-end;box-sizing:border-box;padding:32px 36px}
+.pimg.ph p{margin:0;font-family:var(--khand);font-weight:600;font-size:64px;line-height:1;color:#3a3a42}
+.p-line{display:flex;flex-wrap:wrap;align-items:baseline;gap:4px 12px;margin-top:18px}
+.p-line h3{margin:0;font-size:20px;font-weight:500;line-height:1.3;color:var(--ink)}
+.p-status{font-size:13px;font-weight:500;letter-spacing:.08em;text-transform:uppercase;color:var(--gold)}
+.p-status.conf{font-size:11px;letter-spacing:.1em;color:var(--dim)}
+.p-line h3 a{color:var(--ink)}
+.p-line h3 a:hover{color:#fff}
+a.pimg{display:block}
+.p-year{margin-left:auto;font-size:15px;color:var(--dim)}
+.p-meta{margin:6px 0 0;font-size:15px;line-height:1.45;color:var(--muted)}
+.p-did{margin:4px 0 0;font-size:15px;line-height:1.45;color:var(--dim)}
+.req-link{display:inline-flex;align-items:center;gap:6px;width:fit-content;min-height:44px;margin-top:4px;font-size:15px;font-weight:500;color:var(--gold)}
+.req-link:hover{color:#d2a86a}
+.site-foot{margin-top:0}
+@media (max-width:1180px){
+.feature h2{font-size:44px;max-width:600px}
+.work{padding:72px var(--pad) 112px}
+.pimg{height:420px}
+.pimg:hover .hover-img{opacity:0}
+.pimg:hover img{transform:none}
+}
+@media (max-width:640px){
+.feature{height:640px;min-height:0}
+.feature>img{object-position:62% 30%}
+.feature-scrim{background:linear-gradient(180deg,rgba(24,23,27,.7) 0%,rgba(24,23,27,0) 18%,rgba(24,23,27,0) 34%,rgba(24,23,27,.88) 62%,#18171b 100%)}
+.feature-inner{padding:0 16px 32px}
+.f-label{font-size:14px;margin-bottom:12px}
+.feature h2{font-size:32px;line-height:1.1}
+.f-proof{font-size:16px;margin-top:14px}
+.feature .btn-outline{margin-top:22px;width:auto;padding:0 22px;white-space:nowrap}
+.work{padding:56px 16px 96px}
+.work-head{display:block;margin-bottom:28px;padding-bottom:18px}
+.work-head h2{font-size:32px}
+.work-head p{margin-top:8px;font-size:15px;line-height:1.5}
+.rows{gap:56px}
+.prow{grid-template-columns:1fr;gap:56px}
+.pimg{height:auto;aspect-ratio:4 / 3}
+.pimg.ph{padding:18px 20px}
+.pimg.ph p{font-size:44px}
+.p-line{margin-top:14px}
+.p-line h3{font-size:18px}
+.p-status{font-size:12px}
+.p-year,.p-meta,.p-did{font-size:14px}
+}
+@media (max-width:640px){html{scroll-snap-type:none}}
+@media (prefers-reduced-motion:reduce){.feature>img,.pimg img{transition:none}}
+/* light content (project list) */
+main{background:#f7f7f7}
+.work{background:#f7f7f7}
+.work-head{border-bottom-color:rgba(20,19,26,.12)}
+.work-head h2,.p-line h3,.p-line h3 a{color:#14131a}
+.p-line h3 a:hover{color:#000}
+.work-head p,.p-meta{color:#5c5d66}
+.p-year,.p-did,.p-status.conf{color:#6f7079}
+.p-status{color:#8a6630}
+.pimg{background:#e6e6ea}
+.pimg.ph p{color:#c4c5cc}
+.pimg.still{cursor:default}
+
 </style>
 </head>
 <body>
-<main id="top" style="font-family: 'IBM Plex Sans Condensed', 'Arial Narrow', sans-serif; color: #3a3b47; background: #ffffff">
-
-
-
-<header class="hdr" style="position: fixed; top: 0; left: 0; right: 0; z-index: 50; display: flex; align-items: center; gap: 24px; box-sizing: border-box; padding: 18px 72px; backdrop-filter: blur(20px) saturate(120%); -webkit-backdrop-filter: blur(20px) saturate(120%); border-bottom: 1px solid rgba(20, 19, 26, 0.06); box-shadow: none; transition: padding 0.3s ease, box-shadow 0.3s ease; background-color: rgba(255, 255, 255, 0.7); height: 54px; padding-top: 30px; padding-bottom: 30px">
-<a href="index.html" aria-label="Nashwa Nassar, home" style="display: flex; align-items: center; gap: 12px; min-height: 40px; color: #14131a">
-<svg width="47" height="53" viewBox="0 0 47 53" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" style="width: 37px; height: 42px">
-<rect width="47" height="53" rx="5" fill="#AB8147"></rect>
-<use xlink:href="#stroke0_42_3921" fill="white"></use>
-<mask id="stroke1_42_3921" maskUnits="userSpaceOnUse" x="1.21755" y="1.44095" width="42.7009" height="50.5787" fill="black">
-<rect fill="white" x="1.21755" y="1.44095" width="42.7009" height="50.5787"></rect>
-<use xlink:href="#stroke0_42_3921"></use>
-</mask>
-<path d="M17.4283 46.662C16.4026 46.2962 15.5574 45.6628 14.8926 44.7618C14.2278 43.8607 13.8914 42.897 13.8834 41.8706C13.8853 41.484 13.926 41.0836 14.0058 40.6694C14.1069 40.2905 14.2318 39.8924 14.3806 39.4752C14.8533 38.1499 15.6027 36.7158 16.629 35.173C17.6854 33.641 18.8976 32.0538 20.2654 30.4114C21.6721 28.7553 23.1392 27.1207 24.6666 25.5077C26.2329 23.8808 27.7428 22.3168 29.1962 20.8157C30.6886 19.3008 32.0531 17.9062 33.2896 16.632C34.5349 15.3333 35.5418 14.2262 36.3103 13.3108C36.714 12.8461 36.9772 12.442 37.0997 12.0984C37.2573 11.6567 37.155 11.3712 36.793 11.2421C36.3405 11.0807 35.5197 11.1892 34.3307 11.5674C33.1417 11.9456 31.725 12.5331 30.0807 13.3299C28.4363 14.1266 26.6767 15.1036 24.8018 16.2608C22.927 17.418 21.0774 18.6949 19.2532 20.0914C17.429 21.488 15.7468 22.9629 14.2067 24.5161C12.6667 26.0693 11.3898 27.6473 10.3762 29.2499C10.2848 29.411 10.1584 29.6702 9.9969 30.0276C9.83544 30.385 9.64186 30.6894 9.41616 30.9409C9.22063 31.2031 8.97202 31.2804 8.67034 31.1728C8.01541 30.9116 7.64409 30.4749 7.55638 29.8626C7.49885 29.2612 7.5036 28.7234 7.57065 28.2494C7.79319 26.8626 8.21518 25.2979 8.83662 23.5554C9.33552 22.1564 9.92734 20.7353 10.6121 19.292C11.2968 17.8487 12.0157 16.5006 12.7686 15.2476C13.5215 13.9945 14.2452 12.9663 14.9398 12.1628C15.3912 11.6598 15.9113 11.2505 16.4999 10.9348C17.1275 10.6053 17.6223 10.5052 17.9843 10.6343C18.1954 10.7096 18.3176 10.8915 18.3507 11.1799C18.4141 11.4791 18.3168 11.9424 18.0591 12.5698C17.9628 12.8397 17.6282 13.3013 17.0552 13.9546C16.5211 14.594 15.8479 15.4328 15.0356 16.471C14.2535 17.5199 13.4509 18.7691 12.628 20.2184C11.8051 21.6678 11.061 23.3251 10.3958 25.1903C10.0807 26.0739 9.79776 27.0103 9.54692 27.9998C10.0635 27.4094 10.8121 26.5975 11.7928 25.564C12.8036 24.5413 13.992 23.4021 15.3579 22.1464C16.754 20.9015 18.2581 19.6397 19.8702 18.3612C21.5213 17.0688 23.2302 15.8525 24.9971 14.7121C26.764 13.5717 28.5387 12.6001 30.3212 11.7973C32.1037 10.9945 33.8245 10.4601 35.4835 10.1942C36.3087 10.0735 37.0983 10.1476 37.8525 10.4166C38.6671 10.7071 39.546 11.3647 40.1179 11.7553C40.5448 12.0469 42.207 13.5049 41.779 14.5141C41.3511 15.5234 40.6623 16.4535 39.7128 17.3044C38.8022 18.1415 37.7947 18.9165 36.6904 19.6292C35.6163 20.3527 34.6005 21.0555 33.6432 21.7377C32.3044 22.7264 30.8981 23.857 29.4241 25.1295C27.9803 26.4128 26.5706 27.7912 25.195 29.2648C23.8496 30.7491 22.6355 32.2941 21.5528 33.8998C20.4701 35.5054 19.6355 37.1305 19.0491 38.7748C18.5589 40.1492 18.2931 41.5621 18.2516 43.0135C18.242 44.089 18.413 44.8969 18.7644 45.4371C19.1459 45.9882 19.5781 46.3498 20.0607 46.5219C20.6038 46.7155 19.2615 46.0985 19.8015 46.0145C20.3717 45.9412 20.8451 45.8057 21.2217 45.608C21.6196 45.4457 21.8123 45.3345 21.7996 45.2747C21.8687 45.2717 21.9334 45.2809 21.9937 45.3024C22.2049 45.3777 22.2108 45.5043 22.0113 45.6822C21.8333 45.8953 21.61 46.0923 21.3415 46.2732C21.0642 46.4786 20.8672 46.602 20.7504 46.6434C20.1666 46.8501 19.5877 46.9479 19.0135 46.9368C18.4696 46.9365 17.9412 46.8449 17.4283 46.662Z" stroke="white" mask="url(#stroke1_42_3921)" fill="#ffffff"></path>
-<circle cx="20.0543" cy="43.7362" r="3.39317" fill="white"></circle>
-<defs>
-<path id="stroke0_42_3921" d="M17.4283 46.662C16.4026 46.2962 15.5574 45.6628 14.8926 44.7618C14.2278 43.8607 13.8914 42.897 13.8834 41.8706C13.8853 41.484 13.926 41.0836 14.0058 40.6694C14.1069 40.2905 14.2318 39.8924 14.3806 39.4752C14.8533 38.1499 15.6027 36.7158 16.629 35.173C17.6854 33.641 18.8976 32.0538 20.2654 30.4114C21.6721 28.7553 23.1392 27.1207 24.6666 25.5077C26.2329 23.8808 27.7428 22.3168 29.1962 20.8157C30.6886 19.3008 32.0531 17.9062 33.2896 16.632C34.5349 15.3333 35.5418 14.2262 36.3103 13.3108C36.714 12.8461 36.9772 12.442 37.0997 12.0984C37.2573 11.6567 37.155 11.3712 36.793 11.2421C36.3405 11.0807 35.5197 11.1892 34.3307 11.5674C33.1417 11.9456 31.725 12.5331 30.0807 13.3299C28.4363 14.1266 26.6767 15.1036 24.8018 16.2608C22.927 17.418 21.0774 18.6949 19.2532 20.0914C17.429 21.488 15.7468 22.9629 14.2067 24.5161C12.6667 26.0693 11.3898 27.6473 10.3762 29.2499C10.2848 29.411 10.1584 29.6702 9.9969 30.0276C9.83544 30.385 9.64186 30.6894 9.41616 30.9409C9.22063 31.2031 8.97202 31.2804 8.67034 31.1728C8.01541 30.9116 7.64409 30.4749 7.55638 29.8626C7.49885 29.2612 7.5036 28.7234 7.57065 28.2494C7.79319 26.8626 8.21518 25.2979 8.83662 23.5554C9.33552 22.1564 9.92734 20.7353 10.6121 19.292C11.2968 17.8487 12.0157 16.5006 12.7686 15.2476C13.5215 13.9945 14.2452 12.9663 14.9398 12.1628C15.3912 11.6598 15.9113 11.2505 16.4999 10.9348C17.1275 10.6053 17.6223 10.5052 17.9843 10.6343C18.1954 10.7096 18.3176 10.8915 18.3507 11.1799C18.4141 11.4791 18.3168 11.9424 18.0591 12.5698C17.9628 12.8397 17.6282 13.3013 17.0552 13.9546C16.5211 14.594 15.8479 15.4328 15.0356 16.471C14.2535 17.5199 13.4509 18.7691 12.628 20.2184C11.8051 21.6678 11.061 23.3251 10.3958 25.1903C10.0807 26.0739 9.79776 27.0103 9.54692 27.9998C10.0635 27.4094 10.8121 26.5975 11.7928 25.564C12.8036 24.5413 13.992 23.4021 15.3579 22.1464C16.754 20.9015 18.2581 19.6397 19.8702 18.3612C21.5213 17.0688 23.2302 15.8525 24.9971 14.7121C26.764 13.5717 28.5387 12.6001 30.3212 11.7973C32.1037 10.9945 33.8245 10.4601 35.4835 10.1942C36.3087 10.0735 37.0983 10.1476 37.8525 10.4166C38.6671 10.7071 39.546 11.3647 40.1179 11.7553C40.5448 12.0469 42.207 13.5049 41.779 14.5141C41.3511 15.5234 40.6623 16.4535 39.7128 17.3044C38.8022 18.1415 37.7947 18.9165 36.6904 19.6292C35.6163 20.3527 34.6005 21.0555 33.6432 21.7377C32.3044 22.7264 30.8981 23.857 29.4241 25.1295C27.9803 26.4128 26.5706 27.7912 25.195 29.2648C23.8496 30.7491 22.6355 32.2941 21.5528 33.8998C20.4701 35.5054 19.6355 37.1305 19.0491 38.7748C18.5589 40.1492 18.2931 41.5621 18.2516 43.0135C18.242 44.089 18.413 44.8968 18.7644 45.4371C19.1459 45.9882 19.5781 46.3498 20.0607 46.5219C20.6038 46.7155 19.2615 46.0985 19.8015 46.0145C20.3717 45.9412 20.8451 45.8057 21.2217 45.608C21.6196 45.4457 21.8123 45.3345 21.7996 45.2747C21.8687 45.2717 21.9334 45.2809 21.9937 45.3024C22.2049 45.3777 22.2108 45.5043 22.0113 45.6822C21.8333 45.8953 21.61 46.0923 21.3415 46.2732C21.0642 46.4786 20.8672 46.602 20.7504 46.6434C20.1666 46.8501 19.5877 46.9479 19.0135 46.9368C18.4696 46.9365 17.9412 46.8449 17.4283 46.662Z"></path>
-</defs>
-</svg>
-
+<header class="site-head" id="site-head">
+<a class="brand" href="index.html" aria-label="Nashwa Nassar, home">
+<svg class="brand-mark" width="48" height="54" viewBox="0 0 47 53" aria-hidden="true"><rect width="47" height="53" rx="5" fill="#222127"></rect><path fill="#bb935c" d="M39.06 10.38 L36.94 9.69 L35.56 9.69 L33.62 10.00 L30.56 11.12 L27.88 12.38 L25.06 14.00 L20.56 17.12 L17.00 20.00 L12.75 23.81 L11.69 24.44 L11.44 24.19 L12.94 20.44 L15.25 16.81 L16.62 15.25 L18.38 12.81 L18.75 11.88 L18.56 10.75 L17.81 10.19 L17.00 10.19 L15.50 11.00 L14.00 12.50 L12.19 15.12 L10.06 19.00 L8.19 23.62 L7.00 28.25 L7.12 30.19 L7.81 31.12 L8.50 31.50 L9.19 31.44 L10.06 30.75 L12.50 26.94 L16.94 22.50 L22.50 18.25 L27.25 15.25 L31.75 13.00 L34.88 11.88 L35.81 11.94 L36.12 12.31 L35.81 13.19 L30.88 18.50 L22.06 27.44 L17.31 33.19 L15.06 36.56 L14.12 38.62 L13.50 40.69 L13.38 42.19 L14.12 44.50 L14.69 45.25 L16.38 46.75 L18.06 47.25 L19.88 47.25 L21.50 46.69 L22.56 45.81 L23.31 44.00 L23.31 43.12 L22.94 42.12 L21.75 40.88 L20.00 40.25 L19.38 39.69 L19.44 38.88 L21.19 35.19 L23.25 32.19 L27.25 27.62 L32.06 23.44 L38.75 18.69 L40.88 16.62 L41.88 15.38 L42.19 14.44 L42.19 13.75 L41.94 13.06 L40.50 11.50 Z"></path></svg>
+<span class="brand-name">Nashwa Nassar</span>
 </a>
-<nav class="hdr-nav" aria-label="Main" style="display: flex; flex-wrap: wrap; align-items: center; gap: 4px 32px; margin-left: auto; font-size: 16px">
-<a href="index.html" style="display: flex; align-items: center; min-height: 44px">About</a>
-<a href="projects.html" aria-current="page" style="display: flex; align-items: center; min-height: 44px; font-weight: 600; color: #8a6630">Projects</a>
+<nav class="main-nav" aria-label="Main">
+<a href="index.html">About</a>
+<div class="dd">
+<a href="projects.html" aria-haspopup="true" aria-current="page">Projects<svg class="dd-chev" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"></path></svg></a>
+<div class="dd-menu">
+<ul aria-label="Projects">
+<li><a href="goat.html">GOAT</a></li>
+<li><a href="projects.html">Vodafone Digital Twin</a></li>
+<li><a href="projects.html">Data Strategy &amp; Personalisation</a></li>
+</ul>
+</div>
+</div>
+<a href="index.html#journey">The Journey</a>
 </nav>
-<a class="hdr-cta" href="https://calendly.com/nashwaanassar/30min" target="_blank" rel="noopener noreferrer" style="display: flex; align-items: center; min-height: 40px; box-sizing: border-box; padding: 0 16px; margin-left: 32px; border: 1px solid #8a6630; border-radius: 6px; font-size: 16px; color: #8a6630">Let’s talk</a>
-<button type="button" class="menu-btn" aria-label="Open menu" aria-expanded="false" aria-controls="site-menu" style="margin-left: auto; display: none; align-items: center; justify-content: center; width: 48px; height: 48px; padding: 0; border: 1px solid rgba(20, 19, 26, 0.12); border-radius: 10px; background: rgba(255, 255, 255, 0.5); color: #14131a; cursor: pointer; transition: background 0.2s ease">
-<svg class="ic-close" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12"></path><path d="M18 6L6 18"></path></svg>
-<svg class="ic-open" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16"></path><path d="M4 12h16"></path><path d="M4 17h16"></path></svg>
-</button>
-<nav id="site-menu" hidden class="menu-panel" aria-label="Main" style="position: absolute; top: calc(100% + 8px); right: 72px; width: 300px; box-sizing: border-box; display: flex; flex-direction: column; padding: 12px; border-radius: 14px; background: rgba(245, 246, 255, 0.8); backdrop-filter: blur(20px) saturate(140%); -webkit-backdrop-filter: blur(20px) saturate(140%); border: 1px solid rgba(20, 19, 26, 0.08); box-shadow: 0 20px 48px rgba(20, 19, 26, 0.16)">
-<a href="index.html" style="display: flex; align-items: center; min-height: 48px; padding: 0 12px; border-radius: 8px; font-size: 18px">About</a>
-<a href="projects.html" aria-current="page" style="display: flex; align-items: center; min-height: 48px; padding: 0 12px; border-radius: 8px; font-size: 18px; font-weight: 600; color: #8a6630">Projects</a>
-<a href="https://calendly.com/nashwaanassar/30min" target="_blank" rel="noopener noreferrer" style="display: flex; align-items: center; justify-content: center; min-height: 48px; margin-top: 8px; border: 1px solid #8a6630; border-radius: 8px; font-size: 17px; color: #8a6630">Let’s talk</a>
+<a class="head-cta" href="https://calendly.com/nashwaanassar/30min" target="_blank" rel="noopener">Let’s talk</a>
+<button type="button" class="menu-btn" aria-label="Open menu" aria-expanded="false" aria-controls="site-menu"><svg class="ic-open" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16"></path><path d="M4 12h16"></path><path d="M4 17h16"></path></svg><svg class="ic-close" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12"></path><path d="M18 6L6 18"></path></svg></button>
+<nav id="site-menu" hidden aria-label="Main">
+<a href="index.html">About</a>
+<a href="projects.html" aria-current="page" style="font-weight: 600; color: #bb935c">Projects</a>
+<a href="index.html#journey">The Journey</a>
+<a class="menu-cta" href="https://calendly.com/nashwaanassar/30min" target="_blank" rel="noopener">Let’s talk</a>
 </nav>
-</header><section class="quote" aria-label="Quote" style="display: flex; align-items: center; justify-content: center; box-sizing: border-box; min-height: 586px; padding: 185px 72px 96px; background: #f7f7f7">
-<figure style="margin: 0; max-width: 680px">
-<blockquote style="margin: 0; font-family: Khand, 'Arial Narrow', sans-serif; font-weight: 700; font-size: clamp(24px, 2.45vw, 36px); line-height: 1.9; letter-spacing: 0.004em; text-transform: uppercase; text-align: center; color: #14131a"><p style="margin: 0; font-weight: 500; font-size: 35px; line-height: 2"><span aria-hidden="true" style="display: inline-block; margin-right: 10px; font-size: 2.1em; line-height: 0; vertical-align: -0.12em; color: rgb(58, 58, 58)">“</span>Some people want it to happen, some wish it <br class="q-br"><span class="q-indent">&nbsp; &nbsp; &nbsp; &nbsp;</span>would happen, <span style="color: rgb(171, 129, 71)">others make it happen</span><span aria-hidden="true" style="display: inline-block; margin-left: 10px; font-size: 2.1em; line-height: 0; vertical-align: 0.02em; color: rgb(58, 58, 58); font-weight: 500">”</span></p></blockquote>
-<figcaption style="margin: 6px 0 0; text-align: right; font-family: 'Mrs Saint Delafield', cursive; font-size: clamp(32px, 3vw, 44px); line-height: 1.1; color: #14131a">Michael Jordan</figcaption>
-</figure>
-</section>
+</header>
 
-<section class="work" aria-labelledby="work-h" style="box-sizing: border-box; padding: 96px 72px 160px; position: relative">
-<h1 id="work-h" style="margin: 0 0 76px; font-family: Khand, 'Arial Narrow', sans-serif; font-weight: 700; font-size: clamp(34px, 3.1vw, 46px); line-height: 1.1; letter-spacing: 0.04em; color: #14131a">Selected Projects</h1>
-<div class="grid" style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px">
-
-<div class="proj">
-<a class="card" href="goat.html" aria-label="GOAT: translating SRMG's editorial credibility into digital audience engagement and monetisation. SportsTech and digital media, digital product experience leadership.">
-<img class="base" src="assets/projects/goat.webp" alt="">
-<img class="hover-img" loading="lazy" src="assets/projects/goat-hover.webp" alt="">
-<p class="hover-title" aria-hidden="true">Translating SRMG’s editorial credibility into digital audience engagement and monetisation</p>
-<div class="tags"><p class="tag-row"><span class="pill">SportsTech &amp; Digital Media</span></p><p class="tag-row"><span class="pill">Digital Product Experience Leadership</span></p></div>
-</a>
-<div class="card-info"><h2 style="margin: 0; font-family: Khand, 'Arial Narrow', sans-serif; font-weight: 500; font-size: 24px; line-height: 1.2; color: #14131a"><a href="goat.html" style="color: #14131a">Translating SRMG’s editorial credibility into digital audience engagement and monetisation</a></h2><a class="info-btn" href="goat.html" style="display: flex; align-items: center; gap: 8px; width: fit-content; min-height: 44px; box-sizing: border-box; padding: 0 20px; border: 1px solid #8a6630; border-radius: 6px; font-size: 16px; font-weight: 500; color: #8a6630">View case study<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"></path><path d="M13 6l6 6-6 6"></path></svg></a></div>
-</div>
-
-<div class="proj">
-<div class="card">
-<img class="base" src="assets/projects/digital-twin.webp" alt="">
-<img class="hover-img" loading="lazy" src="assets/projects/digital-twin-hover.webp" alt="">
-<p class="hover-title"><span>Transforming telecom tower workflows with IBM Digital Twin Platform</span><a class="req-btn" href="mailto:nashwaanassar@gmail.com?subject=Access%20request%3A%20IBM%20Digital%20Twin%20Platform%20case%20study&amp;body=Hi%20Nashwa%2C%0A%0AI%27d%20like%20to%20request%20access%20to%20your%20IBM%20Digital%20Twin%20Platform%20case%20study.%0A%0AName%3A%0ACompany%3A%0ARole%3A%0A">Request access</a></p>
-<div class="tags"><p class="tag-row"><span class="pill">Telecom</span><span class="pill">Digital Twin Technology</span><span class="pill">AI</span></p><p class="tag-row"><span class="pill">Design Thinking</span><span class="pill">Experience Design</span><span class="pill">Journey Mapping</span></p></div>
-</div>
-<div class="card-info"><h2 style="margin: 0; font-family: Khand, 'Arial Narrow', sans-serif; font-weight: 500; font-size: 24px; line-height: 1.2; color: #14131a">Transforming telecom tower workflows with IBM Digital Twin Platform</h2><a class="info-btn" href="mailto:nashwaanassar@gmail.com?subject=Access%20request%3A%20IBM%20Digital%20Twin%20Platform%20case%20study&amp;body=Hi%20Nashwa%2C%0A%0AI%27d%20like%20to%20request%20access%20to%20your%20IBM%20Digital%20Twin%20Platform%20case%20study.%0A%0AName%3A%0ACompany%3A%0ARole%3A%0A" style="display: flex; align-items: center; gap: 8px; width: fit-content; min-height: 44px; box-sizing: border-box; padding: 0 20px; border: 1px solid #8a6630; border-radius: 6px; font-size: 16px; font-weight: 500; color: #8a6630">Request access</a></div>
-</div>
-
-<div class="proj">
-<div class="card">
-<img class="base" src="assets/projects/srmg-data.webp" alt="">
-<img class="hover-img" loading="lazy" src="assets/projects/srmg-data-hover.webp" alt="">
-<p class="hover-title"><span>SRMG Data Strategy<br>ML Recommendation Engine &amp; Executive Business Case</span><a class="req-btn" href="mailto:nashwaanassar@gmail.com?subject=Access%20request%3A%20SRMG%20Data%20Strategy%20case%20study&amp;body=Hi%20Nashwa%2C%0A%0AI%27d%20like%20to%20request%20access%20to%20your%20SRMG%20Data%20Strategy%20case%20study.%0A%0AName%3A%0ACompany%3A%0ARole%3A%0A">Request access</a></p>
-<div class="tags"><p class="tag-row"><span class="pill">Digital Media &amp; Newsroom</span></p><p class="tag-row"><span class="pill">Data Strategy</span></p></div>
-</div>
-<div class="card-info"><h2 style="margin: 0; font-family: Khand, 'Arial Narrow', sans-serif; font-weight: 500; font-size: 24px; line-height: 1.2; color: #14131a">SRMG Data Strategy<br>ML Recommendation Engine &amp; Executive Business Case</h2><a class="info-btn" href="mailto:nashwaanassar@gmail.com?subject=Access%20request%3A%20SRMG%20Data%20Strategy%20case%20study&amp;body=Hi%20Nashwa%2C%0A%0AI%27d%20like%20to%20request%20access%20to%20your%20SRMG%20Data%20Strategy%20case%20study.%0A%0AName%3A%0ACompany%3A%0ARole%3A%0A" style="display: flex; align-items: center; gap: 8px; width: fit-content; min-height: 44px; box-sizing: border-box; padding: 0 20px; border: 1px solid #8a6630; border-radius: 6px; font-size: 16px; font-weight: 500; color: #8a6630">Request access</a></div>
-</div>
-
+<main id="top">
+<h1 class="sr-only">Projects</h1>
+<section class="feature" aria-labelledby="goat-h">
+<img src="assets/projects/goat.webp" alt="">
+<div class="feature-scrim" aria-hidden="true"></div>
+<div class="feature-inner">
+<p class="f-label">GOAT · SRMG</p>
+<h2 id="goat-h">Translating SRMG’s editorial credibility into digital audience engagement and monetisation</h2>
+<p class="f-proof"><strong>61%</strong> download-to-registration on the app, up from 50%.</p>
+<a class="btn-outline" href="goat.html">View case study</a>
 </div>
 </section>
 
-<footer class="foot" style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px; padding: 28px 72px; font-size: 15px; color: #8d8e97; background: #18171b">
-<a href="index.html" style="display: flex; align-items: center; min-height: 44px; color: #c8c9d2">Home</a>
-<span>© 2026 Nashwa Nassar · <a href="privacy.html" style="color: #a3a4ad; text-decoration: underline; text-underline-offset: 2px">Privacy</a></span>
-<a href="https://www.linkedin.com/in/nashwanassar/" target="_blank" rel="noopener noreferrer" style="display: flex; align-items: center; min-height: 44px; color: #c8c9d2">LinkedIn</a>
+<section class="work" aria-labelledby="more-h">
+<div class="work-head">
+<h2 id="more-h">More projects</h2>
+<p>Some are confidential: request access and I’ll share the details.</p>
+</div>
+<div class="rows">
+<div class="prow wide-left">
+<article class="pcard">
+<a class="pimg" href="vodafone-digital-twin.html" aria-label="Vodafone Digital Twin">
+<img class="base" src="assets/projects/digital-twin.webp" alt="" loading="lazy">
+<img class="hover-img" src="assets/projects/digital-twin-hover.webp" alt="" loading="lazy">
+</a>
+<div class="p-line"><h3><a href="vodafone-digital-twin.html">Vodafone Digital Twin</a></h3><span class="p-status conf">Confidential</span><span class="p-year">2021</span></div>
+<p class="p-meta">Vodafone · Telecom</p>
+<p class="p-did">Design Thinking · Experience Design · Journey Mapping</p>
+</article>
+<article class="pcard">
+<a class="pimg" href="srmg-data-strategy.html" aria-label="SRMG Data Strategy">
+<img class="base" src="assets/projects/srmg-data.webp" alt="" loading="lazy">
+<img class="hover-img" src="assets/projects/srmg-data-hover.webp" alt="" loading="lazy">
+</a>
+<div class="p-line"><h3><a href="srmg-data-strategy.html">SRMG Data Strategy</a></h3><span class="p-status conf">Confidential</span></div>
+<p class="p-meta">SRMG · Digital Media &amp; Newsroom</p>
+<p class="p-did">Data Strategy · ML Recommendation Engine · Executive Business Case</p>
+</article>
+</div>
+<div class="prow wide-right">
+<article class="pcard">
+<a class="pimg" href="stc-strategic-discovery.html" aria-label="KSA Strategic Discovery">
+<img class="base" src="assets/projects/stc.webp" alt="" loading="lazy">
+<img class="hover-img" src="assets/projects/stc-hover.webp" alt="" loading="lazy">
+</a>
+<div class="p-line"><h3><a href="stc-strategic-discovery.html">KSA Strategic Discovery</a></h3><span class="p-status conf">Confidential</span><span class="p-year">2021</span></div>
+<p class="p-meta">stc · Telecom · KSA</p>
+<p class="p-did">Discovery workshop · Personas · As-is scenarios · Initiatives prioritisation</p>
+</article>
+<article class="pcard">
+<a class="pimg" href="hollard-insurance.html" aria-label="Hollard Insurance">
+<img class="base" src="assets/projects/hollard.webp" alt="" loading="lazy">
+<img class="hover-img" src="assets/projects/hollard-hover.webp" alt="" loading="lazy">
+</a>
+<div class="p-line"><h3><a href="hollard-insurance.html">Hollard Insurance</a></h3><span class="p-status conf">Confidential</span><span class="p-year">2018</span></div>
+<p class="p-meta">Hollard · Insurance · South Africa</p>
+<p class="p-did">Design Thinking Coach · IBM Cloud Garage workshop</p>
+</article>
+</div>
+<div class="prow wide-left">
+<article class="pcard">
+<a class="pimg" href="lycamobile.html" aria-label="Lycamobile">
+<img class="base" src="assets/projects/lycamobile.webp" alt="" loading="lazy">
+<img class="hover-img" src="assets/projects/lycamobile-hover.webp" alt="" loading="lazy">
+</a>
+<div class="p-line"><h3><a href="lycamobile.html">Lycamobile</a></h3><span class="p-year">2021</span></div>
+<p class="p-meta">Telecom · UK</p>
+<p class="p-did">UX lead of the Lycamobile design squad</p>
+</article>
+<article class="pcard">
+<div class="pimg still">
+<img class="base" src="assets/projects/avivasa.webp" alt="" loading="lazy">
+</div>
+<div class="p-line"><h3>AvivaSA</h3><span class="p-status soon">Coming soon</span></div>
+<p class="p-meta">Insurance &amp; pensions · Turkey</p>
+
+</article>
+</div>
+<div class="prow one">
+<article class="pcard">
+<div class="pimg ph"><p aria-hidden="true">HIA Hub</p></div>
+<div class="p-line"><h3>HIA Hub</h3><span class="p-status soon">Coming soon</span></div>
+<p class="p-meta">SRMG · Digital Media · Service Design</p>
+
+</article>
+</div>
+</div>
+</section>
+
+<footer class="site-foot">
+<a href="#top">Back to top</a>
+<span>© 2026 Nashwa Nassar · <a class="privacy" href="privacy.html">Privacy</a></span>
+<a href="https://www.linkedin.com/in/nashwanassar/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+<p class="site-notice">This site uses Microsoft Clarity and Google Analytics to see how visitors use it.</p>
 </footer>
-
 </main>
-<script>(function(){
-  var hdr=document.querySelector('.hdr'), btn=document.querySelector('.menu-btn'), menu=document.getElementById('site-menu');
-  function setMenu(open){menu.hidden=!open;hdr.classList.toggle('menu-open',open);btn.setAttribute('aria-expanded',open?'true':'false');btn.setAttribute('aria-label',open?'Close menu':'Open menu');}
+
+<a class="fab-talk" href="https://calendly.com/nashwaanassar/30min" target="_blank" rel="noopener" aria-label="Let’s talk: book a 30-minute call"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M17 19H4V9H17V19Z"></path><path d="M17 9H19C20.6569 9 22 10.3431 22 12C22 13.6569 20.6569 15 19 15H17"></path><path d="M1 22H22"></path><path d="M8.5 6C7.39543 6 6.5 5.10457 6.5 4C6.5 2.89543 7.39543 2 8.5 2"></path><path d="M14.5 6C13.3954 6 12.5 5.10457 12.5 4C12.5 2.89543 13.3954 2 14.5 2"></path></svg></a>
+<script>
+(function(){
+  var head=document.getElementById('site-head'), btn=head.querySelector('.menu-btn'), menu=document.getElementById('site-menu');
+  function setMenu(open){menu.hidden=!open;head.classList.toggle('menu-open',open);btn.setAttribute('aria-expanded',open?'true':'false');btn.setAttribute('aria-label',open?'Close menu':'Open menu');}
   btn.addEventListener('click',function(){setMenu(menu.hidden);});
   menu.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){setMenu(false);});});
-  function hdrUpdate(){var compact=window.scrollY>40;hdr.classList.toggle('compact',compact);if(!compact&&!menu.hidden&&window.innerWidth>640)setMenu(false);}
-
-
-  var mqT=window.matchMedia('(max-width: 1024px)');
-  document.querySelectorAll('.card').forEach(function(c){
-    c.addEventListener('click',function(e){if(!mqT.matches||e.target.closest('.req-btn'))return;e.preventDefault();c.classList.toggle('flipped');});
-  });
-  mqT.addEventListener('change',function(e){if(!e.matches)document.querySelectorAll('.card.flipped').forEach(function(c){c.classList.remove('flipped');});});
-  window.addEventListener('scroll',hdrUpdate,{passive:true}); window.addEventListener('resize',hdrUpdate); hdrUpdate();
-})();</script>
+  document.addEventListener('keydown',function(e){if(e.key==='Escape'&&!menu.hidden){setMenu(false);btn.focus();}});
+  var ticking=false;
+  function onScroll(){ticking=false;head.classList.toggle('compact',window.scrollY>40);}
+  window.addEventListener('scroll',function(){if(!ticking){ticking=true;requestAnimationFrame(onScroll);}},{passive:true});
+  onScroll();
+})();
+</script>
 </body>
 </html>

@@ -86,31 +86,33 @@ main{position:relative;overflow:hidden;background-color:var(--bg);background-ima
 #site-menu .menu-cta{justify-content:center;margin-top:8px;border:1px solid var(--gold);font-size:17px;font-weight:600;color:var(--gold)}
 
 /* hero */
-.hero{position:relative;min-height:calc(100svh - 40px);max-height:1100px;display:flex}
-.portrait{position:absolute;top:0;right:-17px;z-index:0;height:100%;-webkit-mask-image:linear-gradient(180deg,#000 0%,#000 72%,transparent 100%);mask-image:linear-gradient(180deg,#000 0%,#000 72%,transparent 100%)}
+.hero{position:relative;overflow:hidden;min-height:max(600px,calc(100svh - 170px));max-height:960px;display:flex}
+.portrait{position:absolute;top:0;right:-17px;z-index:0;height:calc(100% + 170px);-webkit-mask-image:linear-gradient(180deg,#000 0%,#000 72%,transparent 100%);mask-image:linear-gradient(180deg,#000 0%,#000 72%,transparent 100%)}
 .portrait img{display:block;height:100%;width:auto;filter:saturate(.35) brightness(1.02);transition:filter .6s ease}
 .portrait:hover img{filter:none}
 .hero-scrim{display:none}
-.hero-inner{position:relative;z-index:2;display:flex;flex-direction:column;justify-content:flex-end;width:100%;padding:120px var(--pad) 56px}
+.hero-inner{position:relative;z-index:2;display:flex;flex-direction:column;justify-content:flex-end;width:100%;padding:120px var(--pad) 64px}
 .hero-copy{display:flex;flex-direction:column;gap:22px}
 .eyebrow{margin:0;font-size:16px;font-weight:300;letter-spacing:.06em;line-height:1.4;color:var(--gold)}
 .hero h1{margin:0;max-width:958px;font-family:var(--khand);font-weight:600;font-size:clamp(40px,6.4vw,104px);line-height:1.04;letter-spacing:.005em;text-transform:uppercase;color:#d4d6e0}
 .hero h1 span{color:var(--gold)}
 .btn-outline{display:flex;align-items:center;width:fit-content;height:44px;margin-top:32px;padding:0 24px;border:1px solid var(--gold);border-radius:6px;font-size:18px;color:var(--gold)}
 .btn-outline:hover{background:rgba(187,147,92,.12);color:#d2a86a}
-.worked{margin-top:64px}
+.proof{--kick:#5c5d66;background:#f7f7f7;padding:44px 0 40px}
+.proof-line{height:0;margin:32px var(--pad);border:0;border-top:1px solid #e5e5e8}
+.proof .kicker{color:var(--kick)}
+.worked{padding:0 var(--pad)}
 .logo-row{display:flex;flex-wrap:wrap;align-items:center;gap:20px 44px}
-.logo-row img{display:block;width:auto}
+.logo-row img{display:block;width:auto;filter:brightness(0) invert(.24)}
 .logo-srmg{height:26px}.logo-ibm{height:21px}.logo-kn{height:42px}
 
 /* clients */
-.clients{padding:32px 0 24px}
 .clients .kicker{margin:0 var(--pad) 18px}
 .marquee{overflow:hidden;-webkit-mask-image:linear-gradient(90deg,transparent 0%,#000 8%,#000 92%,transparent 100%);mask-image:linear-gradient(90deg,transparent 0%,#000 8%,#000 92%,transparent 100%)}
 .marquee-track{display:flex;gap:56px;width:max-content;padding-right:56px;animation:marquee 34s linear infinite}
 .marquee:hover .marquee-track{animation-play-state:paused}
 .marquee-set{display:flex;gap:56px}
-.marquee-set span{flex:none;font-family:var(--khand);font-weight:600;font-size:24px;letter-spacing:.03em;color:var(--dim);white-space:nowrap}
+.marquee-set span{flex:none;font-family:var(--khand);font-weight:600;font-size:24px;letter-spacing:.03em;color:#3f4047;white-space:nowrap}
 @keyframes marquee{to{transform:translateX(-50%)}}
 
 /* expertise */
@@ -187,8 +189,8 @@ main{position:relative;overflow:hidden;background-color:var(--bg);background-ima
 @media (max-width:1180px){
 :root{--pad:32px}
 .site-head{height:76px}
-.hero{min-height:calc(100svh - 24px)}
-.portrait{right:0;max-height:820px}
+.hero{min-height:max(560px,calc(100svh - 160px))}
+.portrait{right:0;height:calc(100% + 160px);max-height:820px}
 .hero-scrim{display:block;position:absolute;inset:0;z-index:1;background:linear-gradient(90deg,rgba(24,23,27,.85) 0%,rgba(24,23,27,.5) 45%,rgba(24,23,27,0) 80%);pointer-events:none}
 .hero-inner{padding:100px var(--pad) 40px}
 .hero h1{font-size:64px;max-width:560px}
@@ -217,19 +219,20 @@ html{scroll-snap-type:y mandatory;scroll-padding-top:52px}
 .main-nav,.head-cta{display:none}
 .menu-btn{display:flex}
 main{background-image:radial-gradient(600px 720px at 82% 185px,#3d3e46 0%,#383941 16%,#27272d 55%,#1e1e22 74%,#18171b 92%)}
-.hero{min-height:100svh;max-height:none}
-.portrait{top:60px;right:0;height:calc(100% - 210px);max-height:440px;-webkit-mask-image:linear-gradient(180deg,#000 0%,#000 70%,transparent 100%);mask-image:linear-gradient(180deg,#000 0%,#000 70%,transparent 100%)}
+.hero{min-height:max(520px,calc(100svh - 118px));max-height:none}
+.portrait{top:60px;right:0;height:calc(100% - 150px);max-height:440px;-webkit-mask-image:linear-gradient(180deg,#000 0%,#000 70%,transparent 100%);mask-image:linear-gradient(180deg,#000 0%,#000 70%,transparent 100%)}
 .hero-scrim{background:linear-gradient(90deg,rgba(24,23,27,.8) 0%,rgba(24,23,27,.45) 45%,rgba(24,23,27,0) 75%)}
 .hero-inner{padding:84px 16px 24px}
 .hero-copy{gap:8px}
-.eyebrow{font-size:12px;font-weight:300;letter-spacing:-.01em;line-height:1.5;max-width:271px}
+.eyebrow{font-size:14px;font-weight:300;letter-spacing:-.01em;line-height:1.5;max-width:271px}
 .hero h1{font-size:34px;line-height:1.4;letter-spacing:-.01em;max-width:254px}
 .btn-outline{height:40px;margin-top:8px;padding:0 22px}
-.worked{margin-top:36px}
+.proof{padding:24px 0 28px}
+.proof-line{margin:24px 16px}
+.btn-outline{width:124px;justify-content:center}
 .worked .kicker{font-size:12px;margin-bottom:14px}
 .logo-row{gap:18px 30px}
 .logo-srmg{height:20px}.logo-ibm{height:16px}.logo-kn{height:32px}
-.clients{padding:28px 0 8px}
 .clients .kicker{font-size:12px;margin-bottom:14px}
 .marquee{-webkit-mask-image:linear-gradient(90deg,transparent 0%,#000 12%,#000 88%,transparent 100%);mask-image:linear-gradient(90deg,transparent 0%,#000 12%,#000 88%,transparent 100%)}
 .marquee-track,.marquee-set{gap:36px}
@@ -283,7 +286,7 @@ html{scroll-behavior:auto}
 <div class="dd-menu">
 <ul aria-label="Projects">
 <li><a href="goat.html">GOAT</a></li>
-<li><a href="projects.html">Digital Twin Platform</a></li>
+<li><a href="projects.html">Vodafone Digital Twin</a></li>
 <li><a href="projects.html">Data Strategy &amp; Personalisation</a></li>
 </ul>
 </div>
@@ -306,23 +309,26 @@ html{scroll-behavior:auto}
 <div class="hero-scrim" aria-hidden="true"></div>
 <div class="hero-inner">
 <div class="hero-copy">
-<p class="eyebrow">Senior Manager, Experience Design at SRMG</p>
+<p class="eyebrow">Senior Manager, Experience Design</p>
 <h1>Simplify complexity<br>Turn ideas into <span>impact</span></h1>
 </div>
 <a class="btn-outline" href="projects.html">Projects</a>
-<div class="worked">
-<p class="kicker">Where I've worked</p>
-<div class="logo-row"><img src="assets/landing/srmg.svg" alt="SRMG" class="logo-srmg"><img src="assets/landing/ibm-ix.svg" alt="IBM iX" class="logo-ibm"><img src="assets/landing/knowledgenet.png" alt="KnowledgeNet" class="logo-kn"></div>
-</div>
 </div>
 </section>
 
-<section class="clients snap" aria-labelledby="cl-h">
+<section class="proof" aria-label="Where I've worked and clients">
+<div class="worked">
+<p class="kicker" id="ww-h">Where I've worked</p>
+<div class="logo-row" role="list" aria-labelledby="ww-h"><img src="assets/landing/srmg.svg" alt="SRMG" class="logo-srmg" role="listitem"><img src="assets/landing/ibm-ix.svg" alt="IBM iX" class="logo-ibm" role="listitem"><img src="assets/landing/knowledgenet.png" alt="KnowledgeNet" class="logo-kn" role="listitem"></div>
+</div>
+<hr class="proof-line" aria-hidden="true">
+<div class="clients snap">
 <p class="kicker" id="cl-h">Clients</p>
 <div class="marquee">
 <div class="marquee-track">
-<div class="marquee-set"><span>Lycamobile</span><span>AvivaSA</span><span>Celcom</span><span>Vodafone Vantage Towers</span><span>Hollard</span><span>stc</span><span>UAE Ports</span><span>Saudi Music Commission</span></div>
-<div class="marquee-set" aria-hidden="true"><span>Lycamobile</span><span>AvivaSA</span><span>Celcom</span><span>Vodafone Vantage Towers</span><span>Hollard</span><span>stc</span><span>UAE Ports</span><span>Saudi Music Commission</span></div>
+<div class="marquee-set"><span>Lycamobile</span><span>AvivaSA</span><span>Celcom</span><span>Vodafone Digital Twin</span><span>Hollard</span><span>stc</span><span>UAE Ports</span><span>Saudi Music Commission</span></div>
+<div class="marquee-set" aria-hidden="true"><span>Lycamobile</span><span>AvivaSA</span><span>Celcom</span><span>Vodafone Digital Twin</span><span>Hollard</span><span>stc</span><span>UAE Ports</span><span>Saudi Music Commission</span></div>
+</div>
 </div>
 </div>
 </section>
@@ -376,14 +382,14 @@ html{scroll-behavior:auto}
 <div class="jmap">
 <img src="assets/landing/journey-map.png" alt="" width="1220" height="960">
 <svg viewBox="0 0 1220 960" aria-hidden="true"><path class="jarc" pathLength="1" d="M432 300 Q560 277 664 356" style="animation-delay: 0.2s"></path><path class="jarc" pathLength="1" d="M432 300 Q540 588 400 862" style="animation-delay: 0.6s"></path><path class="jarc" pathLength="1" d="M432 300 Q323 123 119 85" style="animation-delay: 1.0s"></path><path class="jarc" pathLength="1" d="M432 300 Q373 147 220 88" style="animation-delay: 1.4s"></path><path class="jarc" pathLength="1" d="M432 300 Q844 279 1137 569" style="animation-delay: 1.8s"></path><path class="jarc jarc-home" pathLength="1" d="M432 300 Q542 377 673 348" style="animation-delay: 2.4s"></path></svg>
-<button type="button" class="pin pin-home" data-place="cairo" aria-label="Cairo, Egypt: home until 2023" aria-pressed="true" style="left: 35.44%; top: 31.21%"><span class="pin-pulse" aria-hidden="true"></span><span class="pin-dot" aria-hidden="true"></span></button>
-<button type="button" class="pin pin-home" data-place="uae" aria-label="Dubai and Abu Dhabi, UAE: home since 2023, and project trips before" aria-pressed="false" style="left: 55.14%; top: 36.25%"><span class="pin-pulse" aria-hidden="true"></span><span class="pin-dot" aria-hidden="true"></span></button>
+<button type="button" class="pin pin-home" data-place="uae" aria-label="Dubai and Abu Dhabi, UAE: home since 2023, and project trips before" aria-pressed="true" style="left: 55.14%; top: 36.25%"><span class="pin-pulse" aria-hidden="true"></span><span class="pin-dot" aria-hidden="true"></span></button>
+<button type="button" class="pin pin-home" data-place="cairo" aria-label="Cairo, Egypt: home until 2023" aria-pressed="false" style="left: 35.44%; top: 31.21%"><span class="pin-pulse" aria-hidden="true"></span><span class="pin-dot" aria-hidden="true"></span></button>
 <button type="button" class="pin" data-place="za" aria-label="South Africa: project trip" aria-pressed="false" style="left: 32.83%; top: 89.79%"><span class="pin-dot" aria-hidden="true"></span></button>
 <button type="button" class="pin" data-place="de" aria-label="Germany: project trip" aria-pressed="false" style="left: 18.03%; top: 9.17%"><span class="pin-dot" aria-hidden="true"></span></button>
 <button type="button" class="pin" data-place="uk" aria-label="United Kingdom: project trips" aria-pressed="false" style="left: 9.73%; top: 8.84%"><span class="pin-dot" aria-hidden="true"></span></button>
 <button type="button" class="pin" data-place="my" aria-label="Malaysia: project trip" aria-pressed="false" style="left: 93.19%; top: 59.23%"><span class="pin-dot" aria-hidden="true"></span></button>
-<span class="pin-label lab-left" aria-hidden="true" style="left: 35.44%; top: 31.21%">Cairo</span>
 <span class="pin-label lab-right" aria-hidden="true" style="left: 55.14%; top: 36.25%">Dubai · Abu Dhabi</span>
+<span class="pin-label lab-left" aria-hidden="true" style="left: 35.44%; top: 31.21%">Cairo</span>
 <span class="pin-label lab-right" aria-hidden="true" style="left: 32.83%; top: 89.79%">South Africa</span>
 <span class="pin-label lab-right" aria-hidden="true" style="left: 18.03%; top: 9.17%">Germany</span>
 <span class="pin-label lab-below" aria-hidden="true" style="left: 9.73%; top: 8.84%">UK</span>
@@ -391,14 +397,14 @@ html{scroll-behavior:auto}
 </div>
 </div>
 <div class="jr-card-wrap" aria-live="polite">
-<div class="place-card" data-card="cairo"><p class="pc-eyebrow">Home · until 2023</p><h3>Cairo, Egypt</h3><p class="pc-body">Where I built my career, from UX roles at Cairo studios to leading a 25-person design and front-end team at IBM iX.</p></div>
-<div class="place-card" data-card="uae" hidden><p class="pc-eyebrow">Home · since 2023</p><h3>Dubai, UAE</h3><p class="pc-body">Leading experience design at SRMG. Before the move, business trips to Abu Dhabi in 2018–19 for UAE Ports, Borders &amp; Free Zones Security, with IBM iX.</p></div>
+<div class="place-card" data-card="cairo" hidden><p class="pc-eyebrow">Home · until 2023</p><h3>Cairo, Egypt</h3><p class="pc-body">Where I built my career, from UX roles at Cairo studios to leading a 25-person design and front-end team at IBM iX.</p></div>
+<div class="place-card" data-card="uae"><p class="pc-eyebrow">Home · since 2023</p><h3>Dubai, UAE</h3><p class="pc-body">Leading experience design at SRMG. Before the move, business trips to Abu Dhabi in 2018–19 for UAE Ports, Borders &amp; Free Zones Security, with IBM iX.</p></div>
 <div class="place-card" data-card="za" hidden><p class="pc-eyebrow">Project · 2018</p><h3>South Africa · Hollard</h3><p class="pc-body">Facilitated Enterprise Design Thinking for Hollard with IBM iX.</p></div>
-<div class="place-card" data-card="de" hidden><p class="pc-eyebrow">Project · 2021</p><h3>Germany · Vodafone Vantage Towers</h3><p class="pc-body">UX designer and Design Thinking coach on a telecom-tower digital twin, later shown at Mobile World Congress 2023.</p></div>
+<div class="place-card" data-card="de" hidden><p class="pc-eyebrow">Project · 2021</p><h3>Germany · Vodafone Digital Twin</h3><p class="pc-body">UX designer and Design Thinking coach on a telecom-tower digital twin, later shown at Mobile World Congress 2023.</p></div>
 <div class="place-card" data-card="uk" hidden><p class="pc-eyebrow">Project trips · 2021</p><h3>UK · Lycamobile</h3><p class="pc-body">UX lead of the Lycamobile design squad with IBM iX, covering activation, port-in, plans and voucher journeys.</p></div>
 <div class="place-card" data-card="my" hidden><p class="pc-eyebrow">Project</p><h3>Malaysia · Celcom</h3><p class="pc-body">Led and coded the design system behind 4 Celcom products, with IBM iX.</p></div>
 </div>
-<div class="jr-chips" role="group" aria-label="Choose a place"><button type="button" class="chip" data-place="cairo" aria-pressed="true">Cairo</button><button type="button" class="chip" data-place="uae" aria-pressed="false">Dubai · Abu Dhabi</button><button type="button" class="chip" data-place="za" aria-pressed="false">South Africa</button><button type="button" class="chip" data-place="de" aria-pressed="false">Germany</button><button type="button" class="chip" data-place="uk" aria-pressed="false">UK</button><button type="button" class="chip" data-place="my" aria-pressed="false">Malaysia</button></div>
+<div class="jr-chips" role="group" aria-label="Choose a place"><button type="button" class="chip" data-place="uae" aria-pressed="true">Dubai · Abu Dhabi</button><button type="button" class="chip" data-place="cairo" aria-pressed="false">Cairo</button><button type="button" class="chip" data-place="za" aria-pressed="false">South Africa</button><button type="button" class="chip" data-place="de" aria-pressed="false">Germany</button><button type="button" class="chip" data-place="uk" aria-pressed="false">UK</button><button type="button" class="chip" data-place="my" aria-pressed="false">Malaysia</button></div>
 </div>
 </section>
 
@@ -421,7 +427,7 @@ html{scroll-behavior:auto}
 <span aria-hidden="true" style="position: absolute; left: -29px; top: 6px; width: 13px; height: 13px; box-sizing: border-box; border-radius: 50%; border: 2px solid #bb935c; background: #18171b"></span>
 <p style="margin: 0 0 4px; font-size: 13px; color: #8d8e97">2015 – 2023 · Egypt</p>
 <h3 style="margin: 0; font-family: Khand, 'Arial Narrow', sans-serif; font-weight: 600; font-size: 26px; line-height: 1.1; color: #e2e3ea">IBM iX</h3>
-<p style="margin: 2px 0 8px; font-size: 15px; font-weight: 300; line-height: 1.5; color: #a3a4ad">25 direct reports. Client work for Lycamobile, Celcom, Vodafone Vantage Towers and UAE Ports, Borders &amp; Free Zones Security.</p>
+<p style="margin: 2px 0 8px; font-size: 15px; font-weight: 300; line-height: 1.5; color: #a3a4ad">25 direct reports. Client work for Lycamobile, Celcom, Vodafone Digital Twin and UAE Ports, Borders &amp; Free Zones Security.</p>
 <ul style="list-style: none; margin: 12px 0 0; padding: 0; display: flex; flex-direction: column; gap: 8px; font-size: 14px; line-height: 1.4">
 <li style="display: flex; gap: 12px"><span style="flex: none; width: 74px; color: #8d8e97">2020 – 2023</span><span style="color: #c8c9d2">Senior Experience Consultant, Service Area Leader &amp; People Manager</span></li>
 <li style="display: flex; gap: 12px"><span style="flex: none; width: 74px; color: #8d8e97">2017 – 2020</span><span style="color: #c8c9d2">Senior Experience Consultant</span></li>
