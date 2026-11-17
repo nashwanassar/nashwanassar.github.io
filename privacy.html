@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Privacy — Nashwa Nassar</title>
-<meta name="description" content="How nashwanassar.com uses Microsoft Clarity analytics.">
+<meta name="description" content="How nashwanassar.com uses Microsoft Clarity and Google Analytics.">
 <meta name="theme-color" content="#18171b">
 <link rel="icon" type="image/svg+xml" href="favicon.svg">
 <script type="text/javascript">
@@ -14,6 +14,23 @@ t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
 y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
 })(window, document, "clarity", "script", "zbhc1hp2vl");
 </script>
+<!-- ga4 -->
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+(function(){
+var deny = {ad_storage: 'denied', ad_user_data: 'denied', ad_personalization: 'denied', analytics_storage: 'denied'};
+var gpc = navigator.globalPrivacyControl === true;
+// EEA, UK and Switzerland: no analytics cookies, because this site has no consent banner
+gtag('consent', 'default', Object.assign({region: ['AT', 'BE', 'BG', 'HR', 'CY', 'CZ', 'DK', 'EE', 'FI', 'FR', 'DE', 'GR', 'HU', 'IE', 'IT', 'LV', 'LT', 'LU', 'MT', 'NL', 'PL', 'PT', 'RO', 'SK', 'SI', 'ES', 'SE', 'IS', 'LI', 'NO', 'GB', 'CH']}, deny));
+// Everywhere else: analytics cookies on, unless the browser sends Global Privacy Control. No ads features anywhere.
+gtag('consent', 'default', Object.assign({}, deny, {analytics_storage: gpc ? 'denied' : 'granted'}));
+})();
+gtag('js', new Date());
+gtag('config', 'G-5EDCTR4SLC');
+</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-5EDCTR4SLC"></script>
+<!-- /ga4 -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Condensed:wght@300;400;500;600&amp;family=Khand:wght@600&amp;display=swap" rel="stylesheet">
@@ -39,25 +56,30 @@ Nashwa Nassar
 </a>
 
 <h1>Privacy</h1>
-<p class="updated">Last updated 10 November 2026</p>
+<p class="updated">Last updated 17 November 2026</p>
 
 <h2>What this site collects</h2>
-<p>This is my personal portfolio. I use Microsoft Clarity to understand how visitors use it, so I can improve it. Clarity records:</p>
+<p>This is my personal portfolio. I use two analytics tools, Microsoft Clarity and Google Analytics, to understand how visitors use it, so I can improve it.</p>
+<p>Clarity records:</p>
 <ul>
 <li>usage statistics, such as pages viewed, device, browser and approximate location</li>
 <li>heatmaps of where people click and how far they scroll</li>
 <li>session recordings of clicks, scrolls and mouse movement</li>
 </ul>
-<p>Clarity masks sensitive content by default. I don't use this data to identify you.</p>
+<p>Clarity masks sensitive content by default.</p>
+<p>Google Analytics records usage statistics, such as pages viewed, how you reached the site, device, browser and approximate location. It doesn’t record your screen, and this site doesn’t use its advertising features.</p>
+<p>I don't use this data to identify you.</p>
 
-<h2>Microsoft’s role</h2>
-<p>Microsoft collects this data through cookies and similar technologies, and also uses it as described in the <a href="https://privacy.microsoft.com/privacystatement">Microsoft Privacy Statement</a>. By using this site, you agree that I and Microsoft can collect and use this data.</p>
+<h2>Microsoft’s and Google’s role</h2>
+<p>Microsoft collects this data through cookies and similar technologies, and also uses it as described in the <a href="https://privacy.microsoft.com/privacystatement">Microsoft Privacy Statement</a>.</p>
+<p>Google collects its data through cookies and similar technologies, and uses it as described in the <a href="https://policies.google.com/privacy">Google Privacy Policy</a> and in <a href="https://policies.google.com/technologies/partner-sites">how Google uses information from sites that use its services</a>.</p>
+<p>By using this site, you agree that I, Microsoft and Google can collect and use this data.</p>
 
 <h2>Visitors from the EEA, UK and Switzerland</h2>
-<p>For visits from these regions, Clarity doesn’t set cookies unless you give consent. This site doesn’t ask for consent, so Clarity runs without cookies for you.</p>
+<p>This site doesn’t ask for consent, so for visits from these regions neither tool sets analytics cookies. Clarity runs without cookies, and Google Analytics sends only cookieless signals that don’t identify your browser.</p>
 
 <h2>Opting out</h2>
-<p>Clarity honours the Global Privacy Control signal, which some browsers and extensions can send for you. You can also block or delete cookies in your browser settings.</p>
+<p>Both tools on this site honour the Global Privacy Control signal, which some browsers and extensions can send for you. You can also use Google’s <a href="https://tools.google.com/dlpage/gaoptout">opt-out browser add-on</a>, or block or delete cookies in your browser settings.</p>
 
 <h2>Booking a call</h2>
 <p>The “Let’s talk” button opens Calendly, which handles your booking under <a href="https://calendly.com/legal/privacy-notice">its own privacy notice</a>.</p>
