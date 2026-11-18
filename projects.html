@@ -3,12 +3,12 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Projects — Nashwa Nassar</title>
-<meta name="description" content="Selected projects by Nashwa Nassar: GOAT sports app at SRMG, the IBM Digital Twin Platform for telecom towers, and SRMG's data strategy and ML recommendation engine.">
+<title>Projects — Nashwa Nassar, Experience Strategy &amp; Design Leader</title>
+<meta name="description" content="Selected work by Nashwa Nassar: SRMG’s data strategy, the GOAT sports app, the Vodafone Digital Twin, Lycamobile, and Design Thinking workshops for STC and Hollard.">
 <meta name="theme-color" content="#18171b">
 <meta property="og:type" content="website">
-<meta property="og:title" content="Projects — Nashwa Nassar">
-<meta property="og:description" content="Selected projects by Nashwa Nassar: GOAT sports app at SRMG, the IBM Digital Twin Platform for telecom towers, and SRMG's data strategy and ML recommendation engine.">
+<meta property="og:title" content="Projects — Nashwa Nassar, Experience Strategy &amp; Design Leader">
+<meta property="og:description" content="Selected work by Nashwa Nassar: SRMG’s data strategy, the GOAT sports app, the Vodafone Digital Twin, Lycamobile, and Design Thinking workshops for STC and Hollard.">
 <link rel="icon" type="image/svg+xml" href="favicon.svg">
 <script type="text/javascript">
 (function(c,l,a,r,i,t,y){
@@ -93,8 +93,16 @@ main{position:relative;overflow:hidden;background-color:var(--bg);background-ima
 .hero-scrim{display:none}
 .hero-inner{position:relative;z-index:2;display:flex;flex-direction:column;justify-content:flex-end;width:100%;padding:120px var(--pad) 64px}
 .hero-copy{display:flex;flex-direction:column;gap:22px}
-.eyebrow{margin:0;font-size:16px;font-weight:300;letter-spacing:.06em;line-height:1.4;color:var(--gold)}
-.hero h1{margin:0;max-width:958px;font-family:var(--khand);font-weight:600;font-size:clamp(40px,6.4vw,104px);line-height:1.04;letter-spacing:.005em;text-transform:uppercase;color:#d4d6e0}
+.eyebrow{margin:0;font-size:16px;font-weight:500;letter-spacing:.14em;line-height:1.4;text-transform:uppercase;color:var(--gold)}
+.hero h1{margin:0;max-width:900px;font-family:var(--khand);font-weight:600;font-size:clamp(40px,5vw,76px);line-height:1.04;letter-spacing:.005em;text-transform:uppercase;color:#d4d6e0}
+.hero-lead{margin:0;max-width:640px;font-size:20px;font-weight:300;line-height:1.55;color:var(--text)}
+.focus{display:flex;flex-wrap:wrap;gap:8px 22px;margin:0;padding:0;list-style:none;font-size:15px;font-weight:500;letter-spacing:.06em;text-transform:uppercase;color:var(--ink)}
+.focus li{display:flex;align-items:center}
+.focus li::before{content:"";display:block;width:5px;height:5px;margin-right:10px;border-radius:50%;background:var(--gold)}
+.hero-ctas{display:flex;flex-wrap:wrap;align-items:center;gap:12px 28px;margin-top:32px}
+.hero-ctas .btn-outline{margin-top:0}
+.text-link{display:inline-flex;align-items:center;gap:8px;min-height:44px;font-size:17px;font-weight:500;color:var(--text)}
+.text-link:hover{color:#fff}
 .hero h1 span{color:var(--gold)}
 .btn-outline{display:flex;align-items:center;width:fit-content;height:44px;margin-top:32px;padding:0 24px;border:1px solid var(--gold);border-radius:6px;font-size:18px;color:var(--gold)}
 .btn-outline:hover{background:rgba(187,147,92,.12);color:#d2a86a}
@@ -115,11 +123,43 @@ main{position:relative;overflow:hidden;background-color:var(--bg);background-ima
 .marquee-set span{flex:none;font-family:var(--khand);font-weight:600;font-size:24px;letter-spacing:.03em;color:#3f4047;white-space:nowrap}
 @keyframes marquee{to{transform:translateX(-50%)}}
 
-/* expertise */
-.expertise{padding:100px 0 80px}
+/* selected impact */
+.impact{padding:96px 0 88px}
+.impact .sec-head{max-width:760px;margin-bottom:40px}
+.im-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:24px}
+.im-item{padding-top:20px;border-top:1px solid rgba(187,147,92,.45)}
+.im-num{margin:0;font-family:var(--khand);font-weight:600;font-size:56px;line-height:1;color:var(--gold)}
+.im-label{margin:10px 0 0;max-width:280px;font-size:15px;line-height:1.5;color:var(--muted)}
+
+/* featured work */
+.featured{padding:96px 0;border-top:1px solid rgba(212,214,224,.08)}
+.fw-head{display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:16px 24px;margin-bottom:40px}
+.fw-all{display:inline-flex;align-items:center;gap:8px;min-height:44px;font-size:16px;font-weight:500;color:var(--gold)}
+.fw-all:hover{color:#d2a86a}
+.fw-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:28px}
+.fw-card{display:flex;flex-direction:column;min-width:0}
+.fw-img{position:relative;display:block;height:300px;overflow:hidden;border-radius:4px;background:#222127}
+.fw-img img{position:absolute;inset:0;display:block;width:100%;height:100%;object-fit:cover;transition:transform .8s ease}
+.fw-card:hover .fw-img img{transform:scale(1.03)}
+.fw-kick{display:flex;flex-wrap:wrap;align-items:baseline;gap:4px 12px;margin:20px 0 0;font-size:13px;font-weight:500;letter-spacing:.08em;text-transform:uppercase;color:var(--gold)}
+.fw-conf{font-size:11px;letter-spacing:.1em;color:var(--dim)}
+.fw-card h3{margin:8px 0 0;font-family:var(--khand);font-weight:600;font-size:30px;line-height:1.1}
+.fw-card h3 a{color:var(--ink)}
+.fw-card h3 a:hover{color:#fff}
+.fw-ch{margin:10px 0 0;font-size:16px;font-weight:300;line-height:1.55;color:var(--text)}
+.fw-role{margin:12px 0 0;padding-top:12px;border-top:1px solid var(--line);font-size:14px;line-height:1.45;color:var(--muted)}
+.fw-role span{display:block;margin-bottom:2px;font-size:11px;font-weight:500;letter-spacing:.12em;text-transform:uppercase;color:var(--dim)}
+
+/* how I create value */
+.expertise{padding:96px 0 88px;border-top:1px solid rgba(212,214,224,.08)}
 .expertise .sec-head{max-width:760px;margin-bottom:40px}
 .xp-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:20px}
-.xp-card{display:flex;flex-direction:column;gap:16px;min-height:380px;padding:30px 26px;border:1px solid var(--line);border-radius:18px;background:rgba(255,255,255,.03)}
+.xp-card{display:flex;flex-direction:column;gap:14px;min-height:340px;padding:30px 26px;border:1px solid var(--line);border-radius:18px;background:rgba(255,255,255,.03)}
+.xp-kick{margin:6px 0 0;font-size:12px;font-weight:500;letter-spacing:.12em;text-transform:uppercase;color:var(--gold)}
+.xp-link{display:inline-flex;align-items:center;gap:6px;width:fit-content;min-height:44px;margin-top:auto;font-size:15px;font-weight:500;color:var(--text)}
+.xp-link:hover{color:#fff}
+.xp-credly{display:inline-flex;align-items:center;gap:8px;min-height:44px;margin-top:12px;font-size:15px;font-weight:500;color:var(--gold)}
+.xp-credly:hover{color:#d2a86a}
 .xp-icon{width:34px;height:34px}
 .xp-card h3{margin:0;font-family:var(--khand);font-weight:600;font-size:28px;line-height:1.1;color:var(--ink)}
 .xp-body{margin:0;font-size:16px;font-weight:300;line-height:1.55;color:var(--muted)}
@@ -167,6 +207,17 @@ main{position:relative;overflow:hidden;background-color:var(--bg);background-ima
 .chip[aria-pressed="true"]{border-color:var(--gold);background:var(--gold);color:var(--bg)}
 
 /* experience */
+.ex-stage{margin:0 0 6px;font-size:12px;font-weight:500;letter-spacing:.12em;text-transform:uppercase;color:var(--gold)}
+.ex-head .sec-sub{margin-top:4px}
+.ex-head{margin-bottom:32px}
+
+/* contact */
+.contact{padding:96px 0 104px;border-top:1px solid rgba(212,214,224,.08)}
+.ct-inner{display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:28px 48px}
+.ct-inner .sec-head{max-width:640px}
+.ct-actions{display:flex;flex-wrap:wrap;align-items:center;gap:12px 28px}
+.btn-solid{display:inline-flex;align-items:center;height:48px;padding:0 24px;border-radius:6px;background:var(--gold);font-size:17px;font-weight:600;color:var(--bg)}
+.btn-solid:hover{background:#d2a86a;color:var(--bg)}
 .ex-grid{display:grid;grid-template-columns:4fr 1fr 7fr;grid-template-areas:"head . list" "creds . list" "link . list";grid-template-rows:auto auto 1fr}
 .ex-head{grid-area:head}
 .ex-list{grid-area:list}
@@ -193,10 +244,14 @@ main{position:relative;overflow:hidden;background-color:var(--bg);background-ima
 .portrait{right:0;height:calc(100% + 160px);max-height:820px}
 .hero-scrim{display:block;position:absolute;inset:0;z-index:1;background:linear-gradient(90deg,rgba(24,23,27,.85) 0%,rgba(24,23,27,.5) 45%,rgba(24,23,27,0) 80%);pointer-events:none}
 .hero-inner{padding:100px var(--pad) 40px}
-.hero h1{font-size:64px;max-width:560px}
+.hero h1{font-size:52px;max-width:620px}
+.hero-lead{max-width:560px;font-size:18px}
+.im-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:32px 24px}
+.fw-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+.fw-img{height:260px}
 .eyebrow{font-size:14px}
 .xp-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
-.xp-card{min-height:320px}
+.xp-card{min-height:300px}
 .jr-grid,.ex-grid{display:block;max-width:720px}
 .jr-side-head{margin-bottom:24px}
 .jr-map{margin-bottom:16px}
@@ -207,7 +262,7 @@ main{position:relative;overflow:hidden;background-color:var(--bg);background-ima
 /* ---------- mobile ---------- */
 @media (max-width:640px){
 :root{--pad:16px}
-html{scroll-snap-type:y mandatory;scroll-padding-top:52px}
+html{scroll-snap-type:y proximity;scroll-padding-top:52px}
 .snap{scroll-snap-align:start;scroll-margin-top:16px}
 .snap-end{scroll-snap-align:end}
 .site-head{height:60px;gap:12px}
@@ -223,13 +278,32 @@ main{background-image:radial-gradient(600px 720px at 82% 185px,#3d3e46 0%,#38394
 .portrait{top:60px;right:0;height:calc(100% - 150px);max-height:440px;-webkit-mask-image:linear-gradient(180deg,#000 0%,#000 70%,transparent 100%);mask-image:linear-gradient(180deg,#000 0%,#000 70%,transparent 100%)}
 .hero-scrim{background:linear-gradient(90deg,rgba(24,23,27,.8) 0%,rgba(24,23,27,.45) 45%,rgba(24,23,27,0) 75%)}
 .hero-inner{padding:84px 16px 24px}
-.hero-copy{gap:8px}
-.eyebrow{font-size:14px;font-weight:300;letter-spacing:-.01em;line-height:1.5;max-width:271px}
-.hero h1{font-size:34px;line-height:1.4;letter-spacing:-.01em;max-width:254px}
+.eyebrow{font-size:13px;letter-spacing:.12em;line-height:1.5;max-width:none}
+.hero h1{font-size:30px;line-height:1.15;letter-spacing:0;max-width:none}
+.hero-copy{gap:12px}
+.hero-lead{font-size:16px;line-height:1.5}
+.focus{font-size:12px}
+.focus{gap:6px 18px}
+.focus li::before{margin-right:8px}
+.hero-ctas{margin-top:20px;gap:8px 20px}
+.text-link{font-size:15px}
+.impact{padding:48px 0 40px}
+.impact .sec-head{margin-bottom:24px}
+.im-grid{gap:24px 16px}
+.im-num{font-size:40px}
+.im-label{font-size:13px}
+.featured{padding:48px 0}
+.fw-head{margin-bottom:24px}
+.fw-grid{grid-template-columns:1fr;gap:40px}
+.fw-img{height:auto;aspect-ratio:16 / 10}
+.fw-card h3{font-size:26px}
+.fw-ch{font-size:15px}
+.contact{padding:48px 0 72px}
+.ct-actions{gap:8px 20px}
 .btn-outline{height:40px;margin-top:8px;padding:0 22px}
 .proof{padding:24px 0 28px}
 .proof-line{margin:24px 16px}
-.btn-outline{width:124px;justify-content:center}
+.btn-outline{justify-content:center}
 .worked .kicker{font-size:12px;margin-bottom:14px}
 .logo-row{gap:18px 30px}
 .logo-srmg{height:20px}.logo-ibm{height:16px}.logo-kn{height:32px}
@@ -246,7 +320,7 @@ main{background-image:radial-gradient(600px 720px at 82% 185px,#3d3e46 0%,#38394
 .sec-head{gap:10px}
 .xp-grid{display:flex;gap:12px;overflow-x:auto;scroll-snap-type:x mandatory;margin:0 -16px;padding:0 16px 4px;scroll-padding:0 16px;scrollbar-width:none}
 .xp-grid::-webkit-scrollbar{display:none}
-.xp-card{flex:0 0 280px;scroll-snap-align:start;min-height:330px;padding:24px 22px;gap:14px;border-radius:16px}
+.xp-card{flex:0 0 280px;scroll-snap-align:start;min-height:300px;padding:24px 22px;gap:12px;border-radius:16px}
 .xp-icon{width:30px;height:30px}
 .xp-card h3{font-size:25px}
 .xp-body{font-size:15px;line-height:1.5}
@@ -255,7 +329,7 @@ main{background-image:radial-gradient(600px 720px at 82% 185px,#3d3e46 0%,#38394
 .xp-label{font-size:13px;margin-top:4px}
 .xp-hint{display:block;margin:14px 0 0;font-size:13px;color:#6f7079}
 .journey,.experience{padding:40px 0}
-.experience{padding-bottom:72px}
+.experience{padding-bottom:48px}
 .jr-side-head{margin-bottom:20px}
 .pin-label{font-size:12px}
 .ex-head{margin-bottom:28px}
@@ -358,6 +432,15 @@ main{background:#f7f7f7}
 .pimg.ph p{color:#c4c5cc}
 .pimg.still{cursor:default}
 
+/* challenge + role lines, and the smaller last row */
+.f-role{margin:10px 0 0;font-size:15px;color:var(--muted)}
+.p-ch{margin:10px 0 0;max-width:720px;font-size:16px;font-weight:300;line-height:1.55;color:#3a3b47}
+.p-role{margin:10px 0 0;font-size:14px;line-height:1.45;color:#5c5d66}
+.p-role span{margin-right:8px;font-size:11px;font-weight:500;letter-spacing:.12em;text-transform:uppercase;color:#6f7079}
+.three{grid-template-columns:repeat(3,minmax(0,1fr))}
+.three .pimg{height:340px}
+@media (max-width:1180px){.three{grid-template-columns:repeat(2,minmax(0,1fr))}.three .pimg{height:280px}}
+@media (max-width:640px){.three{grid-template-columns:1fr}.three .pimg{height:auto}.p-ch{font-size:15px}.p-role{font-size:13px}}
 </style>
 <!-- seo -->
 <link rel="canonical" href="https://nashwanassar.com/projects.html">
@@ -376,9 +459,11 @@ main{background:#f7f7f7}
 <a href="projects.html" aria-haspopup="true" aria-current="page">Projects<svg class="dd-chev" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"></path></svg></a>
 <div class="dd-menu">
 <ul aria-label="Projects">
+<li><a href="srmg-data-strategy.html">SRMG Data Strategy</a></li>
 <li><a href="goat.html">GOAT</a></li>
-<li><a href="projects.html">Vodafone Digital Twin</a></li>
-<li><a href="projects.html">Data Strategy &amp; Personalisation</a></li>
+<li><a href="vodafone-digital-twin.html">Vodafone Digital Twin</a></li>
+<li><a href="lycamobile.html">Lycamobile</a></li>
+<li><a href="projects.html">All projects</a></li>
 </ul>
 </div>
 </div>
@@ -405,6 +490,7 @@ main{background:#f7f7f7}
 <p class="f-label">GOAT · SRMG</p>
 <h2 id="goat-h">Translating SRMG’s editorial credibility into digital audience engagement and monetisation</h2>
 <p class="f-proof"><strong>61%</strong> download-to-registration on the app, up from 50%.</p>
+<p class="f-role">Product Owner · Design strategy lead, from hackathon to launch</p>
 <a class="btn-outline" href="goat.html">View case study</a>
 </div>
 </section>
@@ -417,34 +503,45 @@ main{background:#f7f7f7}
 <div class="rows">
 <div class="prow wide-left">
 <article class="pcard">
-<a class="pimg" href="vodafone-digital-twin.html" aria-label="Vodafone Digital Twin">
-<img class="base" src="assets/projects/digital-twin.webp" alt="" loading="lazy">
-<img class="hover-img" src="assets/projects/digital-twin-hover.webp" alt="" loading="lazy">
-</a>
-<div class="p-line"><h3><a href="vodafone-digital-twin.html">Vodafone Digital Twin</a></h3><span class="p-status conf">Confidential</span><span class="p-year">2021</span></div>
-<p class="p-meta">Vodafone · Telecom</p>
-<p class="p-did">Design Thinking · Experience Design · Journey Mapping</p>
-</article>
-<article class="pcard">
 <a class="pimg" href="srmg-data-strategy.html" aria-label="SRMG Data Strategy">
 <img class="base" src="assets/projects/srmg-data.webp" alt="" loading="lazy">
 <img class="hover-img" src="assets/projects/srmg-data-hover.webp" alt="" loading="lazy">
 </a>
 <div class="p-line"><h3><a href="srmg-data-strategy.html">SRMG Data Strategy</a></h3><span class="p-status conf">Confidential</span></div>
 <p class="p-meta">SRMG · Digital Media &amp; Newsroom</p>
-<p class="p-did">Data Strategy · ML Recommendation Engine · Executive Business Case</p>
+<p class="p-ch">128M visitors, only 0.03% registered: a data strategy and business case to close the gap.</p><p class="p-role"><span>Role</span>Senior Manager, Experience Design · data audit to executive business case</p>
+</article>
+<article class="pcard">
+<a class="pimg" href="vodafone-digital-twin.html" aria-label="Vodafone Digital Twin">
+<img class="base" src="assets/projects/digital-twin.webp" alt="" loading="lazy">
+<img class="hover-img" src="assets/projects/digital-twin-hover.webp" alt="" loading="lazy">
+</a>
+<div class="p-line"><h3><a href="vodafone-digital-twin.html">Vodafone Digital Twin</a></h3><span class="p-status conf">Confidential</span><span class="p-year">2021</span></div>
+<p class="p-meta">Vodafone · Telecom</p>
+<p class="p-ch">A telecom-tower digital twin with an uncertain user journey: mapping every role from site acquisition to field service.</p><p class="p-role"><span>Role</span>UX Designer · Enterprise Design Thinking Coach</p>
 </article>
 </div>
 <div class="prow wide-right">
 <article class="pcard">
-<a class="pimg" href="stc-strategic-discovery.html" aria-label="KSA Strategic Discovery">
+<a class="pimg" href="lycamobile.html" aria-label="Lycamobile">
+<img class="base" src="assets/projects/lycamobile.webp" alt="" loading="lazy">
+<img class="hover-img" src="assets/projects/lycamobile-hover.webp" alt="" loading="lazy">
+</a>
+<div class="p-line"><h3><a href="lycamobile.html">Lycamobile</a></h3><span class="p-year">2021</span></div>
+<p class="p-meta">Lycamobile · Telecom · UK</p>
+<p class="p-ch">One brand, a different experience in every market: one Lycamobile experience adapted to each market’s plans and regulations.</p><p class="p-role"><span>Role</span>UX Lead of the design squad, with IBM iX</p>
+</article>
+<article class="pcard">
+<a class="pimg" href="stc-strategic-discovery.html" aria-label="STC Discovery Workshop">
 <img class="base" src="assets/projects/stc.webp" alt="" loading="lazy">
 <img class="hover-img" src="assets/projects/stc-hover.webp" alt="" loading="lazy">
 </a>
-<div class="p-line"><h3><a href="stc-strategic-discovery.html">KSA Strategic Discovery</a></h3><span class="p-status conf">Confidential</span><span class="p-year">2021</span></div>
-<p class="p-meta">stc · Telecom · KSA</p>
-<p class="p-did">Discovery workshop · Personas · As-is scenarios · Initiatives prioritisation</p>
+<div class="p-line"><h3><a href="stc-strategic-discovery.html">STC Discovery Workshop</a></h3><span class="p-status conf">Confidential</span><span class="p-year">2021</span></div>
+<p class="p-meta">STC · Telecom · KSA</p>
+<p class="p-ch">Keeping initiatives tied to strategic intent and KPIs: two days from pain points to initiatives prioritised by impact and feasibility.</p><p class="p-role"><span>Role</span>Design Thinking facilitation, with IBM iX</p>
 </article>
+</div>
+<div class="prow three">
 <article class="pcard">
 <a class="pimg" href="hollard-insurance.html" aria-label="Hollard Insurance">
 <img class="base" src="assets/projects/hollard.webp" alt="" loading="lazy">
@@ -452,18 +549,7 @@ main{background:#f7f7f7}
 </a>
 <div class="p-line"><h3><a href="hollard-insurance.html">Hollard Insurance</a></h3><span class="p-status conf">Confidential</span><span class="p-year">2018</span></div>
 <p class="p-meta">Hollard · Insurance · South Africa</p>
-<p class="p-did">Design Thinking Coach · IBM Cloud Garage workshop</p>
-</article>
-</div>
-<div class="prow wide-left">
-<article class="pcard">
-<a class="pimg" href="lycamobile.html" aria-label="Lycamobile">
-<img class="base" src="assets/projects/lycamobile.webp" alt="" loading="lazy">
-<img class="hover-img" src="assets/projects/lycamobile-hover.webp" alt="" loading="lazy">
-</a>
-<div class="p-line"><h3><a href="lycamobile.html">Lycamobile</a></h3><span class="p-year">2021</span></div>
-<p class="p-meta">Telecom · UK</p>
-<p class="p-did">UX lead of the Lycamobile design squad</p>
+<p class="p-ch">Two days with claims and procurement staff, from empathy maps and as-is scenarios to a first MVP.</p><p class="p-role"><span>Role</span>Design Thinking Coach, IBM Cloud Garage</p>
 </article>
 <article class="pcard">
 <div class="pimg still">
@@ -473,8 +559,6 @@ main{background:#f7f7f7}
 <p class="p-meta">Insurance &amp; pensions · Turkey</p>
 
 </article>
-</div>
-<div class="prow one">
 <article class="pcard">
 <div class="pimg ph"><p aria-hidden="true">HIA Hub</p></div>
 <div class="p-line"><h3>HIA Hub</h3><span class="p-status soon">Coming soon</span></div>

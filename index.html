@@ -3,12 +3,12 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Nashwa Nassar — Senior Manager, Experience Design</title>
-<meta name="description" content="Nashwa Nassar, Senior Manager, Experience Design at SRMG. Design organisations, design systems, data-led product strategy and 0-to-1 products, across the GCC and beyond.">
+<title>Nashwa Nassar — Experience Strategy &amp; Design Leader, Dubai</title>
+<meta name="description" content="Nashwa Nassar, experience strategy and design leader in Dubai. Senior Manager, Experience Design at SRMG, formerly a consultant at IBM iX.">
 <meta name="theme-color" content="#18171b">
 <meta property="og:type" content="website">
-<meta property="og:title" content="Nashwa Nassar — Senior Manager, Experience Design">
-<meta property="og:description" content="Simplify complexity. Turn ideas into impact. Senior Manager, Experience Design at SRMG, formerly IBM iX.">
+<meta property="og:title" content="Nashwa Nassar — Experience Strategy &amp; Design Leader, Dubai">
+<meta property="og:description" content="Turning complex challenges into meaningful experiences and business outcomes. Senior Manager, Experience Design at SRMG, formerly IBM iX.">
 <link rel="icon" type="image/svg+xml" href="favicon.svg">
 <script type="text/javascript">
 (function(c,l,a,r,i,t,y){
@@ -93,8 +93,16 @@ main{position:relative;overflow:hidden;background-color:var(--bg);background-ima
 .hero-scrim{display:none}
 .hero-inner{position:relative;z-index:2;display:flex;flex-direction:column;justify-content:flex-end;width:100%;padding:120px var(--pad) 64px}
 .hero-copy{display:flex;flex-direction:column;gap:22px}
-.eyebrow{margin:0;font-size:16px;font-weight:300;letter-spacing:.06em;line-height:1.4;color:var(--gold)}
-.hero h1{margin:0;max-width:958px;font-family:var(--khand);font-weight:600;font-size:clamp(40px,6.4vw,104px);line-height:1.04;letter-spacing:.005em;text-transform:uppercase;color:#d4d6e0}
+.eyebrow{margin:0;font-size:16px;font-weight:500;letter-spacing:.14em;line-height:1.4;text-transform:uppercase;color:var(--gold)}
+.hero h1{margin:0;max-width:900px;font-family:var(--khand);font-weight:600;font-size:clamp(40px,5vw,76px);line-height:1.04;letter-spacing:.005em;text-transform:uppercase;color:#d4d6e0}
+.hero-lead{margin:0;max-width:640px;font-size:20px;font-weight:300;line-height:1.55;color:var(--text)}
+.focus{display:flex;flex-wrap:wrap;gap:8px 22px;margin:0;padding:0;list-style:none;font-size:15px;font-weight:500;letter-spacing:.06em;text-transform:uppercase;color:var(--ink)}
+.focus li{display:flex;align-items:center}
+.focus li::before{content:"";display:block;width:5px;height:5px;margin-right:10px;border-radius:50%;background:var(--gold)}
+.hero-ctas{display:flex;flex-wrap:wrap;align-items:center;gap:12px 28px;margin-top:32px}
+.hero-ctas .btn-outline{margin-top:0}
+.text-link{display:inline-flex;align-items:center;gap:8px;min-height:44px;font-size:17px;font-weight:500;color:var(--text)}
+.text-link:hover{color:#fff}
 .hero h1 span{color:var(--gold)}
 .btn-outline{display:flex;align-items:center;width:fit-content;height:44px;margin-top:32px;padding:0 24px;border:1px solid var(--gold);border-radius:6px;font-size:18px;color:var(--gold)}
 .btn-outline:hover{background:rgba(187,147,92,.12);color:#d2a86a}
@@ -115,11 +123,43 @@ main{position:relative;overflow:hidden;background-color:var(--bg);background-ima
 .marquee-set span{flex:none;font-family:var(--khand);font-weight:600;font-size:24px;letter-spacing:.03em;color:#3f4047;white-space:nowrap}
 @keyframes marquee{to{transform:translateX(-50%)}}
 
-/* expertise */
-.expertise{padding:100px 0 80px}
+/* selected impact */
+.impact{padding:96px 0 88px}
+.impact .sec-head{max-width:760px;margin-bottom:40px}
+.im-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:24px}
+.im-item{padding-top:20px;border-top:1px solid rgba(187,147,92,.45)}
+.im-num{margin:0;font-family:var(--khand);font-weight:600;font-size:56px;line-height:1;color:var(--gold)}
+.im-label{margin:10px 0 0;max-width:280px;font-size:15px;line-height:1.5;color:var(--muted)}
+
+/* featured work */
+.featured{padding:96px 0;border-top:1px solid rgba(212,214,224,.08)}
+.fw-head{display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:16px 24px;margin-bottom:40px}
+.fw-all{display:inline-flex;align-items:center;gap:8px;min-height:44px;font-size:16px;font-weight:500;color:var(--gold)}
+.fw-all:hover{color:#d2a86a}
+.fw-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:28px}
+.fw-card{display:flex;flex-direction:column;min-width:0}
+.fw-img{position:relative;display:block;height:300px;overflow:hidden;border-radius:4px;background:#222127}
+.fw-img img{position:absolute;inset:0;display:block;width:100%;height:100%;object-fit:cover;transition:transform .8s ease}
+.fw-card:hover .fw-img img{transform:scale(1.03)}
+.fw-kick{display:flex;flex-wrap:wrap;align-items:baseline;gap:4px 12px;margin:20px 0 0;font-size:13px;font-weight:500;letter-spacing:.08em;text-transform:uppercase;color:var(--gold)}
+.fw-conf{font-size:11px;letter-spacing:.1em;color:var(--dim)}
+.fw-card h3{margin:8px 0 0;font-family:var(--khand);font-weight:600;font-size:30px;line-height:1.1}
+.fw-card h3 a{color:var(--ink)}
+.fw-card h3 a:hover{color:#fff}
+.fw-ch{margin:10px 0 0;font-size:16px;font-weight:300;line-height:1.55;color:var(--text)}
+.fw-role{margin:12px 0 0;padding-top:12px;border-top:1px solid var(--line);font-size:14px;line-height:1.45;color:var(--muted)}
+.fw-role span{display:block;margin-bottom:2px;font-size:11px;font-weight:500;letter-spacing:.12em;text-transform:uppercase;color:var(--dim)}
+
+/* how I create value */
+.expertise{padding:96px 0 88px;border-top:1px solid rgba(212,214,224,.08)}
 .expertise .sec-head{max-width:760px;margin-bottom:40px}
 .xp-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:20px}
-.xp-card{display:flex;flex-direction:column;gap:16px;min-height:380px;padding:30px 26px;border:1px solid var(--line);border-radius:18px;background:rgba(255,255,255,.03)}
+.xp-card{display:flex;flex-direction:column;gap:14px;min-height:340px;padding:30px 26px;border:1px solid var(--line);border-radius:18px;background:rgba(255,255,255,.03)}
+.xp-kick{margin:6px 0 0;font-size:12px;font-weight:500;letter-spacing:.12em;text-transform:uppercase;color:var(--gold)}
+.xp-link{display:inline-flex;align-items:center;gap:6px;width:fit-content;min-height:44px;margin-top:auto;font-size:15px;font-weight:500;color:var(--text)}
+.xp-link:hover{color:#fff}
+.xp-credly{display:inline-flex;align-items:center;gap:8px;min-height:44px;margin-top:12px;font-size:15px;font-weight:500;color:var(--gold)}
+.xp-credly:hover{color:#d2a86a}
 .xp-icon{width:34px;height:34px}
 .xp-card h3{margin:0;font-family:var(--khand);font-weight:600;font-size:28px;line-height:1.1;color:var(--ink)}
 .xp-body{margin:0;font-size:16px;font-weight:300;line-height:1.55;color:var(--muted)}
@@ -167,6 +207,17 @@ main{position:relative;overflow:hidden;background-color:var(--bg);background-ima
 .chip[aria-pressed="true"]{border-color:var(--gold);background:var(--gold);color:var(--bg)}
 
 /* experience */
+.ex-stage{margin:0 0 6px;font-size:12px;font-weight:500;letter-spacing:.12em;text-transform:uppercase;color:var(--gold)}
+.ex-head .sec-sub{margin-top:4px}
+.ex-head{margin-bottom:32px}
+
+/* contact */
+.contact{padding:96px 0 104px;border-top:1px solid rgba(212,214,224,.08)}
+.ct-inner{display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:28px 48px}
+.ct-inner .sec-head{max-width:640px}
+.ct-actions{display:flex;flex-wrap:wrap;align-items:center;gap:12px 28px}
+.btn-solid{display:inline-flex;align-items:center;height:48px;padding:0 24px;border-radius:6px;background:var(--gold);font-size:17px;font-weight:600;color:var(--bg)}
+.btn-solid:hover{background:#d2a86a;color:var(--bg)}
 .ex-grid{display:grid;grid-template-columns:4fr 1fr 7fr;grid-template-areas:"head . list" "creds . list" "link . list";grid-template-rows:auto auto 1fr}
 .ex-head{grid-area:head}
 .ex-list{grid-area:list}
@@ -193,10 +244,14 @@ main{position:relative;overflow:hidden;background-color:var(--bg);background-ima
 .portrait{right:0;height:calc(100% + 160px);max-height:820px}
 .hero-scrim{display:block;position:absolute;inset:0;z-index:1;background:linear-gradient(90deg,rgba(24,23,27,.85) 0%,rgba(24,23,27,.5) 45%,rgba(24,23,27,0) 80%);pointer-events:none}
 .hero-inner{padding:100px var(--pad) 40px}
-.hero h1{font-size:64px;max-width:560px}
+.hero h1{font-size:52px;max-width:620px}
+.hero-lead{max-width:560px;font-size:18px}
+.im-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:32px 24px}
+.fw-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+.fw-img{height:260px}
 .eyebrow{font-size:14px}
 .xp-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
-.xp-card{min-height:320px}
+.xp-card{min-height:300px}
 .jr-grid,.ex-grid{display:block;max-width:720px}
 .jr-side-head{margin-bottom:24px}
 .jr-map{margin-bottom:16px}
@@ -207,7 +262,7 @@ main{position:relative;overflow:hidden;background-color:var(--bg);background-ima
 /* ---------- mobile ---------- */
 @media (max-width:640px){
 :root{--pad:16px}
-html{scroll-snap-type:y mandatory;scroll-padding-top:52px}
+html{scroll-snap-type:y proximity;scroll-padding-top:52px}
 .snap{scroll-snap-align:start;scroll-margin-top:16px}
 .snap-end{scroll-snap-align:end}
 .site-head{height:60px;gap:12px}
@@ -223,13 +278,32 @@ main{background-image:radial-gradient(600px 720px at 82% 185px,#3d3e46 0%,#38394
 .portrait{top:60px;right:0;height:calc(100% - 150px);max-height:440px;-webkit-mask-image:linear-gradient(180deg,#000 0%,#000 70%,transparent 100%);mask-image:linear-gradient(180deg,#000 0%,#000 70%,transparent 100%)}
 .hero-scrim{background:linear-gradient(90deg,rgba(24,23,27,.8) 0%,rgba(24,23,27,.45) 45%,rgba(24,23,27,0) 75%)}
 .hero-inner{padding:84px 16px 24px}
-.hero-copy{gap:8px}
-.eyebrow{font-size:14px;font-weight:300;letter-spacing:-.01em;line-height:1.5;max-width:271px}
-.hero h1{font-size:34px;line-height:1.4;letter-spacing:-.01em;max-width:254px}
+.eyebrow{font-size:13px;letter-spacing:.12em;line-height:1.5;max-width:none}
+.hero h1{font-size:30px;line-height:1.15;letter-spacing:0;max-width:none}
+.hero-copy{gap:12px}
+.hero-lead{font-size:16px;line-height:1.5}
+.focus{font-size:12px}
+.focus{gap:6px 18px}
+.focus li::before{margin-right:8px}
+.hero-ctas{margin-top:20px;gap:8px 20px}
+.text-link{font-size:15px}
+.impact{padding:48px 0 40px}
+.impact .sec-head{margin-bottom:24px}
+.im-grid{gap:24px 16px}
+.im-num{font-size:40px}
+.im-label{font-size:13px}
+.featured{padding:48px 0}
+.fw-head{margin-bottom:24px}
+.fw-grid{grid-template-columns:1fr;gap:40px}
+.fw-img{height:auto;aspect-ratio:16 / 10}
+.fw-card h3{font-size:26px}
+.fw-ch{font-size:15px}
+.contact{padding:48px 0 72px}
+.ct-actions{gap:8px 20px}
 .btn-outline{height:40px;margin-top:8px;padding:0 22px}
 .proof{padding:24px 0 28px}
 .proof-line{margin:24px 16px}
-.btn-outline{width:124px;justify-content:center}
+.btn-outline{justify-content:center}
 .worked .kicker{font-size:12px;margin-bottom:14px}
 .logo-row{gap:18px 30px}
 .logo-srmg{height:20px}.logo-ibm{height:16px}.logo-kn{height:32px}
@@ -246,7 +320,7 @@ main{background-image:radial-gradient(600px 720px at 82% 185px,#3d3e46 0%,#38394
 .sec-head{gap:10px}
 .xp-grid{display:flex;gap:12px;overflow-x:auto;scroll-snap-type:x mandatory;margin:0 -16px;padding:0 16px 4px;scroll-padding:0 16px;scrollbar-width:none}
 .xp-grid::-webkit-scrollbar{display:none}
-.xp-card{flex:0 0 280px;scroll-snap-align:start;min-height:330px;padding:24px 22px;gap:14px;border-radius:16px}
+.xp-card{flex:0 0 280px;scroll-snap-align:start;min-height:300px;padding:24px 22px;gap:12px;border-radius:16px}
 .xp-icon{width:30px;height:30px}
 .xp-card h3{font-size:25px}
 .xp-body{font-size:15px;line-height:1.5}
@@ -255,7 +329,7 @@ main{background-image:radial-gradient(600px 720px at 82% 185px,#3d3e46 0%,#38394
 .xp-label{font-size:13px;margin-top:4px}
 .xp-hint{display:block;margin:14px 0 0;font-size:13px;color:#6f7079}
 .journey,.experience{padding:40px 0}
-.experience{padding-bottom:72px}
+.experience{padding-bottom:48px}
 .jr-side-head{margin-bottom:20px}
 .pin-label{font-size:12px}
 .ex-head{margin-bottom:28px}
@@ -271,12 +345,11 @@ html{scroll-behavior:auto}
 .jarc{stroke-dashoffset:0}
 .in-view .jarc{animation:none}
 }
-.xp-credly{display:inline-flex;align-items:center;gap:8px;min-height:44px;margin-top:28px;font-size:16px;font-weight:500;color:var(--gold)}.xp-credly:hover{color:#d2a86a}@media (max-width:640px){.xp-credly{margin-top:16px;font-size:15px}}
 </style>
 <!-- seo -->
 <link rel="canonical" href="https://nashwanassar.com/">
 <meta property="og:url" content="https://nashwanassar.com/">
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Person", "name": "Nashwa Nassar", "url": "https://nashwanassar.com/", "image": "https://nashwanassar.com/assets/landing/portrait.webp", "jobTitle": "Senior Manager, Experience Design", "worksFor": {"@type": "Organization", "name": "SRMG"}, "sameAs": ["https://www.linkedin.com/in/nashwanassar/", "https://www.credly.com/users/nashwa-nassar"]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Person", "name": "Nashwa Nassar", "url": "https://nashwanassar.com/", "image": "https://nashwanassar.com/assets/landing/portrait.webp", "jobTitle": "Senior Manager, Experience Design", "description": "Experience strategy and design leader in Dubai. Senior Manager, Experience Design at SRMG, formerly a consultant at IBM iX.", "address": {"@type": "PostalAddress", "addressLocality": "Dubai", "addressCountry": "AE"}, "knowsAbout": ["Experience strategy", "Design leadership", "Digital transformation", "Design Thinking", "Design systems", "Product strategy"], "worksFor": {"@type": "Organization", "name": "SRMG"}, "sameAs": ["https://www.linkedin.com/in/nashwanassar/", "https://www.credly.com/users/nashwa-nassar"]}</script>
 <!-- /seo -->
 </head>
 <body>
@@ -291,9 +364,11 @@ html{scroll-behavior:auto}
 <a href="projects.html" aria-haspopup="true">Projects<svg class="dd-chev" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"></path></svg></a>
 <div class="dd-menu">
 <ul aria-label="Projects">
+<li><a href="srmg-data-strategy.html">SRMG Data Strategy</a></li>
 <li><a href="goat.html">GOAT</a></li>
-<li><a href="projects.html">Vodafone Digital Twin</a></li>
-<li><a href="projects.html">Data Strategy &amp; Personalisation</a></li>
+<li><a href="vodafone-digital-twin.html">Vodafone Digital Twin</a></li>
+<li><a href="lycamobile.html">Lycamobile</a></li>
+<li><a href="projects.html">All projects</a></li>
 </ul>
 </div>
 </div>
@@ -317,26 +392,81 @@ html{scroll-behavior:auto}
 <div class="hero-scrim" aria-hidden="true"></div>
 <div class="hero-inner">
 <div class="hero-copy">
-<p class="eyebrow">Senior Manager, Experience Design</p>
-<h1>Simplify complexity<br>Turn ideas into <span>impact</span></h1>
+<p class="eyebrow">Experience Strategy &amp; Design Leader</p>
+<h1>Turning complex challenges into meaningful experiences and <span>business outcomes</span></h1>
+<p class="hero-lead">I lead experience strategy, design teams and digital transformation work, connecting business goals, human needs and technology to build products and services with measurable value.</p>
+<ul class="focus" aria-label="Focus areas"><li>Experience Strategy</li><li>Design Leadership</li><li>Digital Transformation</li></ul>
 </div>
-<a class="btn-outline" href="projects.html">Projects</a>
+<div class="hero-ctas">
+<a class="btn-outline" href="#work">See featured work</a>
+<a class="text-link" href="https://www.linkedin.com/in/nashwanassar/" target="_blank" rel="noopener noreferrer">LinkedIn profile<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7"></path><path d="M8 7h9v9"></path></svg></a>
+</div>
 </div>
 </section>
 
 <section class="proof" aria-label="Where I've worked and clients">
 <div class="worked">
 <p class="kicker" id="ww-h">Where I've worked</p>
-<div class="logo-row" role="list" aria-labelledby="ww-h"><img src="assets/landing/srmg.svg" alt="SRMG" class="logo-srmg" role="listitem"><img src="assets/landing/ibm-ix.svg" alt="IBM iX" class="logo-ibm" role="listitem"><img src="assets/landing/knowledgenet.png" alt="KnowledgeNet" class="logo-kn" role="listitem"></div>
+<div class="logo-row" role="list" aria-labelledby="ww-h"><img src="assets/landing/srmg.svg" alt="SRMG" class="logo-srmg" role="listitem"><img src="assets/landing/ibm-ix.svg" alt="IBM iX" class="logo-ibm" role="listitem"></div>
 </div>
 <hr class="proof-line" aria-hidden="true">
 <div class="clients snap">
 <p class="kicker" id="cl-h">Clients</p>
 <div class="marquee">
 <div class="marquee-track">
-<div class="marquee-set"><span>Lycamobile</span><span>AvivaSA</span><span>Celcom</span><span>Vodafone Digital Twin</span><span>Hollard</span><span>stc</span><span>UAE Ports</span><span>Saudi Music Commission</span></div>
-<div class="marquee-set" aria-hidden="true"><span>Lycamobile</span><span>AvivaSA</span><span>Celcom</span><span>Vodafone Digital Twin</span><span>Hollard</span><span>stc</span><span>UAE Ports</span><span>Saudi Music Commission</span></div>
+<div class="marquee-set"><span>Lycamobile</span><span>AvivaSA</span><span>Celcom</span><span>Vodafone Digital Twin</span><span>Hollard</span><span>STC</span><span>UAE Ports</span><span>Saudi Music Commission</span></div>
+<div class="marquee-set" aria-hidden="true"><span>Lycamobile</span><span>AvivaSA</span><span>Celcom</span><span>Vodafone Digital Twin</span><span>Hollard</span><span>STC</span><span>UAE Ports</span><span>Saudi Music Commission</span></div>
 </div>
+</div>
+</div>
+</section>
+
+<section class="impact" id="impact" aria-labelledby="im-h">
+<div class="wrap">
+<div class="sec-head">
+<p class="eyebrow-sec">01 · Selected impact</p>
+<h2 class="sec-h2" id="im-h">The numbers behind <span>the work</span></h2>
+</div>
+<div class="im-grid">
+<div class="im-item"><p class="im-num">25</p><p class="im-label">direct reports led at IBM iX, with budget and hiring</p></div>
+<div class="im-item"><p class="im-num">8</p><p class="im-label">SRMG publications on one design system, Spyne</p></div>
+<div class="im-item"><p class="im-num">0.03%</p><p class="im-label">of 128M visitors were registered: the baseline behind SRMG’s SSO, now live on 2 publications</p></div>
+<div class="im-item"><p class="im-num">61%</p><p class="im-label">download-to-registration on GOAT, up from 50%</p></div>
+</div>
+</div>
+</section>
+
+<section class="featured" id="work" aria-labelledby="fw-h">
+<div class="wrap">
+<div class="fw-head">
+<div class="sec-head">
+<p class="eyebrow-sec">02 · Featured work</p>
+<h2 class="sec-h2" id="fw-h">Strategy, product and <span>complex systems</span></h2>
+</div>
+<a class="fw-all" href="projects.html">All projects<span aria-hidden="true">→</span></a>
+</div>
+<div class="fw-grid">
+<article class="fw-card">
+<a class="fw-img" href="srmg-data-strategy.html" tabindex="-1" aria-hidden="true"><img src="assets/projects/srmg-data.webp" alt="" loading="lazy"></a>
+<p class="fw-kick">SRMG · Digital media<span class="fw-conf">Confidential</span></p>
+<h3><a href="srmg-data-strategy.html">SRMG Data Strategy</a></h3>
+<p class="fw-ch">128M visitors, only 0.03% registered: a data strategy and business case to close the gap.</p>
+<p class="fw-role"><span>Role</span>Senior Manager, Experience Design · data audit to executive business case</p>
+</article>
+<article class="fw-card">
+<a class="fw-img" href="goat.html" tabindex="-1" aria-hidden="true"><img src="assets/projects/goat.webp" alt="" loading="lazy"></a>
+<p class="fw-kick">SRMG · Sports app</p>
+<h3><a href="goat.html">GOAT</a></h3>
+<p class="fw-ch">Turning SRMG’s editorial credibility into digital audience engagement and monetisation.</p>
+<p class="fw-role"><span>Role</span>Product Owner · Design strategy lead, from hackathon to launch</p>
+</article>
+<article class="fw-card">
+<a class="fw-img" href="vodafone-digital-twin.html" tabindex="-1" aria-hidden="true"><img src="assets/projects/digital-twin.webp" alt="" loading="lazy"></a>
+<p class="fw-kick">Vodafone · Telecom · with IBM iX<span class="fw-conf">Confidential</span></p>
+<h3><a href="vodafone-digital-twin.html">Vodafone Digital Twin</a></h3>
+<p class="fw-ch">A telecom-tower digital twin with an uncertain user journey: mapping every role from site acquisition to field service.</p>
+<p class="fw-role"><span>Role</span>UX Designer · Enterprise Design Thinking Coach</p>
+</article>
 </div>
 </div>
 </section>
@@ -344,45 +474,47 @@ html{scroll-behavior:auto}
 <section class="expertise" id="expertise" aria-labelledby="xp-h">
 <div class="wrap">
 <div class="sec-head">
-<p class="eyebrow-sec">01 · Expertise</p>
-<h2 class="sec-h2" id="xp-h">Expertise that <span>drives impact</span></h2>
-<p class="sec-sub">How I work, and the proof behind it.</p>
+<p class="eyebrow-sec">03 · Capabilities</p>
+<h2 class="sec-h2" id="xp-h">How I create <span>value</span></h2>
 </div>
 <div class="xp-grid">
 <article class="xp-card">
-<svg class="xp-icon" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#bb935c" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="8" r="3.2"></circle><path d="M3 20c0-3.3 2.7-6 6-6s6 2.7 6 6"></path><circle cx="17" cy="9" r="2.4"></circle><path d="M16 14.2c2.8.2 5 2.6 5 5.8"></path></svg>
-<h3>I build design organisations</h3>
-<p class="xp-body">Hiring, career paths and ways of working that let a design team scale without losing craft.</p>
-<div class="xp-proof"><p class="xp-num">25</p><p class="xp-label">direct reports led at IBM iX, with budget and hiring. Now a team of 7 across two squads at SRMG.</p></div>
-</article>
-<article class="xp-card">
-<svg class="xp-icon" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#bb935c" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="7.5" height="7.5" rx="1.5"></rect><rect x="13.5" y="3" width="7.5" height="7.5" rx="1.5"></rect><rect x="3" y="13.5" width="7.5" height="7.5" rx="1.5"></rect><rect x="13.5" y="13.5" width="7.5" height="7.5" rx="3.75"></rect></svg>
-<h3>I build systems that scale</h3>
-<p class="xp-body">One design system shared across brands, so squads ship faster and every product feels like one family.</p>
-<div class="xp-proof"><p class="xp-num">8</p><p class="xp-label">publications on Spyne, with ~128 component sets and ~2,300 variants.</p></div>
-</article>
-<article class="xp-card">
 <svg class="xp-icon" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#bb935c" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 20h18"></path><path d="M6 16v-4"></path><path d="M11 16V8"></path><path d="M16 16v-6"></path><path d="M5 7l5-3 4 3 5-3"></path></svg>
+<p class="xp-kick">Experience strategy</p>
 <h3>I turn data into product decisions</h3>
 <p class="xp-body">I start from the numbers: audit the data, find the gap, then design the path to close it.</p>
-<div class="xp-proof"><p class="xp-num">0.03%</p><p class="xp-label">of 128M visitors were registered users: the baseline behind SRMG's SSO, now live on 2 publications.</p></div>
+<a class="xp-link" href="srmg-data-strategy.html">SRMG Data Strategy<span aria-hidden="true">→</span></a>
+</article>
+<article class="xp-card">
+<svg class="xp-icon" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#bb935c" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h11a1 1 0 0 1 1 1v7a1 1 0 0 1-1 1H9l-4 3v-3H4a1 1 0 0 1-1-1V5a1 1 0 0 1 1-1z"></path><path d="M16 8h4a1 1 0 0 1 1 1v6a1 1 0 0 1-1 1h-1v3l-4-3h-4a1 1 0 0 1-1-1v-1"></path></svg>
+<p class="xp-kick">Consulting and facilitation</p>
+<h3>I align people around the right problem</h3>
+<p class="xp-body">Consulting for IBM iX clients in telecom, insurance and government, and coaching Design Thinking workshops that turn discovery into decisions.</p>
+<a class="xp-link" href="workshops.html">Workshops<span aria-hidden="true">→</span></a>
+</article>
+<article class="xp-card">
+<svg class="xp-icon" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#bb935c" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="8" r="3.2"></circle><path d="M3 20c0-3.3 2.7-6 6-6s6 2.7 6 6"></path><circle cx="17" cy="9" r="2.4"></circle><path d="M16 14.2c2.8.2 5 2.6 5 5.8"></path></svg>
+<p class="xp-kick">Design leadership</p>
+<h3>I build design organisations</h3>
+<p class="xp-body">Hiring, career paths and ways of working that let a design team scale without losing craft, on one design system shared across brands.</p>
+<a class="xp-link" href="#experience">Experience<span aria-hidden="true">→</span></a>
 </article>
 <article class="xp-card">
 <svg class="xp-icon" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#bb935c" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3c3.5 2.2 5 5.6 5 9.5L15 17H9l-2-4.5C7 8.6 8.5 5.2 12 3z"></path><circle cx="12" cy="10" r="1.8"></circle><path d="M9 17l-1.5 4M15 17l1.5 4M12 17v4"></path></svg>
+<p class="xp-kick">Product delivery</p>
 <h3>I take products from 0 to 1</h3>
 <p class="xp-body">From hackathon idea to launched app, owning the backlog and the roadmap, not only the screens.</p>
-<div class="xp-proof"><p class="xp-num">61%</p><p class="xp-label">download-to-registration on GOAT, up from 50%.</p></div>
+<a class="xp-link" href="goat.html">GOAT case study<span aria-hidden="true">→</span></a>
 </article>
 </div>
 <p class="xp-hint">Swipe to see all four →</p>
-<a class="xp-credly" href="https://www.credly.com/users/nashwa-nassar" target="_blank" rel="noopener noreferrer">See my certifications and badges on Credly<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7"></path><path d="M8 7h9v9"></path></svg></a>
 </div>
 </section>
 
 <section class="journey snap" id="journey" aria-labelledby="jr-h">
 <div class="wrap jr-grid">
 <div class="sec-head jr-side-head">
-<p class="eyebrow-sec">02 · Journey</p>
+<p class="eyebrow-sec">04 · Journey</p>
 <h2 class="sec-h2" id="jr-h">Where my work <span>has taken me</span></h2>
 <p class="sec-sub">Home in Cairo, now Dubai. Project work across Africa, Europe and Asia.</p>
 </div>
@@ -420,23 +552,26 @@ html{scroll-behavior:auto}
 <section class="experience snap" id="experience" aria-labelledby="ex-h">
 <div class="wrap ex-grid">
 <div class="sec-head ex-head">
-<p class="eyebrow-sec">03 · Experience</p>
+<p class="eyebrow-sec">05 · Experience</p>
 <h2 class="sec-h2" id="ex-h">20+ years in design, <span>6 leading teams</span></h2>
+<p class="sec-sub">From design and front-end foundations in Cairo, to consulting and people leadership at IBM iX, to experience strategy and design leadership at SRMG.</p>
 </div>
 <div class="ex-list">
 <ol class="timeline" style="list-style: none; margin: 0; padding: 0 0 0 22px; border-left: 1px solid rgba(187, 147, 92, 0.4); display: flex; flex-direction: column; gap: 32px">
 <li style="position: relative">
 <span aria-hidden="true" style="position: absolute; left: -29px; top: 6px; width: 13px; height: 13px; border-radius: 50%; background: #bb935c"></span>
 <p style="margin: 0 0 4px; font-size: 13px; color: #8d8e97">2023 – now · Dubai</p>
+<p class="ex-stage">Experience strategy and design leadership</p>
 <h3 style="margin: 0; font-family: Khand, 'Arial Narrow', sans-serif; font-weight: 600; font-size: 26px; line-height: 1.1; color: #e2e3ea">SRMG</h3>
 <p style="margin: 2px 0 8px; font-size: 15px; font-weight: 500; color: #c8c9d2">Senior Manager, Experience Design</p>
-<p style="margin: 0; font-size: 15px; font-weight: 300; line-height: 1.5; color: #a3a4ad">Team of 7 across two squads. Spyne design system, GOAT, and the data strategy behind SSO.</p>
+<p style="margin: 0; font-size: 15px; font-weight: 300; line-height: 1.5; color: #a3a4ad">Leading a team of 7 across two squads: the data strategy behind SSO, GOAT from hackathon to launch, and the Spyne design system shared by 8 publications.</p>
 </li>
 <li style="position: relative">
 <span aria-hidden="true" style="position: absolute; left: -29px; top: 6px; width: 13px; height: 13px; box-sizing: border-box; border-radius: 50%; border: 2px solid #bb935c; background: #18171b"></span>
 <p style="margin: 0 0 4px; font-size: 13px; color: #8d8e97">2015 – 2023 · Egypt</p>
+<p class="ex-stage">Consulting and people leadership</p>
 <h3 style="margin: 0; font-family: Khand, 'Arial Narrow', sans-serif; font-weight: 600; font-size: 26px; line-height: 1.1; color: #e2e3ea">IBM iX</h3>
-<p style="margin: 2px 0 8px; font-size: 15px; font-weight: 300; line-height: 1.5; color: #a3a4ad">25 direct reports. Client work for Lycamobile, Celcom, Vodafone Digital Twin and UAE Ports, Borders &amp; Free Zones Security.</p>
+<p style="margin: 2px 0 8px; font-size: 15px; font-weight: 300; line-height: 1.5; color: #a3a4ad">Consulting for telecom, insurance and government clients, including Lycamobile, Celcom, Vodafone Digital Twin, Hollard, STC and UAE Ports, Borders &amp; Free Zones Security. People manager for 25 direct reports and Enterprise Design Thinking Coach.</p>
 <ul style="list-style: none; margin: 12px 0 0; padding: 0; display: flex; flex-direction: column; gap: 8px; font-size: 14px; line-height: 1.4">
 <li style="display: flex; gap: 12px"><span style="flex: none; width: 74px; color: #8d8e97">2020 – 2023</span><span style="color: #c8c9d2">Senior Experience Consultant, Service Area Leader &amp; People Manager</span></li>
 <li style="display: flex; gap: 12px"><span style="flex: none; width: 74px; color: #8d8e97">2017 – 2020</span><span style="color: #c8c9d2">Senior Experience Consultant</span></li>
@@ -445,7 +580,8 @@ html{scroll-behavior:auto}
 </li>
 <li class="earlier" id="earlier-roles" hidden style="position: relative">
 <span aria-hidden="true" style="position: absolute; left: -27px; top: 7px; width: 9px; height: 9px; border-radius: 50%; background: #6f7079"></span>
-<p style="margin: 0 0 12px; font-size: 13px; color: #8d8e97">2001 – 2015 · Cairo</p>
+<p style="margin: 0 0 4px; font-size: 13px; color: #8d8e97">2001 – 2015 · Cairo</p>
+<p class="ex-stage" style="margin-bottom: 12px">Design and technical foundation</p>
 <ul style="list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 14px; font-size: 14px; line-height: 1.4">
 <li><span style="display: block; color: #8d8e97">2014 – 2015</span><span style="color: #e2e3ea; font-weight: 500">Intellisec-ME</span><span style="color: #a3a4ad"> · Senior UX Designer &amp; Front-end Developer</span></li>
 <li><span style="display: block; color: #8d8e97">2014</span><span style="color: #e2e3ea; font-weight: 500">Esri Northeast Africa</span><span style="color: #a3a4ad"> · Senior UI Designer &amp; Developer</span></li>
@@ -465,8 +601,24 @@ html{scroll-behavior:auto}
 <span style="padding: 8px 12px; border-radius: 8px; background: rgba(255, 255, 255, 0.05); font-size: 13px; color: #c8c9d2">NN/g UX Management Certificate</span>
 <span style="padding: 8px 12px; border-radius: 8px; background: rgba(255, 255, 255, 0.05); font-size: 13px; color: #c8c9d2">ICP-APO</span>
 </div>
+<a class="xp-credly" href="https://www.credly.com/users/nashwa-nassar" target="_blank" rel="noopener noreferrer">All certifications and badges on Credly<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7"></path><path d="M8 7h9v9"></path></svg></a>
 </div></div>
 <div class="ex-link"><a href="https://www.linkedin.com/in/nashwanassar/" target="_blank" rel="noopener noreferrer" style="display: inline-flex; align-items: center; gap: 8px; min-height: 44px; font-size: 16px; font-weight: 500; color: #bb935c">Full profile on LinkedIn<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7"></path><path d="M8 7h9v9"></path></svg></a></div>
+</div>
+</section>
+
+<section class="contact snap" id="contact" aria-labelledby="ct-h">
+<div class="wrap ct-inner">
+<div class="sec-head">
+<p class="eyebrow-sec">06 · Contact</p>
+<h2 class="sec-h2" id="ct-h">Let’s <span>talk</span></h2>
+<p class="sec-sub">Book a 30-minute call, message me on LinkedIn, or send an email.</p>
+</div>
+<div class="ct-actions">
+<a class="btn-solid" href="https://calendly.com/nashwaanassar/30min" target="_blank" rel="noopener">Book a call</a>
+<a class="text-link" href="https://www.linkedin.com/in/nashwanassar/" target="_blank" rel="noopener noreferrer">LinkedIn<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7"></path><path d="M8 7h9v9"></path></svg></a>
+<a class="text-link" href="mailto:nashwaanassar@gmail.com?subject=Hello%20Nashwa">Email</a>
+</div>
 </div>
 </section>
 
