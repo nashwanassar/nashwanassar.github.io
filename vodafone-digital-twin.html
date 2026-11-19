@@ -172,6 +172,37 @@ main{position:relative;overflow:hidden;background-color:var(--bg);background-ima
 .xp-label{margin:6px 0 0;font-size:14px;line-height:1.45;color:var(--muted);min-height:4.35em}
 .xp-hint{display:none}
 
+/* hand-drawn illustrations on the value cards */
+.sk-wrap{height:150px;margin:-6px -8px 2px}
+.sk{display:block}
+.sk-run .s{transform-box:fill-box;animation:8s ease-out infinite}
+.sk-run .d{stroke-dasharray:1;animation:8s ease-in-out infinite}
+@keyframes skb-in1{0%,3%{opacity:0;transform:translateY(7px) scale(.9)}10%,88%{opacity:1;transform:none}94%,100%{opacity:0;transform:none}}
+.sk-run .s1{animation-name:skb-in1}
+@keyframes skb-dr1{0%,3%{stroke-dashoffset:1;opacity:0}4%{opacity:1}12%,88%{stroke-dashoffset:0;opacity:1}94%,100%{stroke-dashoffset:0;opacity:0}}
+.sk-run .d1{animation-name:skb-dr1}
+@keyframes skb-in2{0%,9%{opacity:0;transform:translateY(7px) scale(.9)}16%,88%{opacity:1;transform:none}94%,100%{opacity:0;transform:none}}
+.sk-run .s2{animation-name:skb-in2}
+@keyframes skb-dr2{0%,9%{stroke-dashoffset:1;opacity:0}10%{opacity:1}18%,88%{stroke-dashoffset:0;opacity:1}94%,100%{stroke-dashoffset:0;opacity:0}}
+.sk-run .d2{animation-name:skb-dr2}
+@keyframes skb-in3{0%,15%{opacity:0;transform:translateY(7px) scale(.9)}22%,88%{opacity:1;transform:none}94%,100%{opacity:0;transform:none}}
+.sk-run .s3{animation-name:skb-in3}
+@keyframes skb-dr3{0%,15%{stroke-dashoffset:1;opacity:0}16%{opacity:1}24%,88%{stroke-dashoffset:0;opacity:1}94%,100%{stroke-dashoffset:0;opacity:0}}
+.sk-run .d3{animation-name:skb-dr3}
+@keyframes skb-in4{0%,21%{opacity:0;transform:translateY(7px) scale(.9)}28%,88%{opacity:1;transform:none}94%,100%{opacity:0;transform:none}}
+.sk-run .s4{animation-name:skb-in4}
+@keyframes skb-dr4{0%,21%{stroke-dashoffset:1;opacity:0}22%{opacity:1}30%,88%{stroke-dashoffset:0;opacity:1}94%,100%{stroke-dashoffset:0;opacity:0}}
+.sk-run .d4{animation-name:skb-dr4}
+@keyframes skb-in5{0%,27%{opacity:0;transform:translateY(7px) scale(.9)}34%,88%{opacity:1;transform:none}94%,100%{opacity:0;transform:none}}
+.sk-run .s5{animation-name:skb-in5}
+@keyframes skb-dr5{0%,27%{stroke-dashoffset:1;opacity:0}28%{opacity:1}36%,88%{stroke-dashoffset:0;opacity:1}94%,100%{stroke-dashoffset:0;opacity:0}}
+.sk-run .d5{animation-name:skb-dr5}
+@keyframes skb-in6{0%,33%{opacity:0;transform:translateY(7px) scale(.9)}40%,88%{opacity:1;transform:none}94%,100%{opacity:0;transform:none}}
+.sk-run .s6{animation-name:skb-in6}
+@keyframes skb-dr6{0%,33%{stroke-dashoffset:1;opacity:0}34%{opacity:1}42%,88%{stroke-dashoffset:0;opacity:1}94%,100%{stroke-dashoffset:0;opacity:0}}
+.sk-run .d6{animation-name:skb-dr6}
+@media (prefers-reduced-motion: reduce){.sk-run .s,.sk-run .d{animation:none}}
+
 /* journey */
 .journey,.experience{padding:100px 0;border-top:1px solid rgba(212,214,224,.08)}
 .jr-grid{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:24px;align-items:center}
@@ -278,7 +309,7 @@ main{position:relative;overflow:hidden;background-color:var(--bg);background-ima
 /* ---------- mobile ---------- */
 @media (max-width:640px){
 :root{--pad:16px}
-html{scroll-snap-type:y proximity;scroll-padding-top:52px}
+html{scroll-snap-type:y mandatory;scroll-padding-top:52px}
 .snap{scroll-snap-align:start;scroll-margin-top:16px}
 .snap-end{scroll-snap-align:end}
 .site-head{height:60px;gap:12px}
@@ -290,26 +321,31 @@ html{scroll-snap-type:y proximity;scroll-padding-top:52px}
 .main-nav,.head-cta{display:none}
 .menu-btn{display:flex}
 main{background-image:radial-gradient(600px 720px at 82% 185px,#3d3e46 0%,#383941 16%,#27272d 55%,#1e1e22 74%,#18171b 92%)}
-.hero{min-height:max(520px,calc(100svh - 118px));max-height:none}
+/* first screen: hero, where I've worked and clients, on the dark background */
+.fold{display:flex;flex-direction:column;min-height:100vh;min-height:100svh;scroll-margin-top:0}
+.fold.snap{scroll-snap-align:start}
+.hero{flex:1 0 auto;min-height:420px;max-height:none}
 .portrait{top:60px;right:0;height:calc(100% - 150px);max-height:440px;-webkit-mask-image:linear-gradient(180deg,#000 0%,#000 70%,transparent 100%);mask-image:linear-gradient(180deg,#000 0%,#000 70%,transparent 100%)}
 .hero-scrim{background:linear-gradient(90deg,rgba(24,23,27,.8) 0%,rgba(24,23,27,.45) 45%,rgba(24,23,27,0) 75%)}
-.hero-inner{padding:84px 16px 24px}
+.hero-scrim{-webkit-mask-image:linear-gradient(180deg,#000 60%,transparent 100%);mask-image:linear-gradient(180deg,#000 60%,transparent 100%)}
+.hero-inner{padding:84px 16px 0}
 .eyebrow{font-size:11px;font-weight:300;letter-spacing:.12em;line-height:1.5;max-width:none}
-.hero h1{font-size:30px;line-height:1.15;letter-spacing:0;max-width:none}
+.hero h1{font-size:28px;line-height:1.15;letter-spacing:0;max-width:none}
 .hero-copy{gap:12px}
 .hero-lead{font-size:16px;line-height:1.5}
-.focus{font-size:12px}
-.focus{gap:6px 4px;justify-content:flex-start}
-.focus li:not(.sep){font-size:9px}
+.focus{gap:8px;justify-content:flex-start;font-size:14px;letter-spacing:.06em;color:#3d2b10}
+.focus .sep{display:none}
+.focus li{min-height:32px;padding:0 12px;border:1px solid #8a6630;border-radius:999px;background:rgba(255,255,255,.04)}
 .hero-ctas{margin-top:12px;gap:8px 20px}
-.hero h1{max-width:292px}
+.hero h1{max-width:300px}
 .cta-desk{display:none}
 .cta-mob{display:flex;align-items:center;gap:8px;min-height:44px;font-size:18px;font-weight:300;color:var(--ink)}
 .cta-mob:hover{color:#fff}
 .text-link{font-size:15px}
-.impact{padding:48px 0 40px}
-.intro{margin-bottom:80px}
-.intro-lead{margin-bottom:18px;font-size:20px;line-height:1.5}
+.impact{padding:0 0 40px}
+.intro{display:flex;flex-direction:column;justify-content:center;gap:24px;min-height:calc(100vh - 52px);min-height:calc(100svh - 52px);margin:0 -16px;padding:48px 16px;background:var(--gold);scroll-margin-top:0}
+.intro-lead{margin:0;font-family:var(--khand);font-size:22px;font-weight:500;line-height:1.6;color:#3d2b10}
+.impact .sec-head{padding-top:48px}
 .impact .sec-head{margin-bottom:24px}
 .im-grid{gap:24px 16px}
 .im-num{font-size:40px}
@@ -319,22 +355,25 @@ main{background-image:radial-gradient(600px 720px at 82% 185px,#3d3e46 0%,#38394
 .fw-grid{grid-template-columns:1fr;gap:40px}
 .fw-img{height:auto;aspect-ratio:16 / 10}
 .fw-card h3{font-size:26px}
-.fw-ch{font-size:15px}
+.fw-ch{font-size:18px}
+.fw-role{margin-bottom:46px}
 .contact{padding:48px 0 72px}
 .ct-actions{gap:8px 20px}
 .btn-outline{height:40px;margin-top:8px;padding:0 22px}
-.proof{padding:24px 0 28px}
-.proof-line{margin:24px 16px}
+.proof{--kick:#8d8e97;padding:24px 0;background:transparent}
+.proof .kicker{font-weight:300}
+.proof-line{margin:24px 16px;border-top-color:#5c5d66}
 .btn-outline{justify-content:center}
 .worked .kicker{font-size:12px;margin-bottom:14px}
 .logo-row{gap:18px 30px}
+.logo-row img{filter:none}
 .logo-srmg{height:20px}.logo-ibm{height:16px}.logo-kn{height:32px}
 .clients .kicker{font-size:12px;margin-bottom:14px}
 .marquee{-webkit-mask-image:linear-gradient(90deg,transparent 0%,#000 12%,#000 88%,transparent 100%);mask-image:linear-gradient(90deg,transparent 0%,#000 12%,#000 88%,transparent 100%)}
 .marquee-track,.marquee-set{gap:36px}
 .marquee-track{padding-right:36px;animation-duration:26s}
-.marquee-set span{font-size:21px}
-.expertise{padding:40px 0}
+.marquee-set span{font-size:21px;color:var(--ink)}
+.expertise{min-height:calc(100vh - 52px);min-height:calc(100svh - 52px);padding:40px 0}
 .expertise .sec-head{margin-bottom:24px;padding:0}
 .eyebrow-sec{font-size:13px}
 .sec-h2{font-size:36px;line-height:1.08}
@@ -343,7 +382,7 @@ main{background-image:radial-gradient(600px 720px at 82% 185px,#3d3e46 0%,#38394
 .xp-grid{display:flex;gap:12px;overflow-x:auto;scroll-snap-type:x mandatory;margin:0 -16px;padding:0 16px 4px;scroll-padding:0 16px;scrollbar-width:none}
 .xp-grid::-webkit-scrollbar{display:none}
 .xp-card{flex:0 0 280px;scroll-snap-align:start;min-height:300px;padding:24px 22px;gap:12px;border-radius:16px}
-.xp-icon{width:30px;height:30px}
+.sk-wrap{height:140px}
 .xp-card h3{font-size:25px}
 .xp-body{font-size:15px;line-height:1.5}
 .xp-proof{padding-top:14px}
