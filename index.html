@@ -94,11 +94,12 @@ main{position:relative;overflow:hidden;background-color:var(--bg);background-ima
 .hero-inner{position:relative;z-index:2;display:flex;flex-direction:column;justify-content:flex-end;width:100%;padding:120px var(--pad) 64px}
 .hero-copy{display:flex;flex-direction:column;gap:22px}
 .eyebrow{margin:0;font-size:16px;font-weight:500;letter-spacing:.14em;line-height:1.4;text-transform:uppercase;color:var(--gold)}
-.hero h1{margin:0;max-width:900px;font-family:var(--khand);font-weight:600;font-size:clamp(40px,5vw,76px);line-height:1.04;letter-spacing:.005em;text-transform:uppercase;color:#d4d6e0}
+.hero h1{margin:0;max-width:900px;font-family:var(--khand);font-weight:600;font-size:clamp(40px,5vw,76px);line-height:1.06;letter-spacing:.005em;color:#d4d6e0}
 .hero-lead{margin:0;max-width:640px;font-size:20px;font-weight:300;line-height:1.55;color:var(--text)}
 .focus{display:flex;flex-wrap:wrap;gap:8px 22px;margin:0;padding:0;list-style:none;font-size:15px;font-weight:500;letter-spacing:.06em;text-transform:uppercase;color:var(--ink)}
 .focus li{display:flex;align-items:center}
-.focus li::before{content:"";display:block;width:5px;height:5px;margin-right:10px;border-radius:50%;background:var(--gold)}
+.focus{justify-content:space-between;max-width:1038px}
+.focus .sep{color:var(--dim);font-weight:400}
 .hero-ctas{display:flex;flex-wrap:wrap;align-items:center;gap:12px 28px;margin-top:32px}
 .hero-ctas .btn-outline{margin-top:0}
 .text-link{display:inline-flex;align-items:center;gap:8px;min-height:44px;font-size:17px;font-weight:500;color:var(--text)}
@@ -125,6 +126,8 @@ main{position:relative;overflow:hidden;background-color:var(--bg);background-ima
 
 /* selected impact */
 .impact{padding:96px 0 88px}
+.intro{max-width:1095px;margin-bottom:88px}
+.intro-lead{margin:0 0 24px;font-size:28px;font-weight:300;line-height:1.45;color:var(--ink)}
 .impact .sec-head{max-width:760px;margin-bottom:40px}
 .im-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:24px}
 .im-item{padding-top:20px;border-top:1px solid rgba(187,147,92,.45)}
@@ -206,6 +209,18 @@ main{position:relative;overflow:hidden;background-color:var(--bg);background-ima
 .chip{min-height:40px;padding:0 14px;border:1px solid rgba(212,214,224,.25);border-radius:999px;background:transparent;font:inherit;font-size:14px;color:var(--text);cursor:pointer}
 .chip[aria-pressed="true"]{border-color:var(--gold);background:var(--gold);color:var(--bg)}
 
+/* capabilities on a light band */
+.expertise.light{background:#f7f7f7;border-top:0}
+.expertise.light .eyebrow-sec,.expertise.light .sec-h2 span,.expertise.light .xp-kick{color:#8a6630}
+.expertise.light .sec-h2,.expertise.light .xp-card h3{color:#14131a}
+.expertise.light .xp-card{border-color:rgba(20,19,26,.12);background:#ffffff}
+.expertise.light .xp-icon{stroke:#8a6630}
+.expertise.light .xp-body{color:#5c5d66}
+.expertise.light .xp-link{color:#3a3b47}
+.expertise.light .xp-link:hover{color:#14131a}
+.expertise.light .xp-hint{color:#6f7079}
+.expertise.light + .journey{border-top:0}
+
 /* experience */
 .ex-stage{margin:0 0 6px;font-size:12px;font-weight:500;letter-spacing:.12em;text-transform:uppercase;color:var(--gold)}
 .ex-head .sec-sub{margin-top:4px}
@@ -283,11 +298,14 @@ main{background-image:radial-gradient(600px 720px at 82% 185px,#3d3e46 0%,#38394
 .hero-copy{gap:12px}
 .hero-lead{font-size:16px;line-height:1.5}
 .focus{font-size:12px}
-.focus{gap:6px 18px}
-.focus li::before{margin-right:8px}
+.focus{gap:6px 18px;justify-content:flex-start}
+.focus .sep{display:none}
+.focus li:not(.sep)::before{content:"";display:block;width:5px;height:5px;margin-right:8px;border-radius:50%;background:var(--gold)}
 .hero-ctas{margin-top:20px;gap:8px 20px}
 .text-link{font-size:15px}
 .impact{padding:48px 0 40px}
+.intro{margin-bottom:48px}
+.intro-lead{margin-bottom:18px;font-size:20px;line-height:1.5}
 .impact .sec-head{margin-bottom:24px}
 .im-grid{gap:24px 16px}
 .im-num{font-size:40px}
@@ -394,12 +412,9 @@ html{scroll-behavior:auto}
 <div class="hero-copy">
 <p class="eyebrow">Experience Strategy &amp; Design Leader</p>
 <h1>Turning complex challenges into meaningful experiences and <span>business outcomes</span></h1>
-<p class="hero-lead">I lead experience strategy, design teams and digital transformation work, connecting business goals, human needs and technology to build products and services with measurable value.</p>
-<ul class="focus" aria-label="Focus areas"><li>Experience Strategy</li><li>Design Leadership</li><li>Digital Transformation</li></ul>
 </div>
 <div class="hero-ctas">
 <a class="btn-outline" href="#work">See featured work</a>
-<a class="text-link" href="https://www.linkedin.com/in/nashwanassar/" target="_blank" rel="noopener noreferrer">LinkedIn profile<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7"></path><path d="M8 7h9v9"></path></svg></a>
 </div>
 </div>
 </section>
@@ -423,6 +438,10 @@ html{scroll-behavior:auto}
 
 <section class="impact" id="impact" aria-labelledby="im-h">
 <div class="wrap">
+<div class="intro">
+<p class="intro-lead">I lead experience strategy, design teams and digital transformation work, connecting business goals, human needs and technology to build products and services with measurable value.</p>
+<ul class="focus" aria-label="Focus areas"><li>Experience Strategy</li><li class="sep" aria-hidden="true">|</li><li>Design Leadership</li><li class="sep" aria-hidden="true">|</li><li>Digital Transformation</li></ul>
+</div>
 <div class="sec-head">
 <p class="eyebrow-sec">01 · Selected impact</p>
 <h2 class="sec-h2" id="im-h">The numbers behind <span>the work</span></h2>
@@ -454,14 +473,14 @@ html{scroll-behavior:auto}
 <p class="fw-role"><span>Role</span>Senior Manager, Experience Design · data audit to executive business case</p>
 </article>
 <article class="fw-card">
-<a class="fw-img" href="goat.html" tabindex="-1" aria-hidden="true"><img src="assets/projects/goat.webp" alt="" loading="lazy"></a>
+<a class="fw-img" href="goat.html" tabindex="-1" aria-hidden="true"><img src="assets/projects/goat-featured.webp" alt="" loading="lazy"></a>
 <p class="fw-kick">SRMG · Sports app</p>
 <h3><a href="goat.html">GOAT</a></h3>
 <p class="fw-ch">Turning SRMG’s editorial credibility into digital audience engagement and monetisation.</p>
 <p class="fw-role"><span>Role</span>Product Owner · Design strategy lead, from hackathon to launch</p>
 </article>
 <article class="fw-card">
-<a class="fw-img" href="vodafone-digital-twin.html" tabindex="-1" aria-hidden="true"><img src="assets/projects/digital-twin.webp" alt="" loading="lazy"></a>
+<a class="fw-img" href="vodafone-digital-twin.html" tabindex="-1" aria-hidden="true"><img src="assets/projects/dt-featured.webp" alt="" loading="lazy"></a>
 <p class="fw-kick">Vodafone · Telecom · with IBM iX<span class="fw-conf">Confidential</span></p>
 <h3><a href="vodafone-digital-twin.html">Vodafone Digital Twin</a></h3>
 <p class="fw-ch">A telecom-tower digital twin with an uncertain user journey: mapping every role from site acquisition to field service.</p>
@@ -471,7 +490,7 @@ html{scroll-behavior:auto}
 </div>
 </section>
 
-<section class="expertise" id="expertise" aria-labelledby="xp-h">
+<section class="expertise light" id="expertise" aria-labelledby="xp-h">
 <div class="wrap">
 <div class="sec-head">
 <p class="eyebrow-sec">03 · Capabilities</p>
@@ -481,28 +500,28 @@ html{scroll-behavior:auto}
 <article class="xp-card">
 <svg class="xp-icon" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#bb935c" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 20h18"></path><path d="M6 16v-4"></path><path d="M11 16V8"></path><path d="M16 16v-6"></path><path d="M5 7l5-3 4 3 5-3"></path></svg>
 <p class="xp-kick">Experience strategy</p>
-<h3>I turn data into product decisions</h3>
+<h3>Turn data into product decisions</h3>
 <p class="xp-body">I start from the numbers: audit the data, find the gap, then design the path to close it.</p>
 <a class="xp-link" href="srmg-data-strategy.html">SRMG Data Strategy<span aria-hidden="true">→</span></a>
 </article>
 <article class="xp-card">
 <svg class="xp-icon" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#bb935c" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h11a1 1 0 0 1 1 1v7a1 1 0 0 1-1 1H9l-4 3v-3H4a1 1 0 0 1-1-1V5a1 1 0 0 1 1-1z"></path><path d="M16 8h4a1 1 0 0 1 1 1v6a1 1 0 0 1-1 1h-1v3l-4-3h-4a1 1 0 0 1-1-1v-1"></path></svg>
 <p class="xp-kick">Consulting and facilitation</p>
-<h3>I align people around the right problem</h3>
+<h3>Align people around the right problem</h3>
 <p class="xp-body">Consulting for IBM iX clients in telecom, insurance and government, and coaching Design Thinking workshops that turn discovery into decisions.</p>
 <a class="xp-link" href="workshops.html">Workshops<span aria-hidden="true">→</span></a>
 </article>
 <article class="xp-card">
 <svg class="xp-icon" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#bb935c" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="8" r="3.2"></circle><path d="M3 20c0-3.3 2.7-6 6-6s6 2.7 6 6"></path><circle cx="17" cy="9" r="2.4"></circle><path d="M16 14.2c2.8.2 5 2.6 5 5.8"></path></svg>
 <p class="xp-kick">Design leadership</p>
-<h3>I build design organisations</h3>
+<h3>Build design organisations</h3>
 <p class="xp-body">Hiring, career paths and ways of working that let a design team scale without losing craft, on one design system shared across brands.</p>
 <a class="xp-link" href="#experience">Experience<span aria-hidden="true">→</span></a>
 </article>
 <article class="xp-card">
 <svg class="xp-icon" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#bb935c" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3c3.5 2.2 5 5.6 5 9.5L15 17H9l-2-4.5C7 8.6 8.5 5.2 12 3z"></path><circle cx="12" cy="10" r="1.8"></circle><path d="M9 17l-1.5 4M15 17l1.5 4M12 17v4"></path></svg>
 <p class="xp-kick">Product delivery</p>
-<h3>I take products from 0 to 1</h3>
+<h3>Take products from 0 to 1</h3>
 <p class="xp-body">From hackathon idea to launched app, owning the backlog and the roadmap, not only the screens.</p>
 <a class="xp-link" href="goat.html">GOAT case study<span aria-hidden="true">→</span></a>
 </article>
